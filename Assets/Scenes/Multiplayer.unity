@@ -841,7 +841,7 @@ GameObject:
   - 225: {fileID: 244922608}
   - 114: {fileID: 244922611}
   m_Layer: 5
-  m_Name: MenuCanvas
+  m_Name: GameMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7223,7 +7223,7 @@ GameObject:
   - 222: {fileID: 1979757896}
   - 114: {fileID: 1979757895}
   m_Layer: 5
-  m_Name: PausePanel
+  m_Name: SettingsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
