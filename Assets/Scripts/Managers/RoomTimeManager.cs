@@ -88,8 +88,9 @@ public class RoomTimeManager : MonoBehaviour
 
 	void OnSecondElapsed ()
 	{
-		double elapsedTime = (PhotonNetwork.time - StartTime);
-		double remainingTime = SecondsPerTurn - (elapsedTime % SecondsPerTurn);
+		float elapsedTime = (PhotonNetwork.time - StartTime);
+		float remainingTime = SecondsPerTurn - (elapsedTime % SecondsPerTurn);
+		Debug.Log (TimeHelper.SecondsToTimer (elapsedTime));
 	}
 	
 	public void OnGUI ()
