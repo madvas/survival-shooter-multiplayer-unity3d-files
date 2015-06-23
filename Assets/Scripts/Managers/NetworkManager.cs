@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class NetworkManager : Photon.MonoBehaviour
 {
