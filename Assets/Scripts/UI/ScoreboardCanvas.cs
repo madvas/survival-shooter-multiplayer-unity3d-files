@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ScoreboardCanvas : MonoBehaviour {
+public class ScoreboardCanvas : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
+	Canvas canvas;
 	
+	void Start ()
+	{
+		canvas = GetComponent<Canvas> ();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void Update ()
+	{
+		if (Input.GetKeyDown (KeyCode.Tab)) {
+			canvas.enabled = !canvas.enabled;
+		}
 	}
 }
