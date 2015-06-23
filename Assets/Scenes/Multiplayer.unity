@@ -2507,7 +2507,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1851598978}
+      - m_Target: {fileID: 0}
         m_MethodName: set_enabled
         m_Mode: 0
         m_Arguments:
@@ -6783,7 +6783,6 @@ GameObject:
   - 20: {fileID: 1851598981}
   - 124: {fileID: 1851598980}
   - 92: {fileID: 1851598979}
-  - 81: {fileID: 1851598978}
   - 114: {fileID: 1851598984}
   - 114: {fileID: 1851598983}
   m_Layer: 0
@@ -6793,13 +6792,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1851598978
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1851598977}
-  m_Enabled: 1
 --- !u!92 &1851598979
 Behaviour:
   m_ObjectHideFlags: 0

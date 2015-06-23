@@ -71,6 +71,7 @@ GameObject:
   - 114: {fileID: 11428538}
   - 114: {fileID: 11420294}
   - 114: {fileID: 11473032}
+  - 81: {fileID: 8124976}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -156,6 +157,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4869318, y: .0887731016, z: .646993577}
   m_Center: {x: -.251054704, y: -8.94069672e-08, z: .10632965}
+--- !u!81 &8124976
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
