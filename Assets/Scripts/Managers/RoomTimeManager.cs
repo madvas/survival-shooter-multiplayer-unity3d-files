@@ -29,12 +29,14 @@ public class RoomTimeManager : MonoBehaviour
 	
 	private void StartRoundNow ()
 	{
+		Debug.Log ("start round now");
 		// in some cases, when you enter a room, the server time is not available immediately.
 		// time should be 0.0f but to make sure we detect it correctly, check for a very low value.
 		if (PhotonNetwork.time < 0.0001f) {
 			// we can only start the round when the time is available. let's check that in Update()
 			startRoundWhenTimeIsSynced = true;
-			InvokeRepeating (OnSecondElapsed, 0, 1);
+			Debug.Log ("startRoundWhenTimeIsSynced true");
+			InvokeRepeating ("OnSecondElapsed", 0, 1);
 			return;
 		}
 		startRoundWhenTimeIsSynced = false;
@@ -88,28 +90,8 @@ public class RoomTimeManager : MonoBehaviour
 
 	void OnSecondElapsed ()
 	{
-		float elapsedTime = (PhotonNetwork.time - StartTime);
-		float remainingTime = SecondsPerTurn - (elapsedTime % SecondsPerTurn);
-		Debug.Log (TimeHelper.SecondsToTimer (elapsedTime));
-	}
-	
-	public void OnGUI ()
-	{
-		// alternatively to doing this calculation here:
-		// calculate these values in Update() and make them publicly available to all other scripts
-
-
-//		int turn = (int)(elapsedTime / SecondsPerTurn);
-//		
-//		
-//		// simple gui for output
-//		GUILayout.BeginArea (TextPos);
-//		GUILayout.Label (string.Format ("elapsed: {0:0.000}", elapsedTime));
-//		GUILayout.Label (string.Format ("remaining: {0:0.000}", remainingTime));
-//		GUILayout.Label (string.Format ("turn: {0:0}", turn));
-//		if (GUILayout.Button ("new round")) {
-//			this.StartRoundNow ();
-//		}
-//		GUILayout.EndArea ();
+		double elapsedTime = (PhotonNetwork.time - StartTime);
+		double remainingTime = SecondsPerTurn - (elapsedTime % SecondsPerTurn);
+		Debug.Log (TimeHelper.SecondsToTimer ((float)elapsedTime));
 	}
 }
