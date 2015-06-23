@@ -128,6 +128,7 @@ public class RoomsMenu : MonoBehaviour
 //		}
 		Debug.Log (roomList);
 		foreach (var room in roomList) {
+			Debug.Log ("Adding row " + room.name + " " + room.playerCount);
 			AddListItem (room.name, room.playerCount);
 		}
 	}

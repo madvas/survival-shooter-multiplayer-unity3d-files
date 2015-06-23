@@ -72,10 +72,11 @@ public class NetworkManager : Photon.MonoBehaviour
 		List<Networking.Room> rooms = new List<Networking.Room> ();
 		Debug.Log ("Existing rooms: " + PhotonNetwork.GetRoomList ().Length);
 		foreach (RoomInfo roomInfo in PhotonNetwork.GetRoomList ()) {
-			Debug.Log ("existing: " + roomInfo.name);
 			rooms.Add (new Networking.Room (roomInfo));
 		}
 		List<string> existingRoomNames = rooms.Select (room => room.name).ToList ();
+		Debug.Log (existingRoomNames);
+		Debug.Log (allRoomNames.Except (existingRoomNames));
 		foreach (string roomName in allRoomNames.Except(existingRoomNames)) {
 			rooms.Add (new Networking.Room (roomName, (byte)maxPlayersPerRoom, 0));
 		}
