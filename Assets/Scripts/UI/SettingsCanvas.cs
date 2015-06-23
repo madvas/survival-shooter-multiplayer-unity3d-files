@@ -31,6 +31,11 @@ public class SettingsCanvas : MonoBehaviour
 
 	public void AdjustEffectsVolume (float volume)
 	{
-		Debug.Log (volume);
+		foreach (var player in GameObject.FindGameObjectsWithTag("Player")) {
+			player.GetComponent<AudioSource> ().volume *= volume;
+			foreach (var audioSrc in player.GetComponentsInChildren<AudioSource>()) {
+				audioSrc.volume *= volume;
+			}
+		}
 	}
 }
