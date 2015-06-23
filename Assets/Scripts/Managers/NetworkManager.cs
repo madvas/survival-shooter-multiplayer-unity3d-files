@@ -85,6 +85,7 @@ public class NetworkManager : Photon.MonoBehaviour
 			isVisible = true, 
 			maxPlayers = (byte)maxPlayersPerRoom 
 		};
+		Debug.Log ("Joining as player " + playerName);
 		PhotonNetwork.player.name = playerName;
 		PhotonNetwork.JoinOrCreateRoom (roomName, roomOptions, TypedLobby.Default);
 	}
