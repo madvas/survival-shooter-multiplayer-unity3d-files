@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
+using Endgame;
+using UnityEngine.UI;
 
 public class ScoreboardCanvas : MonoBehaviour
 {
 	Canvas canvas;
+	ListView listView;
 
 	void Awake ()
 	{
 		canvas = GetComponent<Canvas> ();
+		listView = GetComponentInChildren<ListView> ();
 	}
 
 	void Start ()
