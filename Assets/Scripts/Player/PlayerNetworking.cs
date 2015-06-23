@@ -97,7 +97,8 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	public void TakeShot (int damage, string shooterName)
 	{
 		Debug.Log ("Take shot");
-		playerHealth.TakeDamage (damage);
+		bool died;
+		playerHealth.TakeDamage (damage, out died);
 		if (photonView.isMine) {
 			Debug.Log (PhotonNetwork.player.name + " was shot by " + shooterName);
 		}
