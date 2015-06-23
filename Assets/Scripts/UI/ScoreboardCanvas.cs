@@ -24,7 +24,7 @@ public class ScoreboardCanvas : MonoBehaviour
 		listView.AddColumn ("Player Name", playerNameColWidth);
 		listView.AddColumn ("Kills", playerScoreColWidth);
 		listView.AddColumn ("Deaths", playerScoreColWidth);
-		UpdateScoreboard ();
+		NetworkManager.onJoinedRoom += OnJoinedRoom;
 	}
 	
 	void Update ()
@@ -32,6 +32,11 @@ public class ScoreboardCanvas : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Tab)) {
 			canvas.enabled = !canvas.enabled;
 		}
+	}
+
+	void OnJoinedRoom ()
+	{
+		UpdateScoreboard ();
 	}
 
 	void OnPlayerPropertiesChanged (PhotonPlayer player, Hashtable props)
