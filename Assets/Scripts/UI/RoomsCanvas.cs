@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Endgame;
 using UnityEngine.UI;
 
-public class RoomsPanel : MonoBehaviour
+public class RoomsCanvas : MonoBehaviour
 {
 	
 	public ListView listView;
