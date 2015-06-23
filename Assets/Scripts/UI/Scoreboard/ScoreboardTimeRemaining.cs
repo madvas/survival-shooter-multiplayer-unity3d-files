@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class ScoreboardTimeRemaining : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+public class ScoreboardTimeRemaining : MonoBehaviour
+{
+
+	Text timeText;
+
+	void Awake ()
+	{
+		timeText = GetComponent<Text> ();
+		RoomTimeManager.onSecondElapsed += OnSecondElapsed;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnSecondElapsed (string remainingTime)
+	{
+		timeText.text = remainingTime;
 	}
 }
