@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 158ae35c08a8d554e9b62c979b971b18
+labels:
+- listview
+- ui
+- gui
+- list
+- inventory
+- leaderboard
+- rankings
+- leaderboards
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
