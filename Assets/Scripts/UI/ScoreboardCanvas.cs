@@ -7,8 +7,8 @@ using System.Linq;
 
 public class ScoreboardCanvas : MonoBehaviour
 {
-	public int playerNameColWidth = 350;
-	public int playerScoreColWidth = 35;
+	public int playerNameColWidth = 250;
+	public int playerScoreColWidth = 80;
 	Canvas canvas;
 	ListView listView;
 
@@ -44,7 +44,12 @@ public class ScoreboardCanvas : MonoBehaviour
 		listView.ClearAllItems ();
 		List<PhotonPlayer> players = PhotonNetwork.playerList.OrderByDescending (p => p.GetScore ()).ToList ();
 		foreach (var player in players) {
-			Debug.Log (player.name + " " + player.GetScore ());
+			listView.AddItem (new string[]{
+				player.name,
+				player.GetScore ().ToString ("D"),
+				player.GetDeaths ().ToString ("D")
+			});
+//			Debug.Log (player.name + " " + player.GetScore ());
 		}
 	}
 }
