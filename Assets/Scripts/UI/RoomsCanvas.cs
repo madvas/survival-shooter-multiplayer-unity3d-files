@@ -33,11 +33,8 @@ public class RoomsCanvas : MonoBehaviour
 	void Start ()
 	{
 		nicknameField.text = "Shooter" + Random.Range (1000, 9999);
-		Debug.Log ("Shooter" + Random.Range (1000, 9999));
-		AddColumn ("Name");
-		AddColumn ("Players");
-		listView.Columns [0].Width = roomNameColWidth;
-		listView.Columns [1].Width = roomPlayersColWidth;
+		listView.AddColumn ("Name", roomNameColWidth);
+		listView.AddColumn ("Players", roomPlayersColWidth);
 		validateRoomForm ();
 	}
 
@@ -81,20 +78,13 @@ public class RoomsCanvas : MonoBehaviour
 		return true;
 	}
 
-	void AddColumn (string title)
-	{
-		ColumnHeader column = new ColumnHeader ();
-		column.Text = title;
-		listView.Columns.Add (column);
-	}
-
 	void AddListItem (string roomName, int playerCount, int maxPlayers)
 	{
 		string[] item = new string[]{
 			roomName,
 			playerCount.ToString ("D") + "/" + maxPlayers,
 		};
-		listView.Items.Add (new ListViewItem (item));
+		listView.AddItem (item);
 	}
 
 
@@ -123,11 +113,7 @@ public class RoomsCanvas : MonoBehaviour
 	private void onRoomListUpdate (List<Networking.Room> roomList)
 	{
 		rooms = roomList;
-		int itemsCount = listView.Items.Count;
-		for (int i = 0; i < itemsCount; i++) {
-			listView.Items.RemoveAt (0);
-		}
-		Debug.Log (roomList);
+		listView.ClearAllItems ();
 		foreach (var room in roomList) {
 			Debug.Log ("Adding row " + room.name + " " + room.playerCount);
 			AddListItem (room.name, room.playerCount, room.maxPlayers);
