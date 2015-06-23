@@ -87,11 +87,11 @@ public class RoomsMenu : MonoBehaviour
 		listView.Columns.Add (column);
 	}
 
-	void AddListItem (string roomName, int playerCount)
+	void AddListItem (string roomName, int playerCount, int maxPlayers)
 	{
 		string[] item = new string[]{
 			roomName,
-			playerCount.ToString ("D") + "/" + NetworkManager.maxPlayersPerRoom.ToString ("D"),
+			playerCount.ToString ("D") + "/" + maxPlayers,
 		};
 		listView.Items.Add (new ListViewItem (item));
 	}
@@ -129,7 +129,7 @@ public class RoomsMenu : MonoBehaviour
 		Debug.Log (roomList);
 		foreach (var room in roomList) {
 			Debug.Log ("Adding row " + room.name + " " + room.playerCount);
-			AddListItem (room.name, room.playerCount);
+			AddListItem (room.name, room.playerCount, room.maxPlayers);
 		}
 	}
 
