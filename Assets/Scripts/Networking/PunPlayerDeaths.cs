@@ -4,37 +4,37 @@ using System.Collections;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 
-public class PunPlayerScores : MonoBehaviour
+public class PunPlayerDeaths : MonoBehaviour
 {
-	public const string PlayerScoreProp = "score";
+	public const string PlayerDeathsProp = "d";
 }
 
 
-static class ScoreExtensions
+static class DeathsExtensions
 {
-	public static void SetScore (this PhotonPlayer player, int newScore)
+	public static void SetDeaths (this PhotonPlayer player, int newDeaths)
 	{
-		Hashtable score = new Hashtable ();  // using PUN's implementation of Hashtable
-		score [PunPlayerScores.PlayerScoreProp] = newScore;
+		Hashtable deaths = new Hashtable ();  // using PUN's implementation of Hashtable
+		deaths [PunPlayerDeaths.PlayerDeathsProp] = newDeaths;
 
-		player.SetCustomProperties (score);  // this locally sets the score and will sync it in-game asap.
+		player.SetCustomProperties (deaths);  // this locally sets the deaths and will sync it in-game asap.
 	}
 
-	public static void AddScore (this PhotonPlayer player, int scoreToAddToCurrent)
+	public static void AddDeaths (this PhotonPlayer player, int deathsToAddToCurrent)
 	{
-		int current = player.GetScore ();
-		current = current + scoreToAddToCurrent;
+		int current = player.GetDeaths ();
+		current = current + deathsToAddToCurrent;
 
-		Hashtable score = new Hashtable ();  // using PUN's implementation of Hashtable
-		score [PunPlayerScores.PlayerScoreProp] = current;
+		Hashtable deaths = new Hashtable ();  // using PUN's implementation of Hashtable
+		deaths [PunPlayerDeaths.PlayerDeathsProp] = current;
 
-		player.SetCustomProperties (score);  // this locally sets the score and will sync it in-game asap.
+		player.SetCustomProperties (deaths);  // this locally sets the deaths and will sync it in-game asap.
 	}
 
-	public static int GetScore (this PhotonPlayer player)
+	public static int GetDeaths (this PhotonPlayer player)
 	{
 		object teamId;
-		if (player.customProperties.TryGetValue (PunPlayerScores.PlayerScoreProp, out teamId)) {
+		if (player.customProperties.TryGetValue (PunPlayerDeaths.PlayerDeathsProp, out teamId)) {
 			return (int)teamId;
 		}
 
