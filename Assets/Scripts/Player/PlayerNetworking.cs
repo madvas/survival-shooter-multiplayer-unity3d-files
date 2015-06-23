@@ -38,8 +38,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 
 	void Start ()
 	{
-		Debug.Log ("network start");
-		Debug.Log (photonView.isMine);
 		playerSpawning.onPlayerRespawn += onPlayerRespawn;
 		if (photonView.isMine) {
 			GetComponentInChildren<PlayerShooting> ().enabled = true;
