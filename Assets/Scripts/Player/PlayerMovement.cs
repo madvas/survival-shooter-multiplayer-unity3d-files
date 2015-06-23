@@ -81,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
 		// Perform the raycast and if it hits something on the floor layer...
 		if (Physics.Raycast (camRay, out floorHit, camRayLength, floorMask)) {
-			Debug.Log (floorHit.point);
 			// Create a vector from the player to the point on the floor the raycast from the mouse hit.
 			Vector3 playerToMouse = floorHit.point - transform.position;
 
@@ -93,8 +92,6 @@ public class PlayerMovement : MonoBehaviour
 
 			// Set the player's rotation to this new rotation.
 			playerRigidbody.MoveRotation (newRotatation);
-		} else {
-			Debug.Log ("floor wasnt hit");
 		}
 #else
 
