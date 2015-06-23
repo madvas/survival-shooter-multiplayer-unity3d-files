@@ -17,10 +17,8 @@ namespace Networking
 			playerCount = newPlayerCount;
 		}
 		
-		public Room (RoomInfo room)
+		public Room (RoomInfo room) : this(room.name, room.maxPlayers, room.playerCount)
 		{
-			Debug.Log ("creating room " + room.name);
-			Room (room.name, room.maxPlayers, room.playerCount);
 		}
 	}
 }
