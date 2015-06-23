@@ -65,7 +65,6 @@ public class NetworkManager : Photon.MonoBehaviour
 		}
 
 		List<Networking.Room> rooms = new List<Networking.Room> ();
-		Debug.Log ("Existing rooms: " + PhotonNetwork.GetRoomList ().Length);
 		foreach (RoomInfo roomInfo in PhotonNetwork.GetRoomList ()) {
 			rooms.Add (new Networking.Room (roomInfo));
 		}

@@ -7377,8 +7377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5ac8e7a71c04283bc5dce900630ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNameColWidth: 350
-  playerScoreColWidth: 35
+  playerNameColWidth: 250
+  playerScoreColWidth: 70
 --- !u!225 &1912596088
 CanvasGroup:
   m_ObjectHideFlags: 0

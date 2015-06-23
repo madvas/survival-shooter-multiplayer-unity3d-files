@@ -7,8 +7,8 @@ using System.Linq;
 
 public class ScoreboardCanvas : MonoBehaviour
 {
-	public int playerNameColWidth = 250;
-	public int playerScoreColWidth = 80;
+	public int playerNameColWidth = 280;
+	public int playerScoreColWidth = 70;
 	Canvas canvas;
 	ListView listView;
 
@@ -24,6 +24,7 @@ public class ScoreboardCanvas : MonoBehaviour
 		listView.AddColumn ("Player Name", playerNameColWidth);
 		listView.AddColumn ("Kills", playerScoreColWidth);
 		listView.AddColumn ("Deaths", playerScoreColWidth);
+		UpdateScoreboard ();
 	}
 	
 	void Update ()

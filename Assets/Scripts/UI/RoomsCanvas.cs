@@ -113,7 +113,6 @@ public class RoomsCanvas : MonoBehaviour
 		rooms = roomList;
 		listView.ClearAllItems ();
 		foreach (var room in roomList) {
-			Debug.Log ("Adding row " + room.name + " " + room.playerCount);
 			AddListItem (room.name, room.playerCount, room.maxPlayers);
 		}
 	}
