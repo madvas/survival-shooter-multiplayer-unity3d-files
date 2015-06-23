@@ -5327,6 +5327,18 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: DefaultItemTextColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: DefaultItemTextColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: DefaultItemTextColor.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
   m_IsPrefabParent: 0
@@ -7377,7 +7389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5ac8e7a71c04283bc5dce900630ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNameColWidth: 250
+  playerNameColWidth: 280
   playerScoreColWidth: 70
 --- !u!225 &1912596088
 CanvasGroup:
