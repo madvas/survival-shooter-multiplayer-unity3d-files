@@ -36,8 +36,6 @@ public class RoomTimeManager : MonoBehaviour
 		}
 		startRoundWhenTimeIsSynced = false;
 		
-		
-		
 		ExitGames.Client.Photon.Hashtable startTimeProp = new Hashtable ();  // only use ExitGames.Client.Photon.Hashtable for Photon
 		startTimeProp [StartTimeKey] = PhotonNetwork.time;
 		PhotonNetwork.room.SetCustomProperties (startTimeProp);              // implement OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged) to get this change everywhere
