@@ -7,6 +7,7 @@ public class ScoreboardCanvas : MonoBehaviour
 	
 	void Start ()
 	{
+		Debug.Log ("Scoreboard Canvas");
 		canvas = GetComponent<Canvas> ();
 	}
 	
