@@ -123,9 +123,10 @@ public class RoomsMenu : MonoBehaviour
 	{
 		rooms = roomList;
 		int itemsCount = listView.Items.Count;
-		for (int i = 0; i < itemsCount; i++) {
-			listView.Items.RemoveAt (i);
-		}
+//		for (int i = 0; i < itemsCount; i++) {
+//			listView.Items.RemoveAt (i);
+//		}
+		Debug.Log (roomList);
 		foreach (var room in roomList) {
 			AddListItem (room.name, room.playerCount);
 		}
