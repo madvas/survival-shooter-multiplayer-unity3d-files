@@ -7,25 +7,24 @@ using System.Collections;
 /// </summary>
 public class OnClickLoadSomething : MonoBehaviour
 {
-    public enum  ResourceTypeOption : byte
-    {
-        Scene,
-        Web
-    }
+	public enum  ResourceTypeOption : byte
+	{
+		Scene,
+		Web
+	}
 
-    public ResourceTypeOption ResourceTypeToLoad = ResourceTypeOption.Scene;
-    public string ResourceToLoad;
+	public ResourceTypeOption ResourceTypeToLoad = ResourceTypeOption.Scene;
+	public string ResourceToLoad;
 
-    public void OnClick()
-    {
-        switch (ResourceTypeToLoad)
-        {
-            case ResourceTypeOption.Scene:
-                Application.LoadLevel(ResourceToLoad);
-                break;
-            case ResourceTypeOption.Web:
-                Application.OpenURL(ResourceToLoad);
-                break;
-        }
-    }
+	public void OnClick ()
+	{
+		switch (ResourceTypeToLoad) {
+		case ResourceTypeOption.Scene:
+			Application.LoadLevel (ResourceToLoad);
+			break;
+		case ResourceTypeOption.Web:
+			Application.OpenURL (ResourceToLoad);
+			break;
+		}
+	}
 }

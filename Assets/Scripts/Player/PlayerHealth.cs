@@ -79,7 +79,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 	}
 
 
-	public void TakeDamage (int amount, out bool died = false)
+	public void TakeDamage (int amount, out bool died)
 	{
 		if (isDead) {
 			return;
