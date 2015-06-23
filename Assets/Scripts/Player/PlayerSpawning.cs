@@ -40,6 +40,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		GetComponent <Rigidbody> ().isKinematic = false;
 		if (photonView.isMine) {
 			PositionData randomPosition = PositionManager.GetRandomSpawnPosition ();
+			Debug.Log (randomPosition.position);
 			playerMovement.enabled = true;
 			playerShooting.enabled = true;
 			transform.position = randomPosition.position;

@@ -23,7 +23,7 @@ public static class PositionManager
 		foreach (var item in GameObject.FindGameObjectsWithTag("NotSpawnable")) {
 			foreach (Collider collider in item.GetComponents<Collider>()) {
 				if (collider.bounds.Contains (position)) {
-					return collider.ClosestPointOnBounds (Vector3.zero);
+//					return collider.ClosestPointOnBounds (Vector3.zero);
 				}
 			}
 		}
