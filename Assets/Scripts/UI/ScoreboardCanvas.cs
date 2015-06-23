@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ScoreboardCanvas : MonoBehaviour
 {
-
 	Canvas canvas;
 	
 	void Start ()
