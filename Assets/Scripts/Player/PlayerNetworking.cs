@@ -96,10 +96,10 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	[PunRPC]
 	public void TakeShot (int damage, string shooterName)
 	{
+		Debug.Log ("Take shot");
 		playerHealth.TakeDamage (damage);
 		if (photonView.isMine) {
 			Debug.Log (PhotonNetwork.player.name + " was shot by " + shooterName);
-
 		}
 	}
 
