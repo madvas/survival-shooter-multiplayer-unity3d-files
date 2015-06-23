@@ -49,9 +49,9 @@ public class ScoreboardCanvas : MonoBehaviour
 	{
 		Debug.Log ("Updatescoreboard");
 		listView.ClearAllItems ();
-		List<PhotonPlayer> players = PhotonNetwork.playerList.OrderByDescending (p => p.GetScore ()).ToList ();
-		Debug.Log ("players: " + players.Count);
-		Debug.Log ("p: " + PhotonNetwork.player.name);
+		List<PhotonPlayer> players = PhotonNetwork.playerList.OrderByDescending (p => p.GetScore ())
+			.ThenByDescending (p => p.GetDeaths ())
+			.ToList ();
 		foreach (var player in players) {
 			Debug.Log (player.name);
 			listView.AddItem (new string[]{
@@ -59,7 +59,6 @@ public class ScoreboardCanvas : MonoBehaviour
 				player.GetScore ().ToString ("D"),
 				player.GetDeaths ().ToString ("D")
 			});
-//			Debug.Log (player.name + " " + player.GetScore ());
 		}
 	}
 }
