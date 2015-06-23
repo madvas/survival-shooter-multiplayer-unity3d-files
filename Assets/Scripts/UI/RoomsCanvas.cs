@@ -32,7 +32,6 @@ public class RoomsCanvas : MonoBehaviour
 
 	void Start ()
 	{
-		Debug.Log ("STart here");
 		nicknameField.text = "Shooter" + Random.Range (1000, 9999);
 		Debug.Log ("Shooter" + Random.Range (1000, 9999));
 		AddColumn ("Name");
