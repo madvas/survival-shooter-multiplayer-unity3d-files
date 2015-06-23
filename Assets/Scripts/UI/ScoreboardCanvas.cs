@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Endgame;
 using UnityEngine.UI;
+using System.Linq;
 
 public class ScoreboardCanvas : MonoBehaviour
 {
+	public int playerNameColWidth = 350;
+	public int playerScoreColWidth = 35;
 	Canvas canvas;
 	ListView listView;
 
@@ -18,6 +21,9 @@ public class ScoreboardCanvas : MonoBehaviour
 	void Start ()
 	{
 		NetworkManager.onPlayerPropertiesChanged += OnPlayerPropertiesChanged;
+		listView.AddColumn ("Player Name", playerNameColWidth);
+		listView.AddColumn ("Kills", playerScoreColWidth);
+		listView.AddColumn ("Deaths", playerScoreColWidth);
 	}
 	
 	void Update ()
@@ -30,7 +36,15 @@ public class ScoreboardCanvas : MonoBehaviour
 	void OnPlayerPropertiesChanged (PhotonPlayer player, Hashtable props)
 	{
 		Debug.Log ("Player properties changed");
-		Debug.Log (player);
-		Debug.Log (props);
+		UpdateScoreboard ();
+	}
+
+	void UpdateScoreboard ()
+	{
+		listView.ClearAllItems ();
+		List<PhotonPlayer> players = PhotonNetwork.playerList.OrderByDescending (p => p.GetScore ()).ToList ();
+		foreach (var player in players) {
+			Debug.Log (player.name + " " + player.GetScore ());
+		}
 	}
 }
