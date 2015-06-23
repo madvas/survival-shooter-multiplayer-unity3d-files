@@ -45,8 +45,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 			GetComponentInChildren<PlayerShooting> ().enabled = true;
 			GetComponent<PlayerMovement> ().enabled = true;
 			GetComponent<PlayerSpawning> ().enabled = true;
-			Debug.Log ("here ok");
-			Debug.Log (transform.position);
+			GetComponent<AudioListener> ().enabled = true;
 		} else {
 			StartCoroutine (UpdateData ());
 		}
