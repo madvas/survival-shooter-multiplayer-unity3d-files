@@ -21,11 +21,13 @@ public class RoomsPanel : MonoBehaviour
 	Button joinBtnScript;
 	NetworkManager networkManager;
 	List<Networking.Room> rooms;
+	Canvas canvas;
 
 	void Awake ()
 	{
 		joinBtnScript = joinButton.GetComponent<Button> ();
 		networkManager = GetComponent<NetworkManager> ();
+		canvas = transform.GetComponent<Canvas> ();
 	}
 
 	void Start ()
@@ -57,7 +59,9 @@ public class RoomsPanel : MonoBehaviour
 
 	public void JoinSelectedRoom ()
 	{
+		Debug.Log (nicknameField.text);
 		Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
+		Debug.Log (selectedRoom.name);
 		networkManager.JoinRoom (selectedRoom.name, nicknameField.text);
 		canvas.enabled = false;
 	}
