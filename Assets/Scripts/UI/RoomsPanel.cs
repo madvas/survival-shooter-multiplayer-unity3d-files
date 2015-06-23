@@ -21,13 +21,11 @@ public class RoomsPanel : MonoBehaviour
 	Button joinBtnScript;
 	NetworkManager networkManager;
 	List<Networking.Room> rooms;
-	Canvas canvas;
 
 	void Awake ()
 	{
 		joinBtnScript = joinButton.GetComponent<Button> ();
 		networkManager = GetComponent<NetworkManager> ();
-		canvas = gameObject.transform.parent.GetComponent<Canvas> ();
 	}
 
 	void Start ()
