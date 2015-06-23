@@ -74,13 +74,15 @@ public class PlayerHealth : Photon.MonoBehaviour
 			damaged = false;
 		}
 		if (photonView.isMine && Input.GetKeyDown (KeyCode.Q)) {
-			TakeDamage (100);
+			bool died;
+			TakeDamage (100, out died);
 		}
 	}
 
 
 	public void TakeDamage (int amount, out bool died)
 	{
+		died = false;
 		if (isDead) {
 			return;
 		}
