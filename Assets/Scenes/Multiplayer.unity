@@ -399,7 +399,7 @@ GameObject:
   - 65: {fileID: 79361237}
   m_Layer: 9
   m_Name: RobotCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -674,7 +674,7 @@ GameObject:
   - 65: {fileID: 203550638}
   m_Layer: 9
   m_Name: DollhouseDoorCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -715,7 +715,7 @@ GameObject:
   - 65: {fileID: 222986874}
   m_Layer: 9
   m_Name: RobotCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2337,7 +2337,7 @@ GameObject:
   - 65: {fileID: 496030140}
   m_Layer: 9
   m_Name: BloxCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2378,7 +2378,7 @@ GameObject:
   - 65: {fileID: 502767695}
   m_Layer: 9
   m_Name: BloxCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2622,7 +2622,7 @@ GameObject:
   - 23: {fileID: 595918341}
   m_Layer: 9
   m_Name: Wall
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2865,7 +2865,7 @@ GameObject:
   - 65: {fileID: 629487994}
   m_Layer: 9
   m_Name: RobotCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3024,7 +3024,7 @@ GameObject:
   - 65: {fileID: 651886317}
   m_Layer: 9
   m_Name: BloxCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3718,7 +3718,7 @@ GameObject:
   - 136: {fileID: 793123402}
   m_Layer: 9
   m_Name: TrainCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4155,7 +4155,7 @@ GameObject:
   - 23: {fileID: 906673130}
   m_Layer: 9
   m_Name: Robot
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4308,7 +4308,7 @@ GameObject:
   - 136: {fileID: 922592619}
   m_Layer: 9
   m_Name: SpinningTop
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4534,7 +4534,7 @@ GameObject:
   - 65: {fileID: 959160600}
   m_Layer: 9
   m_Name: ClockCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4643,7 +4643,7 @@ GameObject:
   - 65: {fileID: 992526069}
   m_Layer: 9
   m_Name: Hearse
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4799,7 +4799,7 @@ GameObject:
   - 23: {fileID: 1077091416}
   m_Layer: 9
   m_Name: Train
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5095,7 +5095,7 @@ GameObject:
   - 65: {fileID: 1218513146}
   m_Layer: 9
   m_Name: RobotCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5382,7 +5382,7 @@ GameObject:
   - 23: {fileID: 1424566906}
   m_Layer: 9
   m_Name: Blox
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5841,7 +5841,7 @@ GameObject:
   - 65: {fileID: 1644143781}
   m_Layer: 9
   m_Name: TrainCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5882,7 +5882,7 @@ GameObject:
   - 65: {fileID: 1702922597}
   m_Layer: 9
   m_Name: BloxCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6447,23 +6447,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100044, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100026, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100042, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100038, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100034, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
@@ -6475,67 +6475,67 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100084, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100082, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100062, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100060, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100058, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100056, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100040, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100064, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100066, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100068, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100074, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100070, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100078, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100072, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100076, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
@@ -6543,7 +6543,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
-      value: NotSpawnable
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 2}
       propertyPath: m_TagString
@@ -6704,7 +6704,7 @@ GameObject:
   - 65: {fileID: 1796668969}
   m_Layer: 9
   m_Name: RobotCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6745,7 +6745,7 @@ GameObject:
   - 65: {fileID: 1797768323}
   m_Layer: 9
   m_Name: WallCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6786,7 +6786,7 @@ GameObject:
   - 65: {fileID: 1799274720}
   m_Layer: 9
   m_Name: RobotCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7309,7 +7309,7 @@ GameObject:
   - 65: {fileID: 2001424300}
   m_Layer: 9
   m_Name: WallCollider
-  m_TagString: NotSpawnable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
