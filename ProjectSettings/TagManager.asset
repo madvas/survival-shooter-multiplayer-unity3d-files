@@ -11,6 +11,7 @@ TagManager:
   - Floor
   - Game
   - RoomsMenu
+  - BackgroundMusic
   layers:
   - Default
   - TransparentFX

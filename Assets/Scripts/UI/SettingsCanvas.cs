@@ -22,8 +22,13 @@ public class SettingsCanvas : MonoBehaviour
 		}
 	}
 
-	public void DisableSound ()
+	public void DisableSound (bool enabled)
 	{
-
+		foreach (var player in GameObject.FindGameObjectsWithTag("Player")) {
+			player.GetComponent<AudioSource> ().mute = enabled;
+			foreach (var audioSource in player.GetComponentsInChildren<AudioSource>()) {
+				audioSource.mute = enabled;
+			} 
+		} 
 	}
 }
