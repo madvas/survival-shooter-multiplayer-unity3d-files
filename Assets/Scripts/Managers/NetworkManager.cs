@@ -21,11 +21,8 @@ public class NetworkManager : Photon.MonoBehaviour
 	public delegate void OnLeftRoomAction ();
 	public static event OnLeftRoomAction onLeftRoom;
 
-	public delegate void OnPhotonPlayerPropertiesChangedAction ();
+	public delegate void OnPhotonPlayerPropertiesChangedAction (PhotonPlayer player,Hashtable props);
 	public static event OnPhotonPlayerPropertiesChangedAction onPlayerPropertiesChanged;
-
-	Vector3 position;
-	Quaternion rotation;
 
 	void Start ()
 	{
@@ -111,7 +108,9 @@ public class NetworkManager : Photon.MonoBehaviour
 	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
 	{
 		if (onPlayerPropertiesChanged != null) {
-			onPlayerPropertiesChanged ();
+			PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
+			Hashtable props = playerAndUpdatedProps [1] as Hashtable;
+			onPlayerPropertiesChanged (player, props);
 		}
 	}
 
