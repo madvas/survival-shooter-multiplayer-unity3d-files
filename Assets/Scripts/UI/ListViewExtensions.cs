@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Endgame;
 
-public class ListViewExtensions : MonoBehaviour {
+static class ListViewExtensions
+{
+	public static void AddColumn (this ListView listView, string columnTitle, int columnWidth)
+	{
+		ColumnHeader column = new ColumnHeader ();
+		column.Text = columnTitle;
+		int colIndex = listView.Columns.Add (column);
+		listView.Columns [colIndex].Width = columnWidth;
+	}
 
-	// Use this for initialization
-	void Start () {
-	
+	public static void ClearAllItems (this ListView listView)
+	{
+		int itemsCount = listView.Items.Count;
+		for (int i = 0; i < itemsCount; i++) {
+			listView.Items.RemoveAt (0);
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+
 }
