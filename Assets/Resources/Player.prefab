@@ -182,7 +182,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 50
+  MaxDistance: 60
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -251,9 +251,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: .914886475
-  MaxDistance: 500
+  MaxDistance: 60
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1692,7 +1692,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: MaxDistance
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: rolloffMode
@@ -1725,6 +1725,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
       value: .681222677
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BypassListenerEffects
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

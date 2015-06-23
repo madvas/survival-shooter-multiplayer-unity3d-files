@@ -60,7 +60,7 @@ public class NetworkManager : Photon.MonoBehaviour
 		if (onJoinedLobby != null) {
 			onJoinedLobby ();
 		}
-		JoinRoom ("Room 1", "Shooter" + Random.Range (1000, 9999));
+//		JoinRoom ("Room 1", "Shooter" + Random.Range (1000, 9999));
 	}
 
 	public List<Networking.Room> GetRoomList (int maxRooms, int maxPlayersPerRoom)
