@@ -21,15 +21,11 @@ public class NetworkManager : Photon.MonoBehaviour
 	public delegate void OnLeftRoomAction ();
 	public static event OnLeftRoomAction onLeftRoom;
 
+	public delegate void OnPhotonPlayerPropertiesChangedAction ();
+	public static event OnPhotonPlayerPropertiesChangedAction onPlayerPropertiesChanged;
+
 	Vector3 position;
 	Quaternion rotation;
-	float smoothing = 10f;
-	GameObject game;
-
-	void Awake ()
-	{
-		game = GameObject.FindGameObjectWithTag ("Game");
-	}
 
 	void Start ()
 	{
@@ -109,6 +105,13 @@ public class NetworkManager : Photon.MonoBehaviour
 		if (onLeftRoom != null) {
 			Debug.Log ("room left");
 			onLeftRoom ();
+		}
+	}
+
+	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
+	{
+		if (onPlayerPropertiesChanged != null) {
+			onPlayerPropertiesChanged ();
 		}
 	}
 
