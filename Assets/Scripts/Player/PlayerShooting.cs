@@ -60,7 +60,7 @@ public class PlayerShooting : MonoBehaviour
 		if (Physics.Raycast (shootRay, out shootHit, range, shootableMask)) {
 			photonView.RPC ("Shoot", PhotonTargets.All, shootHit.point);
 			if (shootHit.transform.tag == "Player") {
-				photonView.RPC ("TakeShot", PhotonTargets.All, damagePerShot, PhotonNetwork.player.name);
+				shootHit.transform.GetComponent<PhotonView> ().RPC ("TakeShot", PhotonTargets.All, damagePerShot, PhotonNetwork.player.name);
 			}
 
 		} else {
