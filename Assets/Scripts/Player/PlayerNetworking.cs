@@ -94,14 +94,18 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	}
 
 	[PunRPC]
-	public void TakeShot (int damage, string shooterName)
+	public void TakeShot (int damage, int shooterId)
 	{
 		bool died;
 		playerHealth.TakeDamage (damage, out died);
-		Debug.Log ("taking damage: " + photonView.owner.name);
-		Debug.Log ("Player playing: " + PhotonNetwork.playerName);
-		if (photonView.isMine && died) {
-			photonView.owner.AddDeaths (1);
+		if (died) {
+			if (photonView.isMine) {
+				photonView.owner.AddDeaths (1);
+			}
+
+			if (shooterId == PhotonNetwork.player.ID) {
+				PhotonNetwork.player.AddScore (1);
+			}
 		}
 	}
 
