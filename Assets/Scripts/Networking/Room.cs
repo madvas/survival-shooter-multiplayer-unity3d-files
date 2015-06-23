@@ -20,7 +20,7 @@ namespace Networking
 		public Room (RoomInfo room)
 		{
 			Debug.Log ("creating room " + room.name);
-			new Room (room.name, room.maxPlayers, room.playerCount);
+			Room (room.name, room.maxPlayers, room.playerCount);
 		}
 	}
 }
