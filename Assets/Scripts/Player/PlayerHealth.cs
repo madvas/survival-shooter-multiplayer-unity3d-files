@@ -81,8 +81,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 
 	public void TakeDamage (int amount)
 	{
-		Debug.Log ("take damage");
-		Debug.Log (isDead);
 		if (isDead) {
 			return;
 		}
@@ -108,7 +106,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 
 	void Death ()
 	{
-		Debug.Log ("Death");
 		playerSpawning.DisablePlayer (); 
 		isDead = true;
 		anim.SetTrigger ("Die");
