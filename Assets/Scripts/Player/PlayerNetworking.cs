@@ -98,6 +98,8 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	{
 		bool died;
 		playerHealth.TakeDamage (damage, out died);
+		Debug.Log ("taking damage: " + photonView.owner.name);
+		Debug.Log ("Player playing: " + PhotonNetwork.playerName);
 		if (photonView.isMine && died) {
 			photonView.owner.AddDeaths (1);
 		}
