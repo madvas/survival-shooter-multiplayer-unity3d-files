@@ -107,6 +107,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	[PunRPC]
 	public void RespawnPlayer ()
 	{
+		Debug.Log ("Respawn player!!");
 		anim.SetTrigger (respawnHash);
 	}
 
