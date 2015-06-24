@@ -51,6 +51,11 @@ public class RoomsCanvas : MonoBehaviour
 		NetworkManager.onRoomListUpdate -= onRoomListUpdate;
 	}
 
+	void OnJoinedRoom ()
+	{
+
+	}
+
 	public void JoinSelectedRoom ()
 	{
 		Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
