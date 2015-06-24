@@ -12,10 +12,11 @@ public static class PositionHelper
 		float randomZ = Random.Range (floorBounds.center.z + (floorBounds.extents.z / 2) - offset, floorBounds.center.z - (floorBounds.extents.z / 2) + offset);
 		Vector3 randomPosition = new Vector3 (randomX, 0, randomZ);
 		randomPosition = ValidateSpawnPosition (randomPosition);
-		Quaternion rotation = Random.rotation;
-		rotation.x = 0;
-		rotation.z = 0;
-		return new PositionData (randomPosition, Random.rotation);
+
+		Quaternion randomRotation = Random.rotation;
+		randomRotation.x = 0;
+		randomRotation.z = 0;
+		return new PositionData (randomPosition, randomRotation);
 	}
 
 	static Vector3 ValidateSpawnPosition (Vector3 position)

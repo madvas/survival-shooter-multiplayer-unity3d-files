@@ -26,7 +26,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 
 	void Awake ()
 	{
-		Debug.Log ("network awake");
 		GameObject gunBarrelEnd = transform.Find ("GunBarrelEnd").gameObject;
 		gunParticles = GetComponentInChildren<ParticleSystem> ();
 		gunLine = GetComponentInChildren<LineRenderer> ();
@@ -40,7 +39,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 
 	void Start ()
 	{
-		Debug.Log ("network start");
 		if (photonView.isMine) {
 			GetComponentInChildren<PlayerShooting> ().enabled = true;
 			GetComponent<PlayerMovement> ().enabled = true;
@@ -114,7 +112,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	[PunRPC]
 	public void RespawnPlayer ()
 	{
-		Debug.Log ("PlayerNetworking Respawn");
 		anim.SetTrigger (respawnHash);
 	}
 
@@ -132,7 +129,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 
 	void OnPlayerRespawn ()
 	{
-		Debug.Log ("PlayerNetworking respawn");
 		if (photonView.isMine) {
 			photonView.RPC ("RespawnPlayer", PhotonTargets.All);
 		}
