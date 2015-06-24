@@ -29,7 +29,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 			if (transform.position.y < -1) {
 				isSinking = false;
-				gameObject.SetActive (false);
+				SetPlayerVisibility (false);
 			}
 		}
 	}
@@ -46,7 +46,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void RespawnPlayer ()
 	{
-		gameObject.SetActive (true);
 		Debug.Log ("Respawning playering");
 		GetComponent<CapsuleCollider> ().enabled = true;
 		GetComponent <Rigidbody> ().isKinematic = false;
@@ -57,6 +56,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			transform.position = randomPosition.position;
 			transform.rotation = randomPosition.rotation;
 		}
+		SetPlayerVisibility (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 	
