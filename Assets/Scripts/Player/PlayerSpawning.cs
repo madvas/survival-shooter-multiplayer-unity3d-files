@@ -84,7 +84,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	}
 
 
-
 	void OnPlayerDead ()
 	{
 		Invoke ("RespawnPlayer", respawnDelay);
