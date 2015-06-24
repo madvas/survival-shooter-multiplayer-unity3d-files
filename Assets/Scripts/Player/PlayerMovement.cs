@@ -110,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnPlayerDead ()
 	{
+		Debug.Log ("setting is walking false");
 		anim.SetBool (IsWalkingHash, false);
 	}
 }
