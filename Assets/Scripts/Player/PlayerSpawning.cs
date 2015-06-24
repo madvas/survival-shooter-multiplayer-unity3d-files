@@ -44,7 +44,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		RespawnPlayer ();
 	}
 
-	public void RespawnPlayer ()
+	void RespawnPlayer ()
 	{
 		gameObject.SetActive (true);
 		Debug.Log ("Respawning playering");
@@ -60,7 +60,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 	
-	public void DestroyPlayer ()
+	void DestroyPlayer ()
 	{
 		if (photonView.isMine) {
 			isSinking = true;
@@ -70,11 +70,20 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		GetComponent <Rigidbody> ().isKinematic = true;
 	}
 
-	public void DisablePlayerControl ()
+	void SetPlayerVisibility (bool enabled)
+	{
+		foreach (var item in gameObject.GetComponentsInChildren<SkinnedMeshRenderer>()) {
+			item.enabled = enabled;
+		}
+	}
+
+	void DisablePlayerControl ()
 	{
 		playerMovement.enabled = false;
 		playerShooting.enabled = false;
 	}
+
+
 
 	void OnPlayerDead ()
 	{
