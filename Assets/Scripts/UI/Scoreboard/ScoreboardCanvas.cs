@@ -29,9 +29,7 @@ public class ScoreboardCanvas : MonoBehaviour
 	
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.Tab)) {
-			canvas.enabled = !canvas.enabled;
-		}
+		canvas.enabled = Input.GetKey (KeyCode.Tab);
 	}
 
 	void OnJoinedRoom ()
