@@ -38,6 +38,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void OnPlayerInstantiated ()
 	{
+		Debug.Log ("OnPlayerInstantiated");
 		this.enabled = true;
 		if (roomTimeManager.isPauseState ()) {
 			DestroyPlayer (true);
