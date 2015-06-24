@@ -26,7 +26,6 @@ GameObject:
   - 4: {fileID: 400002}
   - 137: {fileID: 13700002}
   - 65: {fileID: 6597926}
-  - 54: {fileID: 5444166}
   m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
@@ -74,6 +73,8 @@ GameObject:
   - 114: {fileID: 11473032}
   - 81: {fileID: 8124976}
   - 23: {fileID: 2332390}
+  - 65: {fileID: 6561856}
+  - 65: {fileID: 6554960}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -171,21 +172,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!54 &5444166
-Rigidbody:
+--- !u!65 &6554960
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Mass: 1.00000001e-07
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Size: {x: 1.4869318, y: .0887731016, z: .646993577}
+  m_Center: {x: -.251054704, y: -8.94069672e-08, z: .10632965}
+--- !u!65 &6561856
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: .699999988, y: 1.13295412, z: 1.15525353}
+  m_Center: {x: .280000001, y: .553712487, z: .182626843}
 --- !u!65 &6597926
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -194,7 +204,7 @@ BoxCollider:
   m_GameObject: {fileID: 100002}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.4869318, y: .0887731016, z: .646993577}
   m_Center: {x: -.251054704, y: -8.94069672e-08, z: .10632965}
@@ -532,11 +542,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 100006}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .5
-  m_Height: 1.20000005
-  m_Direction: 1
-  m_Center: {x: .200000003, y: .600000024, z: 0}
+  m_Enabled: 0
+  m_Radius: .74000001
+  m_Height: 1.53999996
+  m_Direction: 2
+  m_Center: {x: .230000004, y: .649999976, z: .180000007}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
