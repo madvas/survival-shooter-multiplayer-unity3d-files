@@ -17,7 +17,7 @@ using UnityEngine;
 /// </remarks>
 public class RoomTimeManager : MonoBehaviour
 {
-	public int SecondsPerTurn = 5;                  // time per round/turn
+	public int SecondsPerRound = 5;                  // time per round/turn
 	public double StartTime;                        // this should could also be a private. i just like to see this in inspector
 	public Rect TextPos = new Rect (0, 80, 150, 300);   // default gui position. inspector overrides this!
 	
@@ -26,7 +26,9 @@ public class RoomTimeManager : MonoBehaviour
 
 	public delegate void OnSecondElapsedAction (string remainingTime);
 	public static event OnSecondElapsedAction onSecondElapsed;
-	
+
+	public const bool isPause;
+
 	private void StartRoundNow ()
 	{
 		Debug.Log ("start round now");
@@ -39,7 +41,7 @@ public class RoomTimeManager : MonoBehaviour
 			return;
 		}
 		startRoundWhenTimeIsSynced = false;
-		
+		isPause = false;
 		ExitGames.Client.Photon.Hashtable startTimeProp = new Hashtable ();  // only use ExitGames.Client.Photon.Hashtable for Photon
 		startTimeProp [StartTimeKey] = PhotonNetwork.time;
 		PhotonNetwork.room.SetCustomProperties (startTimeProp);              // implement OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged) to get this change everywhere
@@ -91,7 +93,7 @@ public class RoomTimeManager : MonoBehaviour
 	void OnSecondElapsed ()
 	{
 		double elapsedTime = (PhotonNetwork.time - StartTime);
-		double remainingTime = SecondsPerTurn - (elapsedTime % SecondsPerTurn);
+		double remainingTime = SecondsPerRound - (elapsedTime % SecondsPerRound);
 		if (onSecondElapsed != null) {
 			onSecondElapsed (TimeHelper.SecondsToTimer ((float)remainingTime));
 		}
