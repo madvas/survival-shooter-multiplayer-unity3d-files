@@ -48,13 +48,11 @@ public class ScoreboardCanvas : MonoBehaviour
 
 	void OnPauseStarted ()
 	{
-		Debug.Log ("PAUSE STARTED");
 		canvas.enabled = true;
 	}
 
 	void OnRoundStarted ()
 	{
-		Debug.Log ("ROUND STARTED");
 		canvas.enabled = false;
 	}
 

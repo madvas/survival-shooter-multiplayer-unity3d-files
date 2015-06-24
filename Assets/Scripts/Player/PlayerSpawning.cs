@@ -14,7 +14,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	PlayerHealth playerHealth;
 	bool isSinking;
 
-	// Use this for initialization
 	void Awake ()
 	{
 		playerMovement = GetComponent <PlayerMovement> ();
@@ -61,11 +60,12 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine) {
 			isSinking = true;
 		}
+		DisablePlayerControl ();
 		GetComponent<CapsuleCollider> ().enabled = false;
 		GetComponent <Rigidbody> ().isKinematic = true;
 	}
 
-	public void DisablePlayer ()
+	public void DisablePlayerControl ()
 	{
 		playerMovement.enabled = false;
 		playerShooting.enabled = false;
