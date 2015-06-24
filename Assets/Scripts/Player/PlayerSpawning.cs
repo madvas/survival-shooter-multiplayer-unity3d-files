@@ -12,6 +12,8 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	SkinnedMeshRenderer[] playerRenderers;
 	bool isSinking;
 	RoomTimeManager roomTimeManager;
+	int dieAnimHash = Animator.StringToHash ("Die");
+	Animator anim;
 
 	void Awake ()
 	{
@@ -20,6 +22,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
 		playerHealth = GetComponent<PlayerHealth> ();
 		playerRenderers = GetComponentsInChildren<SkinnedMeshRenderer> ();
+		anim = GetComponent<Animator> ();
 	}
 
 	void Update ()
@@ -37,6 +40,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	{
 		if (roomTimeManager.isPauseState ()) {
 			Debug.Log ("is pause state and die now bitch");
+//			anim.SetTrigger (dieAnimHash);
 			DestroyPlayer (true);
 		}
 	}
