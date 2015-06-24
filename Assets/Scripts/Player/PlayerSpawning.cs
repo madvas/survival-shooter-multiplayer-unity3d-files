@@ -14,9 +14,11 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	PlayerHealth playerHealth;
 	SkinnedMeshRenderer[] playerRenderers;
 	bool isSinking;
+	RoomTimeManager roomTimeManager;
 
 	void Awake ()
 	{
+		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager");
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
 		playerHealth = GetComponent<PlayerHealth> ();
@@ -31,6 +33,14 @@ public class PlayerSpawning : Photon.MonoBehaviour
 				isSinking = false;
 				SetPlayerVisibility (false);
 			}
+		}
+	}
+
+	void OnPlayerInstantiated ()
+	{
+		Debug.Log ("spawn cauht OnPlayerInstantiated");
+		if (roomTimeManager.isPauseState ()) {
+			DestroyPlayer (true);
 		}
 	}
 
