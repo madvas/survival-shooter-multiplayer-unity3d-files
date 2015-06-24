@@ -12,7 +12,6 @@ public class PlayerManager : MonoBehaviour
 
 	void InstantiatePlayer ()
 	{
-		PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
 		GameObject player = PhotonNetwork.Instantiate ("Player", Vector3.zero, Quaternion.identity, 0);
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnPlayerInstantiated", player);
