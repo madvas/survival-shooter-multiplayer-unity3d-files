@@ -54,12 +54,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 	{
 		playerSpawning.onPlayerRespawn += onPlayerRespawn;
 	}
-	
-	
-	void OnDisable ()
-	{
-		//playerSpawning.onPlayerRespawn -= onPlayerRespawn;
-	}
 
 	void Update ()
 	{
@@ -113,9 +107,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 		anim.SetTrigger ("Die");
 		playerAudio.clip = deathClip;
 		playerAudio.Play ();
-		if (onPlayerDead != null) {
-			onPlayerDead ();
-		}
+		gameObject.BroadcastMessage ("OnPlayerDead", SendMessageOptions.DontRequireReceiver);
 	}
 
 	void onPlayerRespawn ()
