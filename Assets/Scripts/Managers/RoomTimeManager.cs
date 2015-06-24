@@ -24,6 +24,7 @@ public class RoomTimeManager : MonoBehaviour
 	
 	private bool startRoundWhenTimeIsSynced;        // used in an edge-case when we wanted to set a start time but don't know it yet.
 	private const string StartTimeKey = "st";       // the name of our "start time" custom property.
+	private const string IsPauseKey = "p";
 
 	public delegate void OnSecondElapsedAction (string remainingTime);
 	public static event OnSecondElapsedAction onSecondElapsed;
@@ -43,9 +44,7 @@ public class RoomTimeManager : MonoBehaviour
 		}
 		startRoundWhenTimeIsSynced = false;
 		isPause = false;
-		ExitGames.Client.Photon.Hashtable startTimeProp = new Hashtable ();  // only use ExitGames.Client.Photon.Hashtable for Photon
-		startTimeProp [StartTimeKey] = PhotonNetwork.time;
-		PhotonNetwork.room.SetCustomProperties (startTimeProp);              // implement OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged) to get this change everywhere
+		setNewStartTime ();
 		InvokeRepeating ("OnSecondElapsed", 0, 1);
 	}
 	
@@ -99,5 +98,12 @@ public class RoomTimeManager : MonoBehaviour
 		if (onSecondElapsed != null) {
 			onSecondElapsed (TimeHelper.SecondsToTimer ((float)remainingTime));
 		}
+	}
+
+	void setNewStartTime ()
+	{
+		ExitGames.Client.Photon.Hashtable startTimeProp = new Hashtable ();  // only use ExitGames.Client.Photon.Hashtable for Photon
+		startTimeProp [StartTimeKey] = PhotonNetwork.time;
+		PhotonNetwork.room.SetCustomProperties (startTimeProp);              // implement OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged) to get this change everywhere
 	}
 }
