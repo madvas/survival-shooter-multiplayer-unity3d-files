@@ -21,6 +21,8 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	Transform gunEndTransform;
 	PlayerHealth playerHealth;
 	PlayerSpawning playerSpawning;
+	int IsWalkingHash = Animator.StringToHash ("IsWalking");
+	int respawnHash = Animator.StringToHash ("Respawn");
 
 	void Awake ()
 	{
@@ -78,7 +80,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		if (stream.isWriting) {
 			stream.SendNext (transform.position);
 			stream.SendNext (transform.rotation);
-			stream.SendNext (anim.GetBool ("IsWalking"));
+			stream.SendNext (anim.GetBool (IsWalkingHash));
 		} else {
 			position = (Vector3)stream.ReceiveNext ();
 			rotation = (Quaternion)stream.ReceiveNext ();

@@ -12,7 +12,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	PlayerMovement playerMovement;                              
 	PlayerShooting playerShooting;
 	PlayerHealth playerHealth;
-	Animator anim;          
 	bool isSinking;
 
 	// Use this for initialization
@@ -21,7 +20,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
 		playerHealth = GetComponent<PlayerHealth> ();
-		anim = GetComponent <Animator> ();
 	}
 
 	void Update ()
