@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
 
 	public static void SpawnPlayer ()
 	{
-		PositionData randomPosition = PositionManager.GetRandomSpawnPosition ();
+		PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
 		Debug.Log ("spawning player");
 		GameObject player = PhotonNetwork.Instantiate ("Player", randomPosition.position, randomPosition.rotation, 0);
 		GameObjectHelper.SendMessageToAll ("OnPlayerInstantiated", player);

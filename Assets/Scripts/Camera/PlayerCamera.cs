@@ -19,12 +19,7 @@ public class PlayerCamera : MonoBehaviour
 		transform.position = Vector3.Lerp (transform.position, targetCamPos, smoothing * Time.deltaTime);
 	}		
 
-	void Awake ()
-	{
-		PlayerManager.onPlayerInstantiated += onPlayerInstantiated;
-	}
-
-	void onPlayerInstantiated (GameObject player)
+	void OnPlayerInstantiated (GameObject player)
 	{
 		playerTransform = player.transform;
 	}

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public static class PositionManager
+public static class PositionHelper
 {
 	static GameObject floor = GameObject.FindGameObjectWithTag ("Floor");
 	static Bounds floorBounds = GameObject.FindGameObjectWithTag ("Floor").GetComponent<BoxCollider> ().bounds;
