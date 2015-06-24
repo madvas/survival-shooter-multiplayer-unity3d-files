@@ -36,18 +36,20 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	void OnPlayerInstantiated ()
 	{
 		if (roomTimeManager.isPauseState ()) {
-			DestroyPlayer (true);
+			Debug.Log ("is pause state and die now bitch");
+//			DestroyPlayer (true);
 		}
 	}
 
 	void OnPauseStarted ()
 	{
+		Debug.Log ("on pause");
 		DestroyPlayer ();
 	}
 
 	void OnRoundStarted ()
 	{
-		RespawnPlayer ();
+//		RespawnPlayer ();
 	}
 
 	void RespawnPlayer ()
@@ -68,6 +70,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void DestroyPlayer (bool instantly = false)
 	{
+		Debug.Log ("Destroying player");
 		if (instantly) {
 			SetPlayerVisibility (false);
 		} else {
