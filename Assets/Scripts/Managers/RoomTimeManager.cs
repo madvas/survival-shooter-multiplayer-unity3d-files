@@ -20,7 +20,6 @@ public class RoomTimeManager : MonoBehaviour
 	public int SecondsPerRound = 5;                  // time per round/turn
 	public int SecondsPerPause = 10;
 	public double StartTime;                        // this should could also be a private. i just like to see this in inspector
-	public Rect TextPos = new Rect (0, 80, 150, 300);   // default gui position. inspector overrides this!
 	
 	private bool startRoundWhenTimeIsSynced;        // used in an edge-case when we wanted to set a start time but don't know it yet.
 	private const string StartTimeKey = "st";       // the name of our "start time" custom property.
@@ -29,8 +28,11 @@ public class RoomTimeManager : MonoBehaviour
 	public delegate void OnSecondElapsedAction (string remainingTime);
 	public static event OnSecondElapsedAction onSecondElapsed;
 
-	public delegate void OnStateChangeAction (bool isPause);
-	public static event OnStateChangeAction onStateChange;
+	public delegate void OnRoundStartedAction ();
+	public static event OnRoundStartedAction onRoundStarted;
+
+	public delegate void OnPauseStartedAction ();
+	public static event OnPauseStartedAction onPauseStarted;
 
 	bool isPause = true;
 
@@ -71,8 +73,11 @@ public class RoomTimeManager : MonoBehaviour
 		}
 		if (propertiesThatChanged.ContainsKey (IsPauseKey)) {
 			isPause = (bool)propertiesThatChanged [IsPauseKey];
-			if (onStateChange != null) {
-				onStateChange (isPause);
+			if (onRoundStarted != null && !isPause) {
+				onRoundStarted ();
+			}
+			if (onPauseStarted != null && !isPause) {
+				onPauseStarted ();
 			}
 		}
 	}
