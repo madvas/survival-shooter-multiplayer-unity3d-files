@@ -66,12 +66,14 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			return;
 		}
 
-		PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
-		transform.position = randomPosition.position;
-		transform.rotation = randomPosition.rotation;
-		SetPlayerPhysics (true);
-		SetPlayerVisibility (true);
-		SetPlayerControl (true);
+		if (photonView.isMine) {
+			PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
+			transform.position = randomPosition.position;
+			transform.rotation = randomPosition.rotation;
+			SetPlayerPhysics (true);
+			SetPlayerVisibility (true);
+			SetPlayerControl (true);
+		}
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 
@@ -80,7 +82,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		Debug.Log ("Destroying player: " + instantly);
 		if (instantly) {
 			SetPlayerVisibility (false);
-		} else {
+		} else if (photonView.isMine) {
 			isSinking = true;
 		}
 
