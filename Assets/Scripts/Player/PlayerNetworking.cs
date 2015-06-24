@@ -39,12 +39,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 
 	void Start ()
 	{
-		if (photonView.isMine) {
-			GetComponentInChildren<PlayerShooting> ().enabled = true;
-			GetComponent<PlayerMovement> ().enabled = true;
-			GetComponent<PlayerSpawning> ().enabled = true;
-			GetComponent<AudioListener> ().enabled = true;
-		} else {
+		if (!photonView.isMine) {
 			StartCoroutine (UpdateData ());
 		}
 	}
