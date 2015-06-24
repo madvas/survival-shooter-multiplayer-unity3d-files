@@ -100,7 +100,7 @@ public class RoomTimeManager : MonoBehaviour
 			onSecondElapsed (TimeHelper.SecondsToTimer ((float)remainingSeconds));
 		}
 
-		if (remainingSeconds == 0) {
+		if (remainingSeconds == 0f) {
 			setNewStartTime ();
 		}
 	}
