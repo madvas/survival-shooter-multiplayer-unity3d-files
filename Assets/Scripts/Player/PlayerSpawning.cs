@@ -12,7 +12,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	PlayerMovement playerMovement;                              
 	PlayerShooting playerShooting;
 	PlayerHealth playerHealth;
-	MeshRenderer meshRenderer;
+	SkinnedMeshRenderer[] playerRenderers;
 	bool isSinking;
 
 	void Awake ()
@@ -20,7 +20,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
 		playerHealth = GetComponent<PlayerHealth> ();
-		meshRenderer = GetComponent<MeshRenderer> ();
+		playerRenderers = GetComponentsInChildren<SkinnedMeshRenderer> ();
 	}
 
 	void Update ()
@@ -72,7 +72,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void SetPlayerVisibility (bool enabled)
 	{
-		foreach (var item in gameObject.GetComponentsInChildren<SkinnedMeshRenderer>()) {
+		foreach (var item in playerRenderers) {
 			item.enabled = enabled;
 		}
 	}
