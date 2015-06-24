@@ -24,16 +24,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		anim = GetComponent <Animator> ();
 	}
 
-	void OnEnable ()
-	{
-		playerHealth.onPlayerDead += OnPlayerDead ();
-	}
-
-	void OnDisable ()
-	{
-		playerHealth.onPlayerDead -= OnPlayerDead ();
-	}
-
 	void Update ()
 	{
 		if (isSinking) {
