@@ -52,6 +52,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void RespawnPlayer ()
 	{
+		Debug.Log ("respawn player");
 		if (roomTimeManager.isPauseState ()) {
 			return;
 		}
@@ -99,6 +100,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void SetPlayerControl (bool enabled)
 	{
+		Debug.Log ("setting player control " + enabled);
 		playerMovement.enabled = enabled;
 		playerShooting.enabled = enabled;
 	}
