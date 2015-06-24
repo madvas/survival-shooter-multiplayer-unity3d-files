@@ -40,9 +40,8 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void OnPlayerInstantiated ()
 	{
+		this.enabled = true;
 		if (roomTimeManager.isPauseState ()) {
-			Debug.Log ("is pause state and die now bitch");
-//			anim.SetTrigger (dieAnimHash);
 			DestroyPlayer (true);
 		}
 	}

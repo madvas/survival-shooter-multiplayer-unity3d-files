@@ -19,7 +19,8 @@ public class PlayerHealth : Photon.MonoBehaviour
 
 	PlayerSpawning playerSpawning;
 	bool isDead;                                                
-	bool damaged;     
+	bool damaged;
+	int dieAnimHash = Animator.StringToHash ("Die");
 
 	int _currentHealth;
 	public int currentHealth {
@@ -100,7 +101,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 	void Death ()
 	{
 		isDead = true;
-		anim.SetTrigger ("Die");
+		anim.SetTrigger (dieAnimHash);
 		playerAudio.clip = deathClip;
 		playerAudio.Play ();
 		gameObject.BroadcastMessage ("OnPlayerDead", SendMessageOptions.DontRequireReceiver);
