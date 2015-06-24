@@ -28,7 +28,7 @@ public class ScoreboardCanvas : MonoBehaviour
 	
 	void Update ()
 	{
-		canvas.enabled = Input.GetKey (KeyCode.Tab);
+		canvas.enabled = PhotonNetwork.inRoom && Input.GetKey (KeyCode.Tab);
 	}
 
 	void OnJoinedRoom ()
@@ -50,7 +50,6 @@ public class ScoreboardCanvas : MonoBehaviour
 			.ThenByDescending (p => p.GetDeaths ())
 			.ToList ();
 		foreach (var player in players) {
-			Debug.Log (player.name);
 			listView.AddItem (new string[]{
 				player.name,
 				player.GetScore ().ToString ("D"),
