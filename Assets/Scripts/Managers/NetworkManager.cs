@@ -89,6 +89,11 @@ public class NetworkManager : Photon.MonoBehaviour
 		PhotonNetwork.player.name = playerName;
 		PhotonNetwork.JoinOrCreateRoom (roomName, roomOptions, TypedLobby.Default);
 	}
+
+	public static void LeaveRoom ()
+	{
+		PhotonNetwork.LeaveRoom ();
+	}
 	
 	void OnJoinedRoom ()
 	{
