@@ -13,11 +13,10 @@ public class PlayerManager : MonoBehaviour
 	void InstantiatePlayer ()
 	{
 		PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
-//		GameObject player = PhotonNetwork.Instantiate ("Player", randomPosition.position, randomPosition.rotation, 0);
-		GameObject player = PhotonNetwork.Instantiate ("Player", Vector3.zero, Quaternion.identity, 0);
-//		player.GetComponentInChildren<PlayerShooting> ().enabled = true;
-//		player.GetComponent<PlayerMovement> ().enabled = true;
-//		player.GetComponent<PlayerSpawning> ().enabled = true;
+		GameObject player = PhotonNetwork.Instantiate ("Player", randomPosition.position, randomPosition.rotation, 0);
+		player.GetComponentInChildren<PlayerShooting> ().enabled = true;
+		player.GetComponent<PlayerMovement> ().enabled = true;
+		player.GetComponent<PlayerSpawning> ().enabled = true;
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnPlayerInstantiated", player);
 	}
