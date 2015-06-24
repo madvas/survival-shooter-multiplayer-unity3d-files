@@ -18,6 +18,7 @@ using UnityEngine;
 public class RoomTimeManager : MonoBehaviour
 {
 	public int SecondsPerRound = 5;                  // time per round/turn
+	public int SecondsPerPause = 10;
 	public double StartTime;                        // this should could also be a private. i just like to see this in inspector
 	public Rect TextPos = new Rect (0, 80, 150, 300);   // default gui position. inspector overrides this!
 	
