@@ -38,7 +38,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 
 	void Start ()
 	{
-		playerSpawning.onPlayerRespawn += onPlayerRespawn;
 		if (photonView.isMine) {
 			GetComponentInChildren<PlayerShooting> ().enabled = true;
 			GetComponent<PlayerMovement> ().enabled = true;
@@ -128,7 +127,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		gunLine.SetPosition (1, hitPositon);
 	}
 
-	void onPlayerRespawn ()
+	void OnPlayerRespawn ()
 	{
 		Debug.Log ("PlayerNetworking respawn");
 		if (photonView.isMine) {

@@ -47,9 +47,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			transform.position = randomPosition.position;
 			transform.rotation = randomPosition.rotation;
 		}
-		if (onPlayerRespawn != null) {
-			onPlayerRespawn ();
-		}
+		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 	
 	public void DestroyPlayer ()

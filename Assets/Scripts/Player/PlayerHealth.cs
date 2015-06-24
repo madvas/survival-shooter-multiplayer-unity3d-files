@@ -50,11 +50,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 		ResetHealth ();
 	}
 
-	void OnEnable ()
-	{
-		playerSpawning.onPlayerRespawn += onPlayerRespawn;
-	}
-
 	void Update ()
 	{
 		if (damageImage) {
@@ -110,9 +105,8 @@ public class PlayerHealth : Photon.MonoBehaviour
 		gameObject.BroadcastMessage ("OnPlayerDead", SendMessageOptions.DontRequireReceiver);
 	}
 
-	void onPlayerRespawn ()
+	void OnPlayerRespawn ()
 	{
-		Debug.Log ("health respawn");
 		ResetHealth ();
 		isDead = false;
 	}
