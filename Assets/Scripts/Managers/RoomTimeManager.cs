@@ -50,8 +50,6 @@ public class RoomTimeManager : MonoBehaviour
 		if (PhotonNetwork.isMasterClient) {
 			this.InitTimerNow ();
 		} else {
-			// as the creator of the room sets the start time after entering the room, we may enter a room that has no timer started yet
-			Debug.Log ("StartTime already set: " + PhotonNetwork.room.customProperties.ContainsKey (StartTimeKey));
 			InvokeRepeating ("OnSecondElapsed", 0, 1);
 		}
 	}
@@ -60,6 +58,7 @@ public class RoomTimeManager : MonoBehaviour
 	{
 		CancelInvoke ("OnSecondElapsed");
 		startRoundWhenTimeIsSynced = true;
+		isPause = true;
 	}
 	
 	/// <summary>Called by PUN when new properties for the room were set (by any client in the room).</summary>
@@ -83,7 +82,7 @@ public class RoomTimeManager : MonoBehaviour
 	/// Just to make extremely sure this never happens, a new masterClient will check if it has to
 	/// start a new round.
 	/// </remarks>
-	public void OnMasterClientSwitched (PhotonPlayer newMasterClient)
+	void OnMasterClientSwitched (PhotonPlayer newMasterClient)
 	{
 		if (!PhotonNetwork.room.customProperties.ContainsKey (StartTimeKey)) {
 			Debug.Log ("The new master starts a new round, cause we didn't start yet.");
@@ -123,8 +122,10 @@ public class RoomTimeManager : MonoBehaviour
 
 	void SetRoomProperty<T> (string name, T value)
 	{
-		ExitGames.Client.Photon.Hashtable prop = new Hashtable ();  // only use ExitGames.Client.Photon.Hashtable for Photon
-		prop [name] = value;
-		PhotonNetwork.room.SetCustomProperties (prop);   
+		if (PhotonNetwork.inRoom) {
+			ExitGames.Client.Photon.Hashtable prop = new Hashtable (); 
+			prop [name] = value;
+			PhotonNetwork.room.SetCustomProperties (prop);   
+		}
 	}
 }
