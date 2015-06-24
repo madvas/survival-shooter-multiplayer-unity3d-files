@@ -11,6 +11,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	public float respawnDelay = 2;
 	PlayerMovement playerMovement;                              
 	PlayerShooting playerShooting;
+	PlayerHealth playerHealth;
 	Animator anim;          
 	bool isSinking;
 
@@ -19,7 +20,18 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	{
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
+		playerHealth = GetComponent<PlayerHealth> ();
 		anim = GetComponent <Animator> ();
+	}
+
+	void OnEnable ()
+	{
+		playerHealth.onPlayerDead += OnPlayerDead ();
+	}
+
+	void OnDisable ()
+	{
+		playerHealth.onPlayerDead -= OnPlayerDead ();
 	}
 
 	void Update ()
@@ -57,12 +69,17 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 		GetComponent<CapsuleCollider> ().enabled = false;
 		GetComponent <Rigidbody> ().isKinematic = true;
-		Invoke ("RespawnPlayer", respawnDelay);
 	}
 
 	public void DisablePlayer ()
 	{
 		playerMovement.enabled = false;
 		playerShooting.enabled = false;
+	}
+
+	void OnPlayerDead ()
+	{
+		DestroyPlayer ();
+		Invoke ("RespawnPlayer", respawnDelay);
 	}
 }
