@@ -65,6 +65,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 		if (photonView.isMine && Input.GetKeyDown (KeyCode.Q)) {
 			bool died;
 			TakeDamage (100, out died);
+			photonView.owner.AddDeaths (1);
 		}
 	}
 
