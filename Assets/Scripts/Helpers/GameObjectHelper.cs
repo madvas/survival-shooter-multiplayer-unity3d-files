@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
 
-public class ComponentHelper : MonoBehaviour
+public class GameObjectHelper : MonoBehaviour
 {
-
-	public static void sendMonoMessage (string methodName, params object[] parameters)
+	public static void SendMessageToAll (string methodName, params object[] parameters)
 	{
 		HashSet<GameObject> objectsToCall;
-		objectsToCall = PhotonNetwork.FindGameObjectsWithComponent (typeof(MonoBehaviour));
+		objectsToCall = FindGameObjectsWithComponent (typeof(MonoBehaviour));
 		
 		object callParameter = (parameters != null && parameters.Length == 1) ? parameters [0] : parameters;
 		foreach (GameObject gameObject in objectsToCall) {
@@ -23,7 +23,6 @@ public class ComponentHelper : MonoBehaviour
 		for (int index = 0; index < targetComponents.Length; index++) {
 			objectsWithComponent.Add (targetComponents [index].gameObject);
 		}
-		
 		return objectsWithComponent;
 	}
 }

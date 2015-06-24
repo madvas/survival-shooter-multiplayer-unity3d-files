@@ -42,6 +42,16 @@ public class ScoreboardCanvas : MonoBehaviour
 		UpdateScoreboard ();
 	}
 
+	void OnPauseStarted ()
+	{
+		canvas.enabled = true;
+	}
+
+	void OnRoundStarted ()
+	{
+		canvas.enabled = false;
+	}
+
 	void UpdateScoreboard ()
 	{
 		Debug.Log ("Updatescoreboard");

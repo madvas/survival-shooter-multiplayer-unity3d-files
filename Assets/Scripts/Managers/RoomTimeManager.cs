@@ -28,12 +28,6 @@ public class RoomTimeManager : MonoBehaviour
 	public delegate void OnSecondElapsedAction (string remainingTime);
 	public static event OnSecondElapsedAction onSecondElapsed;
 
-	public delegate void OnRoundStartedAction ();
-	public static event OnRoundStartedAction onRoundStarted;
-
-	public delegate void OnPauseStartedAction ();
-	public static event OnPauseStartedAction onPauseStarted;
-
 	bool isPause = true;
 
 	private void InitTimerNow ()
@@ -73,11 +67,10 @@ public class RoomTimeManager : MonoBehaviour
 		}
 		if (propertiesThatChanged.ContainsKey (IsPauseKey)) {
 			isPause = (bool)propertiesThatChanged [IsPauseKey];
-			if (onRoundStarted != null && !isPause) {
-				onRoundStarted ();
-			}
-			if (onPauseStarted != null && !isPause) {
-				onPauseStarted ();
+			if (isPause) {
+				GameObjectHelper.SendMessageToAll ("OnPauseStarted");
+			} else {
+				GameObjectHelper.SendMessageToAll ("OnRoundStarted");
 			}
 		}
 	}
