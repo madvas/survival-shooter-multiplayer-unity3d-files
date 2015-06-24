@@ -29,7 +29,6 @@ public class RoomTimeManager : MonoBehaviour
 
 	private void InitTimerNow ()
 	{
-		Debug.Log ("start round now");
 		// in some cases, when you enter a room, the server time is not available immediately.
 		// time should be 0.0f but to make sure we detect it correctly, check for a very low value.
 		if (PhotonNetwork.time < 0.0001f) {
@@ -46,7 +45,6 @@ public class RoomTimeManager : MonoBehaviour
 	/// <summary>Called by PUN when this client entered a room (no matter if joined or created).</summary>
 	void OnJoinedRoom ()
 	{
-		Debug.Log ("timemanager joined room");
 		if (PhotonNetwork.isMasterClient) {
 			this.InitTimerNow ();
 		} else {

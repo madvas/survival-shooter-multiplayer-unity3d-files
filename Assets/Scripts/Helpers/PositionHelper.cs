@@ -14,6 +14,8 @@ public static class PositionHelper
 		randomPosition = ValidateSpawnPosition (randomPosition);
 
 		Quaternion randomRotation = Random.rotation;
+		randomRotation.x = 0;
+		randomRotation.z = 0;
 		return new PositionData (randomPosition, randomRotation);
 	}
 
