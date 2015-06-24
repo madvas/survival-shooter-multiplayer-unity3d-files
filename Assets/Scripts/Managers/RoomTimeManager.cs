@@ -94,6 +94,7 @@ public class RoomTimeManager : MonoBehaviour
 	void OnSecondElapsed ()
 	{
 		float remainingTime = (float)(SecondsPerRound - (PhotonNetwork.time - StartTime));
+		Debug.Log (remainingTime);
 		if (Mathf.Round (remainingTime) == 0) {
 			setNewStartTime ();
 		}
