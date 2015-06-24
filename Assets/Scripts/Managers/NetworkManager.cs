@@ -75,7 +75,7 @@ public class NetworkManager : Photon.MonoBehaviour
 		return rooms;
 	}
 
-	public void JoinRoom (string roomName, string playerName)
+	public static void JoinRoom (string roomName, string playerName)
 	{
 		Debug.Log ("joining room" + roomName);
 		if (playerName.Length <= 0 || roomName.Length <= 0) {
