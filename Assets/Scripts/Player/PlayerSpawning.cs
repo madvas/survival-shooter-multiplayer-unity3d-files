@@ -58,9 +58,9 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 	
-	void DestroyPlayer ()
+	void DestroyPlayer (bool instantly = false)
 	{
-		if (photonView.isMine) {
+		if (photonView.isMine && !instantly) {
 			isSinking = true;
 		}
 		SetPlayerPhysics (false);
