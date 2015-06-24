@@ -2653,7 +2653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fe916fdd71a455c9327dac23d7f978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SecondsPerRound: 5
+  SecondsPerRound: 100
   StartTime: 0
   TextPos:
     serializedVersion: 2

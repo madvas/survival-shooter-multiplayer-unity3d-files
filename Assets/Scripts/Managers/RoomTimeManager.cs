@@ -58,6 +58,7 @@ public class RoomTimeManager : MonoBehaviour
 		} else {
 			// as the creator of the room sets the start time after entering the room, we may enter a room that has no timer started yet
 			Debug.Log ("StartTime already set: " + PhotonNetwork.room.customProperties.ContainsKey (StartTimeKey));
+			InvokeRepeating ("OnSecondElapsed", 0, 1);
 		}
 	}
 	
