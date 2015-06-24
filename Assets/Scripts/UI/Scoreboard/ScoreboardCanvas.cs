@@ -11,11 +11,13 @@ public class ScoreboardCanvas : MonoBehaviour
 	public int playerScoreColWidth = 70;
 	Canvas canvas;
 	ListView listView;
+	RoomTimeManager roomTimeManager;
 
 	void Awake ()
 	{
 		canvas = GetComponent<Canvas> ();
 		listView = GetComponentInChildren<ListView> ();
+		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager");
 	}
 
 	void Start ()
@@ -28,7 +30,9 @@ public class ScoreboardCanvas : MonoBehaviour
 	
 	void Update ()
 	{
-		canvas.enabled = PhotonNetwork.inRoom && Input.GetKey (KeyCode.Tab);
+		if (!roomTimeManager.isPauseState ()) {
+			canvas.enabled = PhotonNetwork.inRoom && Input.GetKey (KeyCode.Tab);
+		}
 	}
 
 	void OnJoinedRoom ()
@@ -44,11 +48,13 @@ public class ScoreboardCanvas : MonoBehaviour
 
 	void OnPauseStarted ()
 	{
+		Debug.Log ("PAUSE STARTED");
 		canvas.enabled = true;
 	}
 
 	void OnRoundStarted ()
 	{
+		Debug.Log ("ROUND STARTED");
 		canvas.enabled = false;
 	}
 
