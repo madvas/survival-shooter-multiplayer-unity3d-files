@@ -15,7 +15,7 @@ public class HUDCanvas : MonoBehaviour
 		canvas.enabled = false;
 	}
 	
-	void onJoinedRoom ()
+	void OnJoinedRoom ()
 	{
 		canvas.enabled = true;
 	}

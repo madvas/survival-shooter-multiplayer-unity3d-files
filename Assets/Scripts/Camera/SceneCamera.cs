@@ -16,7 +16,7 @@ public class SceneCamera : MonoBehaviour
 		camera.enabled = true;
 	}
 
-	void onJoinedRoom ()
+	void OnJoinedRoom ()
 	{
 		camera.enabled = false;
 	}
