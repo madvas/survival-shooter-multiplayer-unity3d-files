@@ -25,7 +25,7 @@ public class NetworkManager : MonoBehaviour
 	
 	void OnJoinedLobby ()
 	{
-		JoinRoom ("Room 1", "Shooter" + Random.Range (1000, 9999));
+//		JoinRoom ("Room 1", "Shooter" + Random.Range (1000, 9999));
 	}
 
 	public List<Networking.Room> GetRoomList (int maxRooms, int maxPlayersPerRoom)

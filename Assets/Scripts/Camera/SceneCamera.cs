@@ -20,4 +20,14 @@ public class SceneCamera : MonoBehaviour
 	{
 		camera.enabled = false;
 	}
+
+	void OnPauseStarted ()
+	{
+		camera.enabled = true;
+	}
+
+	void OnRoundStarted ()
+	{
+		camera.enabled = false;
+	}
 }

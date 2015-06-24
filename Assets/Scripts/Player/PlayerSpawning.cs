@@ -32,6 +32,16 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 	}
 
+	void OnPauseStarted ()
+	{
+		DestroyPlayer ();
+	}
+
+	void OnRoundStarted ()
+	{
+		RespawnPlayer ();
+	}
+
 	public void RespawnPlayer ()
 	{
 		GetComponent<CapsuleCollider> ().enabled = true;
