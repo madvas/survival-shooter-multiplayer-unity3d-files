@@ -29,9 +29,12 @@ public class RoomTimeManager : MonoBehaviour
 	public delegate void OnSecondElapsedAction (string remainingTime);
 	public static event OnSecondElapsedAction onSecondElapsed;
 
-	public bool isPause = true;
+	public delegate void OnStateChangeAction (bool isPause);
+	public static event OnStateChangeAction onStateChange;
 
-	private void StartRoundNow ()
+	bool isPause = true;
+
+	private void InitTimerNow ()
 	{
 		Debug.Log ("start round now");
 		// in some cases, when you enter a room, the server time is not available immediately.
@@ -39,7 +42,6 @@ public class RoomTimeManager : MonoBehaviour
 		if (PhotonNetwork.time < 0.0001f) {
 			// we can only start the round when the time is available. let's check that in Update()
 			startRoundWhenTimeIsSynced = true;
-			Debug.Log ("startRoundWhenTimeIsSynced true");
 			return;
 		}
 		startRoundWhenTimeIsSynced = false;
@@ -53,7 +55,7 @@ public class RoomTimeManager : MonoBehaviour
 	{
 		Debug.Log ("timemanager joined room");
 		if (PhotonNetwork.isMasterClient) {
-			this.StartRoundNow ();
+			this.InitTimerNow ();
 		} else {
 			// as the creator of the room sets the start time after entering the room, we may enter a room that has no timer started yet
 			Debug.Log ("StartTime already set: " + PhotonNetwork.room.customProperties.ContainsKey (StartTimeKey));
@@ -67,6 +69,12 @@ public class RoomTimeManager : MonoBehaviour
 		if (propertiesThatChanged.ContainsKey (StartTimeKey)) {
 			StartTime = (double)propertiesThatChanged [StartTimeKey];
 		}
+		if (propertiesThatChanged.ContainsKey (IsPauseKey)) {
+			isPause = (bool)propertiesThatChanged [IsPauseKey];
+			if (onStateChange != null) {
+				onStateChange (isPause);
+			}
+		}
 	}
 	
 	/// <remarks>
@@ -78,23 +86,26 @@ public class RoomTimeManager : MonoBehaviour
 	{
 		if (!PhotonNetwork.room.customProperties.ContainsKey (StartTimeKey)) {
 			Debug.Log ("The new master starts a new round, cause we didn't start yet.");
-			this.StartRoundNow ();
+			this.InitTimerNow ();
 		}
+	}
+
+	public bool isPauseState ()
+	{
+		return isPause;
 	}
 	
 	
 	void Update ()
 	{
 		if (startRoundWhenTimeIsSynced) {
-			this.StartRoundNow ();   // the "time is known" check is done inside the method.
+			this.InitTimerNow ();   // the "time is known" check is done inside the method.
 		}
 	}
 
 	void OnSecondElapsed ()
 	{
 		int remainingSeconds = (int)Mathf.Round ((float)(SecondsPerRound - (PhotonNetwork.time - StartTime)));
-
-//		double remainingTime = SecondsPerRound - (elapsedTime % SecondsPerRound);
 		if (onSecondElapsed != null) {
 			onSecondElapsed (TimeHelper.SecondsToTimer ((float)remainingSeconds));
 		}
