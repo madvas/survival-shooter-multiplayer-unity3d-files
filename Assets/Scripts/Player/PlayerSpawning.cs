@@ -65,8 +65,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 
-	// Called at the end of "Die" animation, must be public
-	public void DestroyPlayer (bool instantly = false)
+	void DestroyPlayer (bool instantly = false)
 	{
 		if (instantly) {
 			SetPlayerVisibility (false);
@@ -78,9 +77,11 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		SetPlayerControl (false);
 	}
 
-	public void DestroyPlayerr ()
+	// Called at the end of "Die" animation, must be public
+	public void OnDeathAnimEnd ()
 	{
-
+		Debug.Log ("Death anim ended");
+		DestroyPlayer ();
 	}
 
 	void SetPlayerPhysics (bool enabled)
