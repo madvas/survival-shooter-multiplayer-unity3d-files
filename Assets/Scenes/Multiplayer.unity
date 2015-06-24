@@ -295,6 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4f43bf66218c874d871d02802b6a2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!114 &55304547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2732,14 +2733,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SecondsPerRound: 10
+  SecondsPerPause: 10
   StartTime: 0
-  TextPos:
-    serializedVersion: 2
-    x: 0
-    y: 80
-    width: 150
-    height: 300
-  isPause: 0
 --- !u!1 &560137264
 GameObject:
   m_ObjectHideFlags: 0

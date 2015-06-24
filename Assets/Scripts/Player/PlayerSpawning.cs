@@ -8,7 +8,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	public event RespawnAction onPlayerRespawn;
 
 	public float sinkSpeed = 1;
-	public float respawnDelay = 2;
+	public float respawnDelay = 5;
 	PlayerMovement playerMovement;                              
 	PlayerShooting playerShooting;
 	PlayerHealth playerHealth;
@@ -69,7 +69,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void OnPlayerDead ()
 	{
-		DestroyPlayer ();
 		Invoke ("RespawnPlayer", respawnDelay);
 	}
 }
