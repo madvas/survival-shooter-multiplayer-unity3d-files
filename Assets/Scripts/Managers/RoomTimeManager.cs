@@ -44,7 +44,7 @@ public class RoomTimeManager : MonoBehaviour
 		}
 		startRoundWhenTimeIsSynced = false;
 		isPause = false;
-		setNewStartTime ();
+		SetNewStartTime ();
 		InvokeRepeating ("OnSecondElapsed", 0, 1);
 	}
 	
@@ -100,15 +100,23 @@ public class RoomTimeManager : MonoBehaviour
 			onSecondElapsed (TimeHelper.SecondsToTimer ((float)remainingSeconds));
 		}
 
-		if (remainingSeconds == 0f) {
-			setNewStartTime ();
+		if (PhotonNetwork.isMasterClient && remainingSeconds == 0f) {
+			SetNewStartTime ();
 		}
 	}
 
-	void setNewStartTime ()
+	void SetNewStartTime ()
 	{
 		ExitGames.Client.Photon.Hashtable startTimeProp = new Hashtable ();  // only use ExitGames.Client.Photon.Hashtable for Photon
 		startTimeProp [StartTimeKey] = PhotonNetwork.time;
 		PhotonNetwork.room.SetCustomProperties (startTimeProp);              // implement OnPhotonCustomRoomPropertiesChanged(Hashtable propertiesThatChanged) to get this change everywhere
+		TogglePauseState ();
+	}
+
+	void TogglePauseState ()
+	{
+		ExitGames.Client.Photon.Hashtable isPauseProp = new Hashtable ();  // only use ExitGames.Client.Photon.Hashtable for Photon
+		isPauseProp [IsPauseKey] = !isPause;
+		PhotonNetwork.room.SetCustomProperties (isPauseProp);   
 	}
 }
