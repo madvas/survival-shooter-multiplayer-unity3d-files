@@ -66,8 +66,10 @@ public class RoomsCanvas : MonoBehaviour
 
 	public void JoinSelectedRoom ()
 	{
-		Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
-		networkManager.JoinRoom (selectedRoom.name, nicknameField.text);
+		if (listView.SelectedItems.Count > 0) {
+			Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
+			networkManager.JoinRoom (selectedRoom.name, nicknameField.text);
+		}
 	}
 
 	public void OnNicknameTextChange ()
