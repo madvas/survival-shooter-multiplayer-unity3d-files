@@ -48,7 +48,6 @@ public class NetworkManager : MonoBehaviour
 
 	public void JoinRoom (string roomName, string playerName)
 	{
-		Debug.Log ("joining room" + roomName);
 		if (playerName.Length <= 0 || roomName.Length <= 0) {
 			return;
 		}
@@ -56,7 +55,6 @@ public class NetworkManager : MonoBehaviour
 			isVisible = true, 
 			maxPlayers = (byte)maxPlayersPerRoom 
 		};
-		Debug.Log ("Joining as player " + playerName);
 		PhotonNetwork.player.name = playerName;
 		PhotonNetwork.JoinOrCreateRoom (roomName, roomOptions, TypedLobby.Default);
 	}

@@ -68,8 +68,9 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		SetPlayerControl (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
-	
-	void DestroyPlayer (bool instantly = false)
+
+	// Called at the end of "Die" animation, must be public
+	public void DestroyPlayer (bool instantly = false)
 	{
 //		if (photonView.isMine && !instantly) {
 		if (instantly) {
@@ -77,6 +78,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		} else {
 			isSinking = true;
 		}
+
 		SetPlayerPhysics (false);
 		SetPlayerControl (false);
 	}
