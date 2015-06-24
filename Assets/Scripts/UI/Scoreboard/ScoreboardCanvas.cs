@@ -17,7 +17,7 @@ public class ScoreboardCanvas : MonoBehaviour
 	{
 		canvas = GetComponent<Canvas> ();
 		listView = GetComponentInChildren<ListView> ();
-		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager");
+		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager").GetComponent<RoomTimeManager> ();
 	}
 
 	void Start ()
@@ -60,7 +60,6 @@ public class ScoreboardCanvas : MonoBehaviour
 
 	void UpdateScoreboard ()
 	{
-		Debug.Log ("Updatescoreboard");
 		listView.ClearAllItems ();
 		List<PhotonPlayer> players = PhotonNetwork.playerList.OrderByDescending (p => p.GetScore ())
 			.ThenByDescending (p => p.GetDeaths ())

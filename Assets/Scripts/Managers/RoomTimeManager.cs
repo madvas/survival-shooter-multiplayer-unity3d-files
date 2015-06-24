@@ -103,7 +103,8 @@ public class RoomTimeManager : MonoBehaviour
 
 	void OnSecondElapsed ()
 	{
-		int remainingSeconds = (int)Mathf.Round ((float)(SecondsPerRound - (PhotonNetwork.time - StartTime)));
+		int totalTime = isPause ? SecondsPerPause : SecondsPerRound;
+		int remainingSeconds = (int)Mathf.Round ((float)(totalTime - (PhotonNetwork.time - StartTime)));
 		if (onSecondElapsed != null) {
 			onSecondElapsed (TimeHelper.SecondsToTimer ((float)remainingSeconds));
 		}

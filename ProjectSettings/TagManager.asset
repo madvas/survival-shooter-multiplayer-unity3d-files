@@ -13,6 +13,7 @@ TagManager:
   - RoomsMenu
   - BackgroundMusic
   - NetworkManager
+  - RoomTimeManager
   layers:
   - Default
   - TransparentFX
