@@ -46,6 +46,8 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	public void RespawnPlayer ()
 	{
+		gameObject.SetActive (true);
+		Debug.Log ("Respawning playering");
 		GetComponent<CapsuleCollider> ().enabled = true;
 		GetComponent <Rigidbody> ().isKinematic = false;
 		if (photonView.isMine) {
@@ -54,7 +56,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			playerShooting.enabled = true;
 			transform.position = randomPosition.position;
 			transform.rotation = randomPosition.rotation;
-			gameObject.SetActive (true);
 		}
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}

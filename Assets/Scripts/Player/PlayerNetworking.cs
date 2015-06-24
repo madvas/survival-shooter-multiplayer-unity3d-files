@@ -40,6 +40,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 
 	void Start ()
 	{
+		Debug.Log ("network start");
 		if (photonView.isMine) {
 			GetComponentInChildren<PlayerShooting> ().enabled = true;
 			GetComponent<PlayerMovement> ().enabled = true;
