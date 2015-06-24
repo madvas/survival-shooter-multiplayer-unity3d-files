@@ -61,6 +61,7 @@ public class RoomsCanvas : MonoBehaviour
 	void OnJoinedLobby ()
 	{
 		canvas.enabled = true;
+		validateRoomForm ();
 	}
 
 	public void JoinSelectedRoom ()
