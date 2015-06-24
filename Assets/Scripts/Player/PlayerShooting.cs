@@ -62,10 +62,7 @@ public class PlayerShooting : MonoBehaviour
 			if (shootHit.transform.tag == "Player") {
 				shootHit.transform.GetComponent<PhotonView> ().RPC ("TakeShot", PhotonTargets.All, damagePerShot, PhotonNetwork.player.ID);
 			}
-
 		} else {
-			// This probably isnt needed
-			Debug.Log ("raycast wasnt hit");
 			photonView.RPC ("Shoot", PhotonTargets.All, shootRay.origin + shootRay.direction * range);
 		}
 	}

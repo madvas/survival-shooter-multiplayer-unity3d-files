@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Turning ()
 	{
+		return;
 #if !MOBILE_INPUT
 		// Create a ray from the mouse cursor on screen in the direction of the camera.
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -108,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 		anim.SetBool (IsWalkingHash, walking);
 	}
 
-	void OnPlayerRespawn ()
+	void OnPlayerDead ()
 	{
 		anim.SetBool (IsWalkingHash, false);
 	}
