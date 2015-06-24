@@ -8,7 +8,6 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class NetworkManager : Photon.MonoBehaviour
 {
 	
-	public Text networkText;
 	public static readonly int maxPlayersPerRoom = 5;
 	public delegate void JoinedLobbyAction ();
 	public event JoinedLobbyAction onJoinedLobby;
@@ -29,24 +28,6 @@ public class NetworkManager : Photon.MonoBehaviour
 	{
 		PhotonNetwork.ConnectUsingSettings ("0.1");
 		//PhotonNetwork.logLevel = PhotonLogLevel.Full;
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		networkText.text = PhotonNetwork.connectionStateDetailed.ToString () + " players:" + PhotonNetwork.playerList.Length;	
-
-		RoomInfo[] rooms = PhotonNetwork.GetRoomList ();
-		networkText.text += "\n PlayerID: " + PhotonNetwork.player.ID;
-
-		networkText.text += "\n";
-		foreach (RoomInfo room in rooms)
-			networkText.text += room.ToString () + "\n";
-
-		networkText.text += "\n";
-		foreach (PhotonPlayer player in PhotonNetwork.playerList) {
-			networkText.text += player.ToString () + "\n";
-		}
 	}
 	
 	void OnJoinedLobby ()
@@ -90,7 +71,7 @@ public class NetworkManager : Photon.MonoBehaviour
 		PhotonNetwork.JoinOrCreateRoom (roomName, roomOptions, TypedLobby.Default);
 	}
 
-	public static void LeaveRoom ()
+	public void LeaveRoom ()
 	{
 		PhotonNetwork.LeaveRoom ();
 	}
