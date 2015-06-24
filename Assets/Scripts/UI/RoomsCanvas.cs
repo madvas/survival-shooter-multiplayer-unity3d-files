@@ -27,7 +27,7 @@ public class RoomsCanvas : MonoBehaviour
 	{
 		joinBtnScript = joinButton.GetComponent<Button> ();
 		canvas = transform.GetComponent<Canvas> ();
-		networkManager = GameObject.FindGameObjectWithTag ("NetworkManager");
+		networkManager = GameObject.FindGameObjectWithTag ("NetworkManager").GetComponent<NetworkManager> ();
 	}
 
 	void Start ()

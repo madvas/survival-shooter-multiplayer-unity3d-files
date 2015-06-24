@@ -9,8 +9,6 @@ public class SceneCamera : MonoBehaviour
 	void Awake ()
 	{
 		camera = GetComponent<Camera> ();
-		NetworkManager.onLeftRoom += OnLeftRoom;
-		NetworkManager.onJoinedRoom += onJoinedRoom;
 	}
 
 	void OnLeftRoom ()

@@ -24,7 +24,6 @@ public class ScoreboardCanvas : MonoBehaviour
 		listView.AddColumn ("Player Name", playerNameColWidth);
 		listView.AddColumn ("Kills", playerScoreColWidth);
 		listView.AddColumn ("Deaths", playerScoreColWidth);
-		NetworkManager.onJoinedRoom += OnJoinedRoom;
 	}
 	
 	void Update ()

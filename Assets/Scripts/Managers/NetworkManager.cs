@@ -5,22 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class NetworkManager : Photon.MonoBehaviour
+public class NetworkManager : MonoBehaviour
 {
 	
 	public int maxPlayersPerRoom = 5;
 	public int maxRooms = 4;
-	public delegate void JoinedLobbyAction ();
-	public event JoinedLobbyAction onJoinedLobby;
 
 	public delegate void OnReceivedRoomListUpdateAction (List<Networking.Room> roomList);
 	public static event OnReceivedRoomListUpdateAction onRoomListUpdate;
-
-	public delegate void OnJoinedRoomAction ();
-	public static event OnJoinedRoomAction onJoinedRoom;
-
-	public delegate void OnLeftRoomAction ();
-	public static event OnLeftRoomAction onLeftRoom;
 
 	public delegate void OnPhotonPlayerPropertiesChangedAction (PhotonPlayer player,Hashtable props);
 	public static event OnPhotonPlayerPropertiesChangedAction onPlayerPropertiesChanged;
@@ -33,9 +25,6 @@ public class NetworkManager : Photon.MonoBehaviour
 	
 	void OnJoinedLobby ()
 	{
-		if (onJoinedLobby != null) {
-			onJoinedLobby ();
-		}
 //		JoinRoom ("Room 1", "Shooter" + Random.Range (1000, 9999));
 	}
 

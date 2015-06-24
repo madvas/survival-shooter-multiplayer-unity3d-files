@@ -8,8 +8,6 @@ public class HUDCanvas : MonoBehaviour
 	void Awake ()
 	{
 		canvas = GetComponent<Canvas> ();
-		NetworkManager.onLeftRoom += OnLeftRoom;
-		NetworkManager.onJoinedRoom += onJoinedRoom;
 	}
 	
 	void OnLeftRoom ()
