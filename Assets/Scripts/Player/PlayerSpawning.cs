@@ -27,9 +27,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void Update ()
 	{
-		Debug.Log (isSinking);
 		if (isSinking) {
-			Debug.Log ("sinking");
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 			if (transform.position.y < -1) {
 				isSinking = false;
@@ -43,6 +41,8 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		this.enabled = true;
 		if (roomTimeManager.isPauseState ()) {
 			DestroyPlayer (true);
+		} else {
+			RespawnPlayer ();
 		}
 	}
 

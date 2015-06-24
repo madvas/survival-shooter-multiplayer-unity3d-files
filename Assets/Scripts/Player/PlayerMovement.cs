@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
 #endif
 
 	int IsWalkingHash = Animator.StringToHash ("IsWalking");
-	RoomTimeManager roomTimeManager;
 
 	void Awake ()
 	{
@@ -24,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
 
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
-		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager").GetComponent<RoomTimeManager> ();
 	}
 
 	void FixedUpdate ()
@@ -112,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnPlayerDead ()
 	{
-		Debug.Log ("setting is walking false");
 		anim.SetBool (IsWalkingHash, false);
 	}
 }
