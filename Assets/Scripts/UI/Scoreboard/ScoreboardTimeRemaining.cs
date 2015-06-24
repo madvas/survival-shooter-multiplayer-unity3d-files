@@ -11,10 +11,9 @@ public class ScoreboardTimeRemaining : MonoBehaviour
 	void Awake ()
 	{
 		timeText = GetComponent<Text> ();
-		RoomTimeManager.onSecondElapsed += OnSecondElapsed;
 	}
 	
-	void OnSecondElapsed (string remainingTime)
+	void OnTimerTick (string remainingTime)
 	{
 		timeText.text = remainingTime;
 	}

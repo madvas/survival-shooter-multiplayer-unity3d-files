@@ -25,9 +25,6 @@ public class RoomTimeManager : MonoBehaviour
 	private const string StartTimeKey = "st";       // the name of our "start time" custom property.
 	private const string IsPauseKey = "p";
 
-	public delegate void OnSecondElapsedAction (string remainingTime);
-	public static event OnSecondElapsedAction onSecondElapsed;
-
 	bool isPause = true;
 
 	private void InitTimerNow ()
@@ -105,9 +102,7 @@ public class RoomTimeManager : MonoBehaviour
 	{
 		int totalTime = isPause ? SecondsPerPause : SecondsPerRound;
 		int remainingSeconds = (int)Mathf.Round ((float)(totalTime - (PhotonNetwork.time - StartTime)));
-		if (onSecondElapsed != null) {
-			onSecondElapsed (TimeHelper.SecondsToTimer ((float)remainingSeconds));
-		}
+		GameObjectHelper.SendMessageToAll ("OnTimerTick", TimeHelper.SecondsToTimer ((float)remainingSeconds));
 
 		if (PhotonNetwork.isMasterClient && remainingSeconds == 0f) {
 			SetNewStartTime ();
