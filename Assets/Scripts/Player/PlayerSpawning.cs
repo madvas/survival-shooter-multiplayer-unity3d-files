@@ -46,9 +46,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void RespawnPlayer ()
 	{
-		Debug.Log ("Respawning playering");
-		GetComponent<CapsuleCollider> ().enabled = true;
-		GetComponent <Rigidbody> ().isKinematic = false;
 		if (photonView.isMine) {
 			PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
 			playerMovement.enabled = true;
@@ -56,6 +53,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			transform.position = randomPosition.position;
 			transform.rotation = randomPosition.rotation;
 		}
+		SetPlayerPhysics (true);
 		SetPlayerVisibility (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
@@ -65,9 +63,14 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine) {
 			isSinking = true;
 		}
-		DisablePlayerControl ();
-		GetComponent<CapsuleCollider> ().enabled = false;
-		GetComponent <Rigidbody> ().isKinematic = true;
+		SetPlayerPhysics (false);
+		SetPlayerControl (false);
+	}
+
+	void SetPlayerPhysics (bool enabled)
+	{
+		GetComponent<CapsuleCollider> ().enabled = enabled;
+		GetComponent <Rigidbody> ().isKinematic = !enabled;
 	}
 
 	void SetPlayerVisibility (bool enabled)
@@ -77,10 +80,10 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 	}
 
-	void DisablePlayerControl ()
+	void SetPlayerControl (bool enabled)
 	{
-		playerMovement.enabled = false;
-		playerShooting.enabled = false;
+		playerMovement.enabled = enabled;
+		playerShooting.enabled = enabled;
 	}
 
 
