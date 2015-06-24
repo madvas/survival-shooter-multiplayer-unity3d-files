@@ -40,6 +40,11 @@ public class ScoreboardCanvas : MonoBehaviour
 		UpdateScoreboard ();
 	}
 
+	void OnLeftRoom ()
+	{
+		canvas.enabled = false;
+	}
+
 	void OnPlayerPropertiesChanged (PhotonPlayer player, Hashtable props)
 	{
 		Debug.Log ("Player properties changed");
