@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
 {
 	public float speed = 6f;            // The speed that the player will move at.
 
-
 	Vector3 movement;                   // The vector to store the direction of the player's movement.
 	Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
@@ -14,34 +13,17 @@ public class PlayerMovement : MonoBehaviour
 	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 #endif
 
-	PlayerSpawning playerSpawning;
 	int IsWalkingHash = Animator.StringToHash ("IsWalking");
 
 	void Awake ()
 	{
 #if !MOBILE_INPUT
-		// Create a layer mask for the floor layer.
 		floorMask = LayerMask.GetMask ("Floor");
 #endif
 
-		// Set up references.
-		playerSpawning = GetComponent<PlayerSpawning> ();
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
 	}
-
-	void OnEnable ()
-	{
-		playerSpawning.onPlayerRespawn += onPlayerRespawn;
-	}
-	
-	
-	void OnDisable ()
-	{
-		playerSpawning.onPlayerRespawn -= onPlayerRespawn;
-	}
-
-
 
 	void FixedUpdate ()
 	{
@@ -126,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
 		anim.SetBool (IsWalkingHash, walking);
 	}
 
-	void onPlayerRespawn ()
+	void OnPlayerRespawn ()
 	{
 		anim.SetBool (IsWalkingHash, false);
 	}

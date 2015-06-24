@@ -3,12 +3,9 @@ using System.Collections;
 
 public class PlayerSpawning : Photon.MonoBehaviour
 {
-
-	public delegate void RespawnAction ();
-	public event RespawnAction onPlayerRespawn;
-
 	public float sinkSpeed = 1;
 	public float respawnDelay = 5;
+
 	PlayerMovement playerMovement;                              
 	PlayerShooting playerShooting;
 	PlayerHealth playerHealth;
@@ -58,11 +55,10 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (roomTimeManager.isPauseState ()) {
 			return;
 		}
-//		if (photonView.isMine) {
+
 		PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
 		transform.position = randomPosition.position;
 		transform.rotation = randomPosition.rotation;
-//		}
 		SetPlayerPhysics (true);
 		SetPlayerVisibility (true);
 		SetPlayerControl (true);
@@ -72,7 +68,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	// Called at the end of "Die" animation, must be public
 	public void DestroyPlayer (bool instantly = false)
 	{
-//		if (photonView.isMine && !instantly) {
 		if (instantly) {
 			SetPlayerVisibility (false);
 		} else {
@@ -81,6 +76,11 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 		SetPlayerPhysics (false);
 		SetPlayerControl (false);
+	}
+
+	public void DestroyPlayerr ()
+	{
+
 	}
 
 	void SetPlayerPhysics (bool enabled)

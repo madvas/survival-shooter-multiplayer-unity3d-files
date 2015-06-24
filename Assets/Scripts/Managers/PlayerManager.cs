@@ -13,8 +13,6 @@ public class PlayerManager : MonoBehaviour
 	void InstantiatePlayer ()
 	{
 		PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
-		Debug.Log ("InstantiatePlayer");
-		Debug.Log (randomPosition.position);
 		GameObject player = PhotonNetwork.Instantiate ("Player", randomPosition.position, randomPosition.rotation, 0);
 		player.GetComponentInChildren<PlayerShooting> ().enabled = true;
 		player.GetComponent<PlayerMovement> ().enabled = true;

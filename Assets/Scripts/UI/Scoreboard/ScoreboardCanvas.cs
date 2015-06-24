@@ -47,7 +47,6 @@ public class ScoreboardCanvas : MonoBehaviour
 
 	void OnPlayerPropertiesChanged (PhotonPlayer player, Hashtable props)
 	{
-		Debug.Log ("Player properties changed");
 		UpdateScoreboard ();
 	}
 
