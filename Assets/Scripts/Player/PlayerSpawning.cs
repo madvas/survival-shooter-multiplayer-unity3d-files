@@ -18,7 +18,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void Awake ()
 	{
-		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager");
+		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager").GetComponent<RoomTimeManager> ();
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
 		playerHealth = GetComponent<PlayerHealth> ();
@@ -38,7 +38,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void OnPlayerInstantiated ()
 	{
-		Debug.Log ("spawn cauht OnPlayerInstantiated");
 		if (roomTimeManager.isPauseState ()) {
 			DestroyPlayer (true);
 		}
@@ -56,13 +55,16 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void RespawnPlayer ()
 	{
-		if (photonView.isMine) {
-			PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
-			playerMovement.enabled = true;
-			playerShooting.enabled = true;
-			transform.position = randomPosition.position;
-			transform.rotation = randomPosition.rotation;
+		if (roomTimeManager.isPauseState ()) {
+			return;
 		}
+//		if (photonView.isMine) {
+		PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
+		playerMovement.enabled = true;
+		playerShooting.enabled = true;
+		transform.position = randomPosition.position;
+		transform.rotation = randomPosition.rotation;
+//		}
 		SetPlayerPhysics (true);
 		SetPlayerVisibility (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
@@ -70,7 +72,10 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	
 	void DestroyPlayer (bool instantly = false)
 	{
-		if (photonView.isMine && !instantly) {
+//		if (photonView.isMine && !instantly) {
+		if (instantly) {
+			SetPlayerVisibility (false);
+		} else {
 			isSinking = true;
 		}
 		SetPlayerPhysics (false);
@@ -95,7 +100,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		playerMovement.enabled = enabled;
 		playerShooting.enabled = enabled;
 	}
-
 
 	void OnPlayerDead ()
 	{
