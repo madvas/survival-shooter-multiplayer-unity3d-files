@@ -12,6 +12,7 @@ TagManager:
   - Game
   - RoomsMenu
   - BackgroundMusic
+  - NetworkManager
   layers:
   - Default
   - TransparentFX

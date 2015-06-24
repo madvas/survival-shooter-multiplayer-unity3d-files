@@ -2640,8 +2640,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 939147026}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!114 &535338340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2653,7 +2653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fe916fdd71a455c9327dac23d7f978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SecondsPerTurn: 10
+  SecondsPerRound: 5
   StartTime: 0
   TextPos:
     serializedVersion: 2
@@ -2661,6 +2661,7 @@ MonoBehaviour:
     y: 80
     width: 150
     height: 300
+  isPause: 0
 --- !u!1 &560137264
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,7 +4643,6 @@ Transform:
   - {fileID: 1851598982}
   - {fileID: 763414845}
   - {fileID: 632661380}
-  - {fileID: 535338339}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!114 &939147027
@@ -6108,7 +6108,7 @@ GameObject:
   - 114: {fileID: 1533439335}
   m_Layer: 0
   m_Name: NetworkManager
-  m_TagString: Untagged
+  m_TagString: NetworkManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6124,6 +6124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e05ee1a26434da5b5b9774b4c0a249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPlayersPerRoom: 5
+  maxRooms: 4
 --- !u!4 &1533439336
 Transform:
   m_ObjectHideFlags: 0
