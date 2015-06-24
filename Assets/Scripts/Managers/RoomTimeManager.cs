@@ -44,7 +44,7 @@ public class RoomTimeManager : MonoBehaviour
 	
 	
 	/// <summary>Called by PUN when this client entered a room (no matter if joined or created).</summary>
-	public void OnJoinedRoom ()
+	void OnJoinedRoom ()
 	{
 		Debug.Log ("timemanager joined room");
 		if (PhotonNetwork.isMasterClient) {
@@ -54,6 +54,12 @@ public class RoomTimeManager : MonoBehaviour
 			Debug.Log ("StartTime already set: " + PhotonNetwork.room.customProperties.ContainsKey (StartTimeKey));
 			InvokeRepeating ("OnSecondElapsed", 0, 1);
 		}
+	}
+
+	void OnLeftRoom ()
+	{
+		CancelInvoke ("OnSecondElapsed");
+		startRoundWhenTimeIsSynced = true;
 	}
 	
 	/// <summary>Called by PUN when new properties for the room were set (by any client in the room).</summary>
