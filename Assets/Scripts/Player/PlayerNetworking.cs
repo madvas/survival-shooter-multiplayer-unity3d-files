@@ -137,6 +137,14 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		}
 	}
 
+	void OnRoundStarted ()
+	{
+		if (photonView.isMine) {
+			photonView.owner.SetScore (0);
+			photonView.owner.SetDeaths (0);
+		}
+	}
+
 	void DisableEffects ()
 	{
 		gunLine.enabled = false;
