@@ -8,7 +8,8 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class NetworkManager : Photon.MonoBehaviour
 {
 	
-	public static readonly int maxPlayersPerRoom = 5;
+	public int maxPlayersPerRoom = 5;
+	public int maxRooms = 4;
 	public delegate void JoinedLobbyAction ();
 	public event JoinedLobbyAction onJoinedLobby;
 
@@ -104,7 +105,7 @@ public class NetworkManager : Photon.MonoBehaviour
 	void OnReceivedRoomListUpdate ()
 	{
 		if (onRoomListUpdate != null) {
-			onRoomListUpdate (GetRoomList (4, 5));
+			onRoomListUpdate (GetRoomList (maxRooms, maxPlayersPerRoom));
 		}
 	}
 }

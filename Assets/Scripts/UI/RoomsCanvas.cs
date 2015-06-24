@@ -53,14 +53,18 @@ public class RoomsCanvas : MonoBehaviour
 
 	void OnJoinedRoom ()
 	{
+		canvas.enabled = false;
+	}
 
+	void OnJoinedLobby ()
+	{
+		canvas.enabled = true;
 	}
 
 	public void JoinSelectedRoom ()
 	{
 		Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
 		NetworkManager.JoinRoom (selectedRoom.name, nicknameField.text);
-		canvas.enabled = false;
 	}
 
 	public void OnNicknameTextChange ()
