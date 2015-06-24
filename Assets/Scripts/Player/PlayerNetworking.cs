@@ -114,7 +114,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	public void RespawnPlayer ()
 	{
 		Debug.Log ("PlayerNetworking Respawn");
-		anim.SetTrigger ("Respawn");
+		anim.SetTrigger (respawnHash);
 	}
 
 	public void DrawShot (Vector3 fromPosition, Vector3 hitPositon)

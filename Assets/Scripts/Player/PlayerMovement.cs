@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 #endif
 
 	PlayerSpawning playerSpawning;
+	int IsWalkingHash = Animator.StringToHash ("IsWalking");
+
 	void Awake ()
 	{
 #if !MOBILE_INPUT
@@ -121,12 +123,11 @@ public class PlayerMovement : MonoBehaviour
 		bool walking = h != 0f || v != 0f;
 
 		// Tell the animator whether or not the player is walking.
-		anim.SetBool ("IsWalking", walking);
+		anim.SetBool (IsWalkingHash, walking);
 	}
-
 
 	void onPlayerRespawn ()
 	{
-		anim.SetBool ("IsWalking", false);
+		anim.SetBool (IsWalkingHash, false);
 	}
 }
