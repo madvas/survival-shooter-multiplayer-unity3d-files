@@ -27,7 +27,7 @@ public class RoomTimeManager : MonoBehaviour
 	public delegate void OnSecondElapsedAction (string remainingTime);
 	public static event OnSecondElapsedAction onSecondElapsed;
 
-	public const bool isPause;
+	public bool isPause;
 
 	private void StartRoundNow ()
 	{
