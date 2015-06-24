@@ -57,7 +57,7 @@ public class NetworkManager : Photon.MonoBehaviour
 		return rooms;
 	}
 
-	public static void JoinRoom (string roomName, string playerName)
+	public void JoinRoom (string roomName, string playerName)
 	{
 		Debug.Log ("joining room" + roomName);
 		if (playerName.Length <= 0 || roomName.Length <= 0) {
@@ -75,22 +75,6 @@ public class NetworkManager : Photon.MonoBehaviour
 	public void LeaveRoom ()
 	{
 		PhotonNetwork.LeaveRoom ();
-	}
-	
-	void OnJoinedRoom ()
-	{
-		Debug.Log ("Room joined");
-		if (onJoinedRoom != null) {
-			onJoinedRoom ();
-		}
-	}
-
-	void OnLeftRoom ()
-	{
-		if (onLeftRoom != null) {
-			Debug.Log ("room left");
-			onLeftRoom ();
-		}
 	}
 
 	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)

@@ -21,11 +21,13 @@ public class RoomsCanvas : MonoBehaviour
 	Button joinBtnScript;
 	List<Networking.Room> rooms;
 	Canvas canvas;
+	NetworkManager networkManager;
 
 	void Awake ()
 	{
 		joinBtnScript = joinButton.GetComponent<Button> ();
 		canvas = transform.GetComponent<Canvas> ();
+		networkManager = GameObject.FindGameObjectWithTag ("NetworkManager");
 	}
 
 	void Start ()
@@ -64,7 +66,7 @@ public class RoomsCanvas : MonoBehaviour
 	public void JoinSelectedRoom ()
 	{
 		Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
-		NetworkManager.JoinRoom (selectedRoom.name, nicknameField.text);
+		networkManager.JoinRoom (selectedRoom.name, nicknameField.text);
 	}
 
 	public void OnNicknameTextChange ()
@@ -127,7 +129,7 @@ public class RoomsCanvas : MonoBehaviour
 	private bool isSelectedRoomFull ()
 	{
 		Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
-		return NetworkManager.maxPlayersPerRoom <= selectedRoom.playerCount;
+		return selectedRoom.maxPlayers <= selectedRoom.playerCount;
 	}
 
 }
