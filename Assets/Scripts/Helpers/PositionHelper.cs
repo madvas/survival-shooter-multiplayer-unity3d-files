@@ -5,7 +5,7 @@ public static class PositionHelper
 	static GameObject floor = GameObject.FindGameObjectWithTag ("Floor");
 	static Bounds floorBounds = GameObject.FindGameObjectWithTag ("Floor").GetComponent<BoxCollider> ().bounds;
 
-	public static PositionData GetRandomSpawnPosition ()
+	public static PositionData GetRandomSpawnPosition (out Transform transform)
 	{
 		float offset = 0;
 		float randomX = Random.Range (floorBounds.center.x + (floorBounds.extents.x / 2) - offset, floorBounds.center.x - (floorBounds.extents.x / 2) + offset);
@@ -16,6 +16,8 @@ public static class PositionHelper
 		Quaternion randomRotation = Random.rotation;
 		randomRotation.x = 0;
 		randomRotation.z = 0;
+		transform.position = randomPosition;
+		transform.rotation = randomRotation;
 		return new PositionData (randomPosition, randomRotation);
 	}
 

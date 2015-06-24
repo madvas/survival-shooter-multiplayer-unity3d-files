@@ -60,13 +60,12 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 //		if (photonView.isMine) {
 		PositionData randomPosition = PositionHelper.GetRandomSpawnPosition ();
-		playerMovement.enabled = true;
-		playerShooting.enabled = true;
 		transform.position = randomPosition.position;
 		transform.rotation = randomPosition.rotation;
 //		}
 		SetPlayerPhysics (true);
 		SetPlayerVisibility (true);
+		SetPlayerControl (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 	
