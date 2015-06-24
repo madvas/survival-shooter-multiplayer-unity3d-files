@@ -12,6 +12,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	PlayerMovement playerMovement;                              
 	PlayerShooting playerShooting;
 	PlayerHealth playerHealth;
+	MeshRenderer meshRenderer;
 	bool isSinking;
 
 	void Awake ()
@@ -19,6 +20,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
 		playerHealth = GetComponent<PlayerHealth> ();
+		meshRenderer = GetComponent<MeshRenderer> ();
 	}
 
 	void Update ()
@@ -27,6 +29,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 			if (transform.position.y < -1) {
 				isSinking = false;
+				gameObject.SetActive (false);
 			}
 		}
 	}
@@ -51,6 +54,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			playerShooting.enabled = true;
 			transform.position = randomPosition.position;
 			transform.rotation = randomPosition.rotation;
+			gameObject.SetActive (true);
 		}
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
