@@ -34,8 +34,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	public void RespawnPlayer ()
 	{
-		Debug.Log ("RespawnPlayer");
-		Debug.Log (photonView.isMine);
 		GetComponent<CapsuleCollider> ().enabled = true;
 		GetComponent <Rigidbody> ().isKinematic = false;
 		if (photonView.isMine) {
