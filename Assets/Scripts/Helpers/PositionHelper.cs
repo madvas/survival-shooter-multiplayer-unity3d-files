@@ -12,7 +12,10 @@ public static class PositionHelper
 		float randomZ = Random.Range (floorBounds.center.z + (floorBounds.extents.z / 2) - offset, floorBounds.center.z - (floorBounds.extents.z / 2) + offset);
 		Vector3 randomPosition = new Vector3 (randomX, 0, randomZ);
 		randomPosition = ValidateSpawnPosition (randomPosition);
-		return new PositionData (randomPosition, Quaternion.identity);
+		Quaternion rotation = Random.rotation;
+		rotation.x = 0;
+		rotation.z = 0;
+		return new PositionData (randomPosition, Random.rotation);
 	}
 
 	static Vector3 ValidateSpawnPosition (Vector3 position)
@@ -20,8 +23,6 @@ public static class PositionHelper
 		foreach (var item in GameObject.FindGameObjectsWithTag("NotSpawnable")) {
 			foreach (Collider collider in item.GetComponents<Collider>()) {
 				if (collider.bounds.Contains (position)) {
-					Debug.Log ("Collision!!");
-					Debug.Log (collider.ClosestPointOnBounds (Vector3.zero));
 					return collider.ClosestPointOnBounds (Vector3.zero);
 				}
 			}
