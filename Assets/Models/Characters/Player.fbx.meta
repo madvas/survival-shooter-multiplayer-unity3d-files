@@ -540,7 +540,7 @@ ModelImporter:
       curves: []
       events:
       - time: .997762918
-        functionName: DestroyPlayer
+        functionName: OnDeathAnimEnd
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
