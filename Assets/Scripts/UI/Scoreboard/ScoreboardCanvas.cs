@@ -60,6 +60,16 @@ public class ScoreboardCanvas : MonoBehaviour
 		canvas.enabled = false;
 	}
 
+	void OnJoinedRoomInPause ()
+	{
+		canvas.enabled = true;
+	}
+
+	void OnPhotonPlayerConnected (PhotonPlayer newPlayer)
+	{
+		UpdateScoreboard ();
+	}
+
 	void UpdateScoreboard ()
 	{
 		listView.ClearAllItems ();
