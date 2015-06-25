@@ -9,12 +9,15 @@ public class RoomMessages : MonoBehaviour
 
 	void Awake ()
 	{
-		listView = GetComponent<ListView>();
+		listView = GetComponent<ListView> ();
 	}
 
-	void Start () {
-		listView.AddItem(new string[] {
+	void Start ()
+	{
+		listView.AddColumn ("new Col", 250);
+		string[] item = new string[]{
 			"test"
-		})
+		};
+		listView.AddItem (item);
 	}
 }
