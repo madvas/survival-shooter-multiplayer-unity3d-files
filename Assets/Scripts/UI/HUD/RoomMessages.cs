@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Endgame;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class RoomMessages : Photon.MonoBehaviour
 {
 
 	ListView listView;
 	int messagesWidth;
-	Input messageInput;
+	InputField messageInput;
 
 	void Awake ()
 	{
 		listView = GetComponentInChildren<ListView> ();
 		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
-		messageInput = GetComponentInChildren<Input> ();
+		messageInput = GetComponentInChildren<InputField> ();
 	}
 
 	void Start ()
@@ -25,6 +27,13 @@ public class RoomMessages : Photon.MonoBehaviour
 	void Update ()
 	{
 		if (Input.GetKeyDown (KeyCode.Return)) {
+			if (messageInput.isFocused) {
+				Debug.Log ("send message");
+			} else {
+				Debug.Log ("focusing");
+				EventSystem.current.SetSelectedGameObject (messageInput.gameObject, null);
+				messageInput.OnPointerClick (new PointerEventData (EventSystem.current));
+			}
 		}
 	}
 
