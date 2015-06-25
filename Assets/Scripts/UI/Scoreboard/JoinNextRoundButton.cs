@@ -6,24 +6,32 @@ public class JoinNextRoundButton : MonoBehaviour
 {
 
 	Button button;
+	Text text;
 
 	void Awake ()
 	{
 		button = GetComponent<Button> ();
+		text = GetComponentInChildren<Text> ();
 	}
 
 	void OnRoundStarted ()
 	{
-		button.enabled = false;
+		SetButton (false);
 	}
 
 	void OnPauseStarted ()
 	{
-		button.enabled = true;
+		SetButton (true);
 	}
 
 	public void OnClick ()
 	{
-		button.enabled = false;
+		SetButton (false);
+	}
+
+	void SetButton (bool enabled)
+	{
+		button.enabled = enabled;
+		text.enabled = enabled;
 	}
 }
