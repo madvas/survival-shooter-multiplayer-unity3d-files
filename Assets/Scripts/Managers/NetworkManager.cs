@@ -13,6 +13,7 @@ public class NetworkManager : MonoBehaviour
 
 	void Start ()
 	{
+		PhotonNetwork.offlineMode = true; 
 		PhotonNetwork.ConnectUsingSettings ("0.1");
 		//PhotonNetwork.logLevel = PhotonLogLevel.Full;
 	}

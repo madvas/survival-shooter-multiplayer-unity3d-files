@@ -15,6 +15,7 @@ public class RoomMessages : MonoBehaviour
 	void Start ()
 	{
 		listView.AddColumn ("new Col", 250);
+		listView.ShowColumnHeaders = false;
 		string[] item = new string[]{
 			"test"
 		};

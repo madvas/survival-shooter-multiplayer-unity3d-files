@@ -2317,13 +2317,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
       propertyPath: m_Name
-      value: RoomMessages
+      value: RoomMessagesListView
       objectReference: {fileID: 0}
     - target: {fileID: 11400042, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
       propertyPath: m_Color.a
       value: .391000003
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 100030, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421448, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11421448, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11421448, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &372554069
@@ -5731,6 +5744,10 @@ Prefab:
     - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
       propertyPath: DefaultSelectedItemColor.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: m_Name
+      value: ScoreListView
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
