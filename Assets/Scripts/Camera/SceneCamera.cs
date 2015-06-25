@@ -30,4 +30,9 @@ public class SceneCamera : MonoBehaviour
 	{
 		camera.enabled = false;
 	}
+
+	void OnJoinedRoomInPause ()
+	{
+		camera.enabled = true;
+	}
 }
