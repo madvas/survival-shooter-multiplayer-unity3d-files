@@ -95,6 +95,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	void SetPlayerPhysics (bool enabled)
 	{
 		GetComponent<CapsuleCollider> ().enabled = enabled;
+		GetComponent<BoxCollider> ().enabled = enabled;
 		GetComponent <Rigidbody> ().isKinematic = !enabled;
 	}
 
