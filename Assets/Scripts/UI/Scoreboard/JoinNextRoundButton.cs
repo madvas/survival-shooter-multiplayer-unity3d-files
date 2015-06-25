@@ -1,17 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class JoinNextRoundButton : MonoBehaviour {
+public class JoinNextRoundButton : MonoBehaviour
+{
 
-	void OnRoundStarted() {
-		gameObject.SetActive(false);
+	Button button;
+
+	void Awake ()
+	{
+		button = GetComponent<Button> ();
 	}
 
-	void OnPauseStarted() {
-		gameObject.SetActive(true);
+	void OnRoundStarted ()
+	{
+		button.enabled = false;
 	}
 
-	void public OnClick() {
+	void OnPauseStarted ()
+	{
+		button.enabled = true;
+	}
 
+	public void OnClick ()
+	{
+		button.enabled = false;
 	}
 }
