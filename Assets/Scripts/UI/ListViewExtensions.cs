@@ -12,9 +12,9 @@ static class ListViewExtensions
 		listView.Columns [colIndex].Width = columnWidth;
 	}
 
-	public static void AddItem (this ListView listView, string[] item)
+	public static void AddItem (this ListView listView, params string[] rowItems)
 	{
-		listView.Items.Add (new ListViewItem (item));
+		listView.Items.Add (new ListViewItem (rowItems));
 	}
 
 	public static void ClearAllItems (this ListView listView)

@@ -6,19 +6,20 @@ public class RoomMessages : MonoBehaviour
 {
 
 	ListView listView;
+	int messagesWidth;
 
 	void Awake ()
 	{
 		listView = GetComponent<ListView> ();
+		messagesWidth = GetComponent<RectTransform>().rect.width;
 	}
 
 	void Start ()
 	{
-		listView.AddColumn ("new Col", 250);
+		listView.AddColumn ("Messages", messagesWidth);
 		listView.ShowColumnHeaders = false;
-		string[] item = new string[]{
-			"test"
-		};
-		listView.AddItem (item);
+		listView.AddItem ("test");
 	}
+
+	void AddMessage
 }
