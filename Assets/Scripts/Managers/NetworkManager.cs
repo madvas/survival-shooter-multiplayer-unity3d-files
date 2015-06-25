@@ -11,12 +11,6 @@ public class NetworkManager : MonoBehaviour
 	public int maxPlayersPerRoom = 5;
 	public int maxRooms = 4;
 
-	public delegate void OnReceivedRoomListUpdateAction (List<Networking.Room> roomList);
-	public static event OnReceivedRoomListUpdateAction onRoomListUpdate;
-
-	public delegate void OnPhotonPlayerPropertiesChangedAction (PhotonPlayer player,Hashtable props);
-	public static event OnPhotonPlayerPropertiesChangedAction onPlayerPropertiesChanged;
-
 	void Start ()
 	{
 		PhotonNetwork.ConnectUsingSettings ("0.1");
@@ -63,20 +57,9 @@ public class NetworkManager : MonoBehaviour
 	{
 		PhotonNetwork.LeaveRoom ();
 	}
-
-	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
-	{
-		if (onPlayerPropertiesChanged != null) {
-			PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
-			Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-			onPlayerPropertiesChanged (player, props);
-		}
-	}
-
+	
 	void OnReceivedRoomListUpdate ()
 	{
-		if (onRoomListUpdate != null) {
-			onRoomListUpdate (GetRoomList (maxRooms, maxPlayersPerRoom));
-		}
+		GameObjectHelper.SendMessageToAll ("OnRoomListUpdate", GetRoomList (maxRooms, maxPlayersPerRoom));
 	}
 }
