@@ -19,14 +19,12 @@ public static class PositionHelper
 		return new PositionData (randomPosition, randomRotation);
 	}
 
-//	public static void RandomizeTransform (ref Transform transform)
-	public static void RandomizeTransform (ref GameObject gameObject)
+	public static Transform RandomizeTransform (Transform transform)
 	{
 		PositionData positionData = PositionHelper.GetRandomSpawnPosition ();
-//		transform.position = positionData.position;
-//		transform.rotation = positionData.rotation;
-		gameObject.transform.position = positionData.position;
-		gameObject.transform.rotation = positionData.rotation;
+		transform.position = positionData.position;
+		transform.rotation = positionData.rotation;
+		return transform;
 	}
 
 	static Vector3 ValidateSpawnPosition (Vector3 position)
