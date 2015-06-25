@@ -18,7 +18,15 @@ public class RoomMessages : MonoBehaviour
 	{
 		listView.AddColumn ("Messages", messagesWidth);
 		listView.ShowColumnHeaders = false;
+		AddEmptyMessages ();
 		InvokeRepeating ("AddRandomMsg", 1, 1);
+	}
+
+	void AddEmptyMessages ()
+	{
+		for (int i = 0; i < 5; i++) {
+			listView.AddItem ("");
+		}
 	}
 
 	void AddMessage (string message)
