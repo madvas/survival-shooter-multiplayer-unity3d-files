@@ -33,6 +33,7 @@ public class SceneCamera : MonoBehaviour
 
 	void OnJoinedRoomInPause ()
 	{
+		Debug.Log ("SceneCamera OnJoinedRoomInPause");
 		camera.enabled = true;
 	}
 }
