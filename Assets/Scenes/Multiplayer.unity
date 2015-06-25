@@ -2398,11 +2398,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
       propertyPath: DefaultItemFontSize
-      value: 11
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
       propertyPath: DefaultItemButtonHeight
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
       propertyPath: DefaultControlBackgroundColor.a
@@ -7033,7 +7033,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: .5}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 10
@@ -9083,7 +9083,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
