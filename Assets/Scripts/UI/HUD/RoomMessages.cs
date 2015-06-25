@@ -16,6 +16,7 @@ public class RoomMessages : Photon.MonoBehaviour
 		listView = GetComponentInChildren<ListView> ();
 		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
 		messageInput = GetComponentInChildren<InputField> ();
+		Text messageInputText = messageInput.GetComponent<Text> ();
 	}
 
 	void Start ()
@@ -28,11 +29,10 @@ public class RoomMessages : Photon.MonoBehaviour
 	{
 		if (Input.GetKeyDown (KeyCode.Return)) {
 			if (messageInput.isFocused) {
-				Debug.Log ("send message");
+				Debug.Log ("alive and well");
+				messageInput.text = "";
 			} else {
-				Debug.Log ("focusing");
-				EventSystem.current.SetSelectedGameObject (messageInput.gameObject, null);
-				messageInput.OnPointerClick (new PointerEventData (EventSystem.current));
+				messageInput.ActivateInputField ();
 			}
 		}
 	}
