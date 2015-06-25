@@ -18,13 +18,12 @@ public class RoomMessages : Photon.MonoBehaviour
 	{
 		listView.AddColumn ("Messages", messagesWidth);
 		listView.ShowColumnHeaders = false;
-		AddEmptyMessages ();
 	}
 
 	void AddEmptyMessages ()
 	{
 		for (int i = 0; i < 5; i++) {
-			listView.AddItem ("asd");
+			listView.AddItem ("");
 		}
 	}
 
@@ -37,6 +36,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	void OnJoinedRoom ()
 	{
 		listView.ClearAllItems ();
+		AddEmptyMessages ();
 		OnPhotonPlayerConnected (PhotonNetwork.player);
 	}
 
