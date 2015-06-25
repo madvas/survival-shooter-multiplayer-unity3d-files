@@ -18,13 +18,17 @@ public class RoomMessages : MonoBehaviour
 	{
 		listView.AddColumn ("Messages", messagesWidth);
 		listView.ShowColumnHeaders = false;
-		AddMessage ("Player asdasd joined the game");
-		AddMessage ("Player asdasd left the game");
+		InvokeRepeating ("AddRandomMsg", 1, 1);
 	}
 
 	void AddMessage (string message)
 	{
 		listView.AddItem (message);
 		listView.SetVerticalScrollBarValue (9999f);
+	}
+
+	void AddRandomMsg ()
+	{
+		AddMessage ("Player " + Random.Range (1000, 9999) + " just killed me");
 	}
 }

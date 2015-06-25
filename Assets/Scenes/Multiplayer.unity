@@ -2377,7 +2377,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
       propertyPath: DefaultItemButtonHeight
-      value: 20
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: DefaultControlBackgroundColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: DefaultScrollBarBackgroundColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400046, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: DefaultScrollBarThumbColor.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11421448, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
