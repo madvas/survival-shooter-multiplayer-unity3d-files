@@ -34,6 +34,11 @@ public class RoomMessages : MonoBehaviour
 		listView.SetVerticalScrollBarValue (9999f);
 	}
 
+	void OnJoinedRoom ()
+	{
+		OnPhotonPlayerConnected (PhotonNetwork.player);
+	}
+
 	void OnPhotonPlayerConnected (PhotonPlayer newPlayer)
 	{
 		AddMessage ("Player " + newPlayer.name + " joined the room. " + GetPlayersInRoomString ());
