@@ -22,7 +22,6 @@ public class ScoreboardCanvas : MonoBehaviour
 
 	void Start ()
 	{
-		NetworkManager.onPlayerPropertiesChanged += OnPlayerPropertiesChanged;
 		listView.AddColumn ("Player Name", playerNameColWidth);
 		listView.AddColumn ("Kills", playerScoreColWidth);
 		listView.AddColumn ("Deaths", playerScoreColWidth);
@@ -50,7 +49,7 @@ public class ScoreboardCanvas : MonoBehaviour
 		canvas.enabled = false;
 	}
 
-	void OnPlayerPropertiesChanged (PhotonPlayer player, Hashtable props)
+	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
 	{
 		UpdateScoreboard ();
 	}

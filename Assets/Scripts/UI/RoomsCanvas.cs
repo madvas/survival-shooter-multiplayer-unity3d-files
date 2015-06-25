@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class RoomsCanvas : MonoBehaviour
 {
-	
 	public ListView listView;
 	public int roomNameColWidth = 278;
 	public int roomPlayersColWidth = 100;
@@ -42,7 +41,6 @@ public class RoomsCanvas : MonoBehaviour
 	{
 		listView.SelectedIndexChanged += OnSelectedItemChange;
 		listView.ItemActivate += OnItemActivate;
-		NetworkManager.onRoomListUpdate += onRoomListUpdate;
 	}
 	
 	
@@ -50,7 +48,6 @@ public class RoomsCanvas : MonoBehaviour
 	{
 		listView.SelectedIndexChanged -= OnSelectedItemChange;
 		listView.ItemActivate -= OnItemActivate;
-		NetworkManager.onRoomListUpdate -= onRoomListUpdate;
 	}
 
 	void OnJoinedRoom ()
@@ -97,7 +94,6 @@ public class RoomsCanvas : MonoBehaviour
 		listView.AddItem (item);
 	}
 
-
 	void disableJoining ()
 	{
 		joinBtnScript.interactable = false;
@@ -120,7 +116,7 @@ public class RoomsCanvas : MonoBehaviour
 		}
 	}
 
-	private void onRoomListUpdate (List<Networking.Room> roomList)
+	private void OnRoomListUpdate (List<Networking.Room> roomList)
 	{
 		rooms = roomList;
 		listView.ClearAllItems ();
@@ -134,5 +130,4 @@ public class RoomsCanvas : MonoBehaviour
 		Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
 		return selectedRoom.maxPlayers <= selectedRoom.playerCount;
 	}
-
 }

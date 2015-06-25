@@ -14,6 +14,6 @@ public class PlayerManager : MonoBehaviour
 	{
 		GameObject player = PhotonNetwork.Instantiate ("Player", Vector3.zero, Quaternion.identity, 0);
 		player.GetComponent<AudioListener> ().enabled = true;
-		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiated", player);
+		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
 	}
 }
