@@ -18,6 +18,7 @@ public class SceneCamera : MonoBehaviour
 
 	void OnJoinedRoom ()
 	{
+		Debug.Log ("Scenecamera OnJoinedRoomInPause");
 		camera.enabled = false;
 	}
 
