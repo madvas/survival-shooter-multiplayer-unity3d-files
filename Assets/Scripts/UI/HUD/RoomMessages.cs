@@ -11,7 +11,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	void Awake ()
 	{
 		listView = GetComponentInChildren<ListView> ();
-		messagesWidth = (int)GetComponentInChildren<RectTransform> ().rect.width;
+		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
 		Debug.Log (messagesWidth);
 	}
 
@@ -19,6 +19,13 @@ public class RoomMessages : Photon.MonoBehaviour
 	{
 		listView.AddColumn ("Messages", messagesWidth);
 		listView.ShowColumnHeaders = false;
+	}
+
+	void Update ()
+	{
+		if (Input.GetKey (KeyCode.Return)) {
+			Debug.Log ("enter pressed");
+		}
 	}
 
 	void AddEmptyMessages ()
