@@ -19,7 +19,6 @@ public class RoomMessages : MonoBehaviour
 		listView.AddColumn ("Messages", messagesWidth);
 		listView.ShowColumnHeaders = false;
 		AddEmptyMessages ();
-		InvokeRepeating ("AddRandomMsg", 1, 1);
 	}
 
 	void AddEmptyMessages ()
@@ -35,8 +34,18 @@ public class RoomMessages : MonoBehaviour
 		listView.SetVerticalScrollBarValue (9999f);
 	}
 
-	void AddRandomMsg ()
+	void OnPhotonPlayerConnected (PhotonPlayer newPlayer)
 	{
-		AddMessage ("Player " + Random.Range (1000, 9999) + " just killed me");
+		AddMessage ("Player " + newPlayer.name + " joined the room. " + GetPlayersInRoomString ());
+	}
+
+	void OnPhotonPlayerDisconnected (PhotonPlayer otherPlayer)
+	{
+		AddMessage ("Player " + otherPlayer.name + " left the room. " + GetPlayersInRoomString ());
+	}
+
+	string GetPlayersInRoomString ()
+	{
+		return string.Format ("({0}/{1})", PhotonNetwork.room.playerCount, PhotonNetwork.room.maxPlayers);
 	}
 }
