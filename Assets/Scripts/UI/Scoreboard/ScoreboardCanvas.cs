@@ -77,8 +77,9 @@ public class ScoreboardCanvas : MonoBehaviour
 	void UpdateScoreboard ()
 	{
 		listView.ClearAllItems ();
-		List<PhotonPlayer> players = PhotonNetwork.playerList.OrderByDescending (p => p.GetScore ())
-			.ThenByDescending (p => p.GetDeaths ())
+		List<PhotonPlayer> players = PhotonNetwork.playerList
+			.OrderByDescending (p => p.GetScore ())
+			.ThenBy (p => p.GetDeaths ())
 			.ToList ();
 		foreach (var player in players) {
 			listView.AddItem (new string[]{
