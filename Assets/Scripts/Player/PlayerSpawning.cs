@@ -71,9 +71,9 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			transform.position = randomPosition.position;
 			transform.rotation = randomPosition.rotation;
 			SetPlayerPhysics (true);
-			SetPlayerVisibility (true);
 			SetPlayerControl (true);
 		}
+		SetPlayerVisibility (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 
