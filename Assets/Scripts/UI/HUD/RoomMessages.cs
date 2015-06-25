@@ -10,13 +10,13 @@ public class RoomMessages : Photon.MonoBehaviour
 	ListView listView;
 	int messagesWidth;
 	InputField messageInput;
+	bool isWriting = false;
 
 	void Awake ()
 	{
 		listView = GetComponentInChildren<ListView> ();
 		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
 		messageInput = GetComponentInChildren<InputField> ();
-		Text messageInputText = messageInput.GetComponent<Text> ();
 	}
 
 	void Start ()
@@ -28,11 +28,11 @@ public class RoomMessages : Photon.MonoBehaviour
 	void Update ()
 	{
 		if (Input.GetKeyDown (KeyCode.Return)) {
-			if (messageInput.isFocused) {
-				Debug.Log ("alive and well");
+			if (isWriting) {
 				messageInput.text = "";
 			} else {
 				messageInput.ActivateInputField ();
+				isWriting = true;
 			}
 		}
 	}
