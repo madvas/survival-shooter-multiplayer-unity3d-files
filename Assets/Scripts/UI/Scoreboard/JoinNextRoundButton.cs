@@ -9,17 +9,26 @@ public class JoinNextRoundButton : MonoBehaviour
 	Text text;
 	Image image;
 	bool clicked;
+	NetworkManager networkManager;
 
 	void Awake ()
 	{
 		button = GetComponent<Button> ();
 		text = GetComponentInChildren<Text> ();
 		image = GetComponent<Image> ();
+		networkManager = GameObject.FindGameObjectWithTag ("NetworkManager").GetComponent<NetworkManager> ();
+	}
+
+	void OnJoinedRoomInPause ()
+	{
+		clicked = true;
 	}
 
 	void OnRoundStarted ()
 	{
 		SetButton (false);
+		if (!clicked) {
+		}
 	}
 
 	void OnPauseStarted ()
