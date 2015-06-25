@@ -36,22 +36,8 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 	}
 
-	void OnPlayerInstantiated ()
-	{
-		return;
-		Debug.Log ("OnPlayerInstantiated");
-		Debug.Log (roomTimeManager.isPauseState ());
-		this.enabled = true;
-		if (roomTimeManager.isPauseState ()) {
-			DestroyPlayer (true);
-		} else {
-			RespawnPlayer ();
-		}
-	}
-
 	void OnPhotonInstantiate (PhotonMessageInfo	info)
 	{
-		this.enabled = true;
 		if (roomTimeManager.isPauseState ()) {
 			DestroyPlayer (true);
 		} else {
