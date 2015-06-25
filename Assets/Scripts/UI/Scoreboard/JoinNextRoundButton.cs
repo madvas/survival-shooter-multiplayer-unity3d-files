@@ -7,11 +7,14 @@ public class JoinNextRoundButton : MonoBehaviour
 
 	Button button;
 	Text text;
+	Image image;
+	bool clicked;
 
 	void Awake ()
 	{
 		button = GetComponent<Button> ();
 		text = GetComponentInChildren<Text> ();
+		image = GetComponent<Image> ();
 	}
 
 	void OnRoundStarted ()
@@ -21,11 +24,13 @@ public class JoinNextRoundButton : MonoBehaviour
 
 	void OnPauseStarted ()
 	{
+		clicked = false;
 		SetButton (true);
 	}
 
 	public void OnClick ()
 	{
+		clicked = true;
 		SetButton (false);
 	}
 
@@ -33,5 +38,6 @@ public class JoinNextRoundButton : MonoBehaviour
 	{
 		button.enabled = enabled;
 		text.enabled = enabled;
+		image.enabled = enabled;
 	}
 }
