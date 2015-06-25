@@ -2391,6 +2391,10 @@ Prefab:
       propertyPath: DefaultScrollBarThumbColor.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 22400000, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11421448, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8d19dd6abbb015e4e8543b4e51c87935, type: 2}
