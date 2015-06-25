@@ -48,6 +48,8 @@ public class RoomTimeManager : MonoBehaviour
 		if (PhotonNetwork.isMasterClient) {
 			this.InitTimerNow ();
 		} else {
+			string methodName = isPause ? "OnJoinedRoomInPause" : "OnJoinedRoomInRound";
+			GameObjectHelper.SendMessageToAll (methodName);
 			InvokeRepeating ("OnSecondElapsed", 0, 1);
 		}
 	}
