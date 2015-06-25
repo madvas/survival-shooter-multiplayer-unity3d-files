@@ -25,7 +25,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 137: {fileID: 13700002}
-  - 65: {fileID: 6597926}
   m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
@@ -183,18 +182,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .129999995, y: .720000029, z: 1.52999997}
   m_Center: {x: .419999987, y: .310000002, z: .109999999}
---- !u!65 &6597926
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4869318, y: .0887731016, z: .646993577}
-  m_Center: {x: -.251054704, y: -8.94069672e-08, z: .10632965}
 --- !u!81 &8124976
 AudioListener:
   m_ObjectHideFlags: 1
