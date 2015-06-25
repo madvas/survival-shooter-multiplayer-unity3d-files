@@ -7,12 +7,13 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	ListView listView;
 	int messagesWidth;
+	Input messageInput;
 
 	void Awake ()
 	{
 		listView = GetComponentInChildren<ListView> ();
 		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
-		Debug.Log (messagesWidth);
+		messageInput = GetComponentInChildren<Input> ();
 	}
 
 	void Start ()
@@ -23,8 +24,7 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetKey (KeyCode.Return)) {
-			Debug.Log ("enter pressed");
+		if (Input.GetKeyDown (KeyCode.Return)) {
 		}
 	}
 
