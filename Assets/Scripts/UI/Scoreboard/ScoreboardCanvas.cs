@@ -40,6 +40,11 @@ public class ScoreboardCanvas : MonoBehaviour
 		UpdateScoreboard ();
 	}
 
+	void OnJoinedRoomInPause ()
+	{
+		canvas.enabled = true;
+	}
+
 	void OnLeftRoom ()
 	{
 		canvas.enabled = false;
@@ -58,11 +63,6 @@ public class ScoreboardCanvas : MonoBehaviour
 	void OnRoundStarted ()
 	{
 		canvas.enabled = false;
-	}
-
-	void OnJoinedRoomInPause ()
-	{
-		canvas.enabled = true;
 	}
 
 	void OnPhotonPlayerConnected (PhotonPlayer newPlayer)
