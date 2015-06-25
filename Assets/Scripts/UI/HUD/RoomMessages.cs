@@ -18,7 +18,13 @@ public class RoomMessages : MonoBehaviour
 	{
 		listView.AddColumn ("Messages", messagesWidth);
 		listView.ShowColumnHeaders = false;
-		listView.AddItem ("Player bla joined game");
-		listView.AddItem ("Player blablasbas joined game");
+		AddMessage ("Player asdasd joined the game");
+		AddMessage ("Player asdasd left the game");
+	}
+
+	void AddMessage (string message)
+	{
+		listView.AddItem (message);
+		listView.SetVerticalScrollBarValue (9999f);
 	}
 }
