@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Endgame;
 
-public class RoomMessages : MonoBehaviour {
+public class RoomMessages : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
+	ListView listView;
+
+	void Awake ()
+	{
+		listView = GetComponent<ListView>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Start () {
+		listView.AddItem(new string[] {
+			"test"
+		})
 	}
 }
