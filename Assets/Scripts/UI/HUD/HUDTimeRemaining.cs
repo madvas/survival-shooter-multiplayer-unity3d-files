@@ -12,7 +12,7 @@ public class HUDTimeRemaining : MonoBehaviour
 		timeText = GetComponent<Text> ();
 	}
 	
-	void OnTimerTick (string remainingTime)
+	void OnTimerTick (string remainingTime, bool isPause)
 	{
 		timeText.text = remainingTime;
 	}
