@@ -16,10 +16,14 @@ public class SceneCamera : MonoBehaviour
 		camera.enabled = true;
 	}
 
-	void OnJoinedRoom ()
+	void OnJoinedRoomInRound ()
 	{
-		Debug.Log ("Scenecamera OnJoinedRoomInPause");
 		camera.enabled = false;
+	}
+
+	void OnJoinedRoomInPause ()
+	{
+		camera.enabled = true;
 	}
 
 	void OnPauseStarted ()
@@ -30,11 +34,5 @@ public class SceneCamera : MonoBehaviour
 	void OnRoundStarted ()
 	{
 		camera.enabled = false;
-	}
-
-	void OnJoinedRoomInPause ()
-	{
-		Debug.Log ("SceneCamera OnJoinedRoomInPause");
-		camera.enabled = true;
 	}
 }

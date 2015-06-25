@@ -26,6 +26,8 @@ public class RoomTimeManager : MonoBehaviour
 	private const string IsPauseKey = "p";
 
 	bool isPause = true;
+	string methodInPause = "OnJoinedRoomInPause";
+	string methodInRound = "OnJoinedRoomInRound";
 
 	private void InitTimerNow ()
 	{
@@ -47,8 +49,9 @@ public class RoomTimeManager : MonoBehaviour
 	{
 		if (PhotonNetwork.isMasterClient) {
 			this.InitTimerNow ();
+			GameObjectHelper.SendMessageToAll (methodInRound);
 		} else {
-			string methodName = isPause ? "OnJoinedRoomInPause" : "OnJoinedRoomInRound";
+			string methodName = isPause ? methodInPause : methodInRound;
 			GameObjectHelper.SendMessageToAll (methodName);
 			InvokeRepeating ("OnSecondElapsed", 0, 1);
 		}
