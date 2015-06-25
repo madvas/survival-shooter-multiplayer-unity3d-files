@@ -110,7 +110,7 @@ public class RoomTimeManager : MonoBehaviour
 	{
 		int totalTime = isPause ? SecondsPerPause : SecondsPerRound;
 		int remainingSeconds = (int)Mathf.Round ((float)(totalTime - (PhotonNetwork.time - StartTime)));
-		GameObjectHelper.SendMessageToAll ("OnTimerTick", TimeHelper.SecondsToTimer ((float)remainingSeconds));
+		GameObjectHelper.SendMessageToAll ("OnTimerTick", TimeHelper.SecondsToTimer ((float)remainingSeconds), isPause);
 
 		if (PhotonNetwork.isMasterClient && remainingSeconds == 0f) {
 			SetNewStartTime ();
