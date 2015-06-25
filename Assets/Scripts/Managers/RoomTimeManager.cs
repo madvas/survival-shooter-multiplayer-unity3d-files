@@ -26,6 +26,7 @@ public class RoomTimeManager : MonoBehaviour
 	private const string IsPauseKey = "p";
 
 	bool isPause = true;
+	bool firstSync = true;
 	string methodInPause = "OnJoinedRoomInPause";
 	string methodInRound = "OnJoinedRoomInRound";
 
@@ -72,12 +73,15 @@ public class RoomTimeManager : MonoBehaviour
 		}
 		if (propertiesThatChanged.ContainsKey (IsPauseKey)) {
 			isPause = (bool)propertiesThatChanged [IsPauseKey];
-			if (isPause) {
-				GameObjectHelper.SendMessageToAll ("OnPauseStarted");
-			} else {
-				GameObjectHelper.SendMessageToAll ("OnRoundStarted");
+			if (!firstSync) {
+				if (isPause) {
+					GameObjectHelper.SendMessageToAll ("OnPauseStarted");
+				} else {
+					GameObjectHelper.SendMessageToAll ("OnRoundStarted");
+				}
 			}
 		}
+		firstSync = false;
 	}
 	
 	/// <remarks>
