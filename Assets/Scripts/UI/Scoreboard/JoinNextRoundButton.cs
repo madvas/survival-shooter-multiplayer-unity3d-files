@@ -19,7 +19,7 @@ public class JoinNextRoundButton : MonoBehaviour
 		networkManager = GameObject.FindGameObjectWithTag ("NetworkManager").GetComponent<NetworkManager> ();
 	}
 
-	void OnJoinedRoomInPause ()
+	void OnJoinedRoom ()
 	{
 		clicked = true;
 	}
@@ -28,6 +28,7 @@ public class JoinNextRoundButton : MonoBehaviour
 	{
 		SetButton (false);
 		if (!clicked) {
+			networkManager.LeaveRoom ();
 		}
 	}
 
