@@ -19,7 +19,6 @@ public class ShowInfoOfPlayer : Photon.MonoBehaviour
 
 	void Start ()
 	{
-		Debug.Log ("I AM DEFINITELY HERE");
 		if (font == null) {
 			#if UNITY_3_5
             font = (Font)FindObjectsOfTypeIncludingAssets(typeof(Font))[0];
