@@ -48,6 +48,11 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 	}
 
+	void OnPhotonInstantiate (PhotonMessageInfo	info)
+	{
+		Debug.Log ("OnPhotonInstantiate");
+	}
+
 	void OnPauseStarted ()
 	{
 		DestroyPlayer ();
