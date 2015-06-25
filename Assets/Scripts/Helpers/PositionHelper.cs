@@ -19,6 +19,11 @@ public static class PositionHelper
 		return new PositionData (randomPosition, randomRotation);
 	}
 
+	public static void RandomizeSpawnTransform ()
+	{
+
+	}
+
 	static Vector3 ValidateSpawnPosition (Vector3 position)
 	{
 		foreach (var item in GameObject.FindGameObjectsWithTag("NotSpawnable")) {
