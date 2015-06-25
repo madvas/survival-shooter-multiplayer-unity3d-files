@@ -87,11 +87,7 @@ public class RoomsCanvas : MonoBehaviour
 
 	void AddListItem (string roomName, int playerCount, int maxPlayers)
 	{
-		string[] item = new string[]{
-			roomName,
-			playerCount.ToString ("D") + "/" + maxPlayers,
-		};
-		listView.AddItem (item);
+		listView.AddItem (roomName, playerCount.ToString ("D") + "/" + maxPlayers);
 	}
 
 	void disableJoining ()

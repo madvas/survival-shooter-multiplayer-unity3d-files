@@ -82,11 +82,7 @@ public class ScoreboardCanvas : MonoBehaviour
 			.ThenBy (p => p.GetDeaths ())
 			.ToList ();
 		foreach (var player in players) {
-			listView.AddItem (new string[]{
-				player.name,
-				player.GetScore ().ToString ("D"),
-				player.GetDeaths ().ToString ("D")
-			});
+			listView.AddItem (player.name, player.GetScore ().ToString ("D"), player.GetDeaths ().ToString ("D"));
 		}
 	}
 }

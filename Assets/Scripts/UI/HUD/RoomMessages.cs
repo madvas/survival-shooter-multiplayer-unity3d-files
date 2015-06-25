@@ -11,15 +11,14 @@ public class RoomMessages : MonoBehaviour
 	void Awake ()
 	{
 		listView = GetComponent<ListView> ();
-		messagesWidth = GetComponent<RectTransform>().rect.width;
+		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
 	}
 
 	void Start ()
 	{
 		listView.AddColumn ("Messages", messagesWidth);
 		listView.ShowColumnHeaders = false;
-		listView.AddItem ("test");
+		listView.AddItem ("Player bla joined game");
+		listView.AddItem ("Player blablasbas joined game");
 	}
-
-	void AddMessage
 }
