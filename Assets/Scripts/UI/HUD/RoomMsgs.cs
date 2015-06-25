@@ -40,7 +40,7 @@ public class RoomMsgs : Photon.MonoBehaviour
 		
 		GUI.SetNextControlName ("");
 		GUILayout.BeginArea (this.GuiRect);
-		
+
 		scrollPos = GUILayout.BeginScrollView (scrollPos);
 		GUILayout.FlexibleSpace ();
 		for (int i = messages.Count - 1; i >= 0; i--) {
@@ -51,6 +51,7 @@ public class RoomMsgs : Photon.MonoBehaviour
 		GUILayout.BeginHorizontal ();
 		GUI.SetNextControlName ("ChatInput");
 		inputLine = GUILayout.TextField (inputLine);
+
 		if (GUILayout.Button ("Send", GUILayout.ExpandWidth (false))) {
 			this.photonView.RPC ("Chat", PhotonTargets.All, this.inputLine);
 			this.inputLine = "";
