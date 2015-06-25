@@ -36,6 +36,7 @@ public class RoomMessages : MonoBehaviour
 
 	void OnJoinedRoom ()
 	{
+		listView.ClearAllItems ();
 		OnPhotonPlayerConnected (PhotonNetwork.player);
 	}
 
