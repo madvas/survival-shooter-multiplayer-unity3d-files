@@ -2773,8 +2773,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fe916fdd71a455c9327dac23d7f978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SecondsPerRound: 10
-  SecondsPerPause: 20
+  SecondsPerRound: 40
+  SecondsPerPause: 10
   StartTime: 0
 --- !u!1 &560137264
 GameObject:

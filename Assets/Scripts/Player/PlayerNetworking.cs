@@ -41,6 +41,8 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	{
 		if (!photonView.isMine) {
 			StartCoroutine (UpdateData ());
+		} else {
+			ResetScore ();
 		}
 	}
 
@@ -131,6 +133,11 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	}
 
 	void OnRoundStarted ()
+	{
+		ResetScore ();
+	}
+
+	void ResetScore ()
 	{
 		if (photonView.isMine) {
 			photonView.owner.SetScore (0);
