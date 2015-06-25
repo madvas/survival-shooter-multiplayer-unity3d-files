@@ -22,6 +22,7 @@ public class JoinNextRoundButton : MonoBehaviour
 	void OnJoinedRoom ()
 	{
 		clicked = true;
+		SetButton (false);
 	}
 
 	void OnRoundStarted ()
@@ -40,6 +41,7 @@ public class JoinNextRoundButton : MonoBehaviour
 
 	public void OnClick ()
 	{
+		Debug.Log ("button clicked");
 		clicked = true;
 		SetButton (false);
 	}
