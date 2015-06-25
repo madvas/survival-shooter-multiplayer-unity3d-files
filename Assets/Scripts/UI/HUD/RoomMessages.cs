@@ -12,6 +12,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	{
 		listView = GetComponentInChildren<ListView> ();
 		messagesWidth = (int)GetComponentInChildren<RectTransform> ().rect.width;
+		Debug.Log (messagesWidth);
 	}
 
 	void Start ()
