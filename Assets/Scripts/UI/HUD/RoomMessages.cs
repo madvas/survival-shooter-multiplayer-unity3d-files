@@ -30,9 +30,11 @@ public class RoomMessages : Photon.MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Return)) {
 			if (isWriting) {
 				messageInput.text = "";
+				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
 			} else {
 				messageInput.ActivateInputField ();
 				isWriting = true;
+				GameObjectHelper.SendMessageToAll ("OnWritingMesssageStarted");
 			}
 		}
 	}

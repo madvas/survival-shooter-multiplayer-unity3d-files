@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 #endif
 
+	bool keyboardDisabled = false;
 	int IsWalkingHash = Animator.StringToHash ("IsWalking");
 
 	void Awake ()
@@ -27,18 +28,20 @@ public class PlayerMovement : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		// Store the input axes.
-		float h = CrossPlatformInputManager.GetAxisRaw ("Horizontal");
-		float v = CrossPlatformInputManager.GetAxisRaw ("Vertical");
-
-		// Move the player around the scene.
-		Move (h, v);
+		if (!keyboardDisabled) {
+			// Store the input axes.
+			float h = CrossPlatformInputManager.GetAxisRaw ("Horizontal");
+			float v = CrossPlatformInputManager.GetAxisRaw ("Vertical");
+			
+			// Move the player around the scene.
+			Move (h, v);
+			
+			// Animate the player.
+			Animating (h, v);
+		}
 
 		// Turn the player to face the mouse cursor.
 		Turning ();
-
-		// Animate the player.
-		Animating (h, v);
 	}
 
 
@@ -111,5 +114,15 @@ public class PlayerMovement : MonoBehaviour
 	void OnPlayerDead ()
 	{
 		anim.SetBool (IsWalkingHash, false);
+	}
+
+	void OnWritingMesssageStarted ()
+	{
+		keyboardDisabled = true;
+	}
+
+	void OnWritingMesssageEnded ()
+	{
+		keyboardDisabled = false;
 	}
 }
