@@ -2,7 +2,8 @@
 using System.Collections;
 using Endgame;
 
-public class RoomMessages : MonoBehaviour
+[RequireComponent(typeof(PhotonView))]
+public class RoomMessages : Photon.MonoBehaviour
 {
 
 	ListView listView;
@@ -53,5 +54,5 @@ public class RoomMessages : MonoBehaviour
 	string GetPlayersInRoomString ()
 	{
 		return string.Format ("({0}/{1})", PhotonNetwork.room.playerCount, PhotonNetwork.room.maxPlayers);
-	}
+	}	
 }
