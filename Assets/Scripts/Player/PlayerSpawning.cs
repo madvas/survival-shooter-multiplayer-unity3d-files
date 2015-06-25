@@ -67,7 +67,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 
 		if (photonView.isMine) {
-			transform = PositionHelper.RandomizeTransform (transform);
+			PositionHelper.RandomizeTransform (transform);
 			SetPlayerPhysics (true);
 			SetPlayerControl (true);
 		}

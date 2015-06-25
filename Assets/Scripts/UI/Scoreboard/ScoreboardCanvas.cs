@@ -70,6 +70,11 @@ public class ScoreboardCanvas : MonoBehaviour
 		UpdateScoreboard ();
 	}
 
+	void OnPhotonPlayerDisconnected (PhotonPlayer otherPlayer)
+	{
+		UpdateScoreboard ();
+	}
+
 	void UpdateScoreboard ()
 	{
 		listView.ClearAllItems ();
