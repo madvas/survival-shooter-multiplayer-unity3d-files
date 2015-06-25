@@ -2,7 +2,6 @@
 using System.Collections;
 using Endgame;
 
-[RequireComponent(typeof(PhotonView))]
 public class RoomMessages : Photon.MonoBehaviour
 {
 
@@ -25,7 +24,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	void AddEmptyMessages ()
 	{
 		for (int i = 0; i < 5; i++) {
-			listView.AddItem ("");
+			listView.AddItem ("asd");
 		}
 	}
 
