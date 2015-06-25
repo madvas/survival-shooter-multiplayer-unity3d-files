@@ -27,7 +27,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void Update ()
 	{
-		if (isSinking) {
+		if (photonView.isMine && isSinking) {
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 			if (transform.position.y < -1) {
 				isSinking = false;
@@ -38,6 +38,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void OnPlayerInstantiated ()
 	{
+		return;
 		Debug.Log ("OnPlayerInstantiated");
 		Debug.Log (roomTimeManager.isPauseState ());
 		this.enabled = true;
@@ -50,7 +51,12 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void OnPhotonInstantiate (PhotonMessageInfo	info)
 	{
-		Debug.Log ("OnPhotonInstantiate");
+		this.enabled = true;
+		if (roomTimeManager.isPauseState ()) {
+			DestroyPlayer (true);
+		} else {
+			RespawnPlayer ();
+		}
 	}
 
 	void OnPauseStarted ()
