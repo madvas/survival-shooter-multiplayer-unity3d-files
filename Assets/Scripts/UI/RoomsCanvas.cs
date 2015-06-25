@@ -104,28 +104,29 @@ public class RoomsCanvas : MonoBehaviour
 		joinBtnScript.interactable = true;
 	}
 
-	private void OnSelectedItemChange (object sender, System.EventArgs args)
+	void OnSelectedItemChange (object sender, System.EventArgs args)
 	{
 		validateRoomForm ();
 	}
 
-	private void OnItemActivate (object sender, System.EventArgs args)
+	void OnItemActivate (object sender, System.EventArgs args)
 	{
 		if (validateRoomForm ()) {
 			JoinSelectedRoom ();
 		}
 	}
 
-	private void OnRoomListUpdate (List<Networking.Room> roomList)
+	void OnRoomListUpdate (List<Networking.Room> roomList)
 	{
 		rooms = roomList;
 		listView.ClearAllItems ();
 		foreach (var room in roomList) {
 			AddListItem (room.name, room.playerCount, room.maxPlayers);
 		}
+		listView.SetVerticalScrollBarValue (9999);
 	}
 
-	private bool isSelectedRoomFull ()
+	bool isSelectedRoomFull ()
 	{
 		Networking.Room selectedRoom = rooms [listView.SelectedItems [0].Index];
 		return selectedRoom.maxPlayers <= selectedRoom.playerCount;
