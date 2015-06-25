@@ -763,8 +763,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -109.699997, y: 118.299988}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: -59.5, y: 118.299988}
+  m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &117041244
 MonoBehaviour:
@@ -809,6 +809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38c0d2f5048545a0991319ace180ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pausePrefix: 'Next round starts in: '
+  roundPrefix: 'Time remaining: '
 --- !u!1 &129671497
 GameObject:
   m_ObjectHideFlags: 0
@@ -7697,7 +7699,7 @@ Canvas:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1912596085}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_RenderMode: 0
   m_Camera: {fileID: 0}

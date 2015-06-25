@@ -14,6 +14,7 @@ public class HUDTimeRemaining : MonoBehaviour
 	
 	void OnTimerTick (object[] timeData)
 	{
-		timeText.text = timeData [0];
+		string timeRemaining = timeData [0] as string;
+		timeText.text = timeRemaining;
 	}
 }

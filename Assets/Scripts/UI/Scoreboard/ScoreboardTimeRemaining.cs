@@ -17,12 +17,11 @@ public class ScoreboardTimeRemaining : MonoBehaviour
 		timeText = GetComponent<Text> ();
 	}
 
-//	void OnTimerTick (string remainingTime, bool isPause)
 	void OnTimerTick (object[] timeData)
 	{
-		Debug.Log (timeData [0]);
-		Debug.Log (timeData [1]);
-//		prefix = isPause ? pausePrefix : roundPrefix;
-//		timeText.text = prefix + remainingTime;
+		string remainingTime = timeData [0] as string;
+		bool isPause = (bool)timeData [1];
+		prefix = isPause ? pausePrefix : roundPrefix;
+		timeText.text = prefix + remainingTime;
 	}
 }
