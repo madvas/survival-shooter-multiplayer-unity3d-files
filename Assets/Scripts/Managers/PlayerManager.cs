@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerManager : MonoBehaviour
 {
 	public float respawnDelay = 2f;
+	public Material[] playerMaterials;
 
 	void OnJoinedRoom ()
 	{
