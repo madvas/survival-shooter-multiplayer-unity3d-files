@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using ExitGames.Client.Photon;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -15,25 +16,23 @@ public class PlayerManager : MonoBehaviour
 	void InstantiatePlayer ()
 	{
 		GameObject player = PhotonNetwork.Instantiate ("Player", Vector3.zero, Quaternion.identity, 0);
-		SkinnedMeshRenderer body = player.FindComponentInChildWithTag<SkinnedMeshRenderer> ("PlayerBodyMesh");
 
 		List<int> availableMaterials = Enumerable.Range (0, playerMaterials.Length).ToList ().Except (PhotonNetwork.playerList.GetMaterials ()).ToList ();
-
-		foreach (var item in Enumerable.Range (0, playerMaterials.Length).ToList ()) {
-			Debug.Log ("used mat: " + item);
-		}
-
 		int materialIndex = availableMaterials.PickRandom ();
-
 		PhotonNetwork.player.SetMaterialIndex (materialIndex);
-		body.material = playerMaterials [materialIndex];
 
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
 	}
 
-	void OnPhotonPlayerInstantiate (PhotonPlayer player)
+	void OnPhotonPlayerPropertiesChanged (Hashtable playerAndUpdatedProps)
 	{
-
+		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
+		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
+		if (props.ContainsKey (PhotonPlayerExtensions.PlayerMaterialProp)) {
+			int materialIndex = (int)props [PhotonPlayerExtensions.PlayerMaterialProp];
+			SkinnedMeshRenderer body = player.FindComponentInChildWithTag<SkinnedMeshRenderer> ("PlayerBodyMesh");
+			body.material = playerMaterials [materialIndex];
+		}
 	}
 }

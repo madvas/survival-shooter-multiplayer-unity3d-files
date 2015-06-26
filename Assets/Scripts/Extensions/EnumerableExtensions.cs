@@ -24,7 +24,8 @@ public static class EnumerableExtension
 	public static IEnumerable<T> Debug<T> (this IEnumerable<T> source, string prefix = "")
 	{
 		foreach (var item in source) {
-			UnityEngine.Debug.Log (prefix + " " + item);
+			UnityEngine.Debug.Log (prefix + " " + item.ToString ());
 		}
+		return source;
 	}
 }
