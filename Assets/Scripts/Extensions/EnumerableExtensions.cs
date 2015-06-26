@@ -2,11 +2,22 @@
 using System.Linq;
 using UnityEngine;
 using System.Collections;
+using System;
 
 public static class EnumerableExtension
 {
-	public static T PickRandom<T> (this List<T> source)
+	public static T PickRandom<T> (this IEnumerable<T> source)
 	{
-		return source [Random.Range (0, source.Count)];
+		return source.PickRandom (1).Single ();
+	}
+	
+	public static IEnumerable<T> PickRandom<T> (this IEnumerable<T> source, int count)
+	{
+		return source.Shuffle ().Take (count);
+	}
+	
+	public static IEnumerable<T> Shuffle<T> (this IEnumerable<T> source)
+	{
+		return source.OrderBy (x => Guid.NewGuid ());
 	}
 }
