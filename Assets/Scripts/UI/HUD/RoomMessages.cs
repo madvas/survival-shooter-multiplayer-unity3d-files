@@ -15,7 +15,8 @@ public class RoomMessages : Photon.MonoBehaviour
 	void Awake ()
 	{
 		listView = GetComponentInChildren<ListView> ();
-		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
+//		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
+		messagesWidth = 250;
 		messageInput = GetComponentInChildren<InputField> ();
 	}
 
