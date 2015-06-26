@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-using ExitGames.Client.Photon;
 
 public class PlayerManager : MonoBehaviour
 {
 	public float respawnDelay = 2f;
-	public Material[] playerMaterials;
+	public static Material[] playerMaterials;
 
 	void OnJoinedRoom ()
 	{
@@ -23,16 +22,5 @@ public class PlayerManager : MonoBehaviour
 
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
-	}
-
-	void OnPhotonPlayerPropertiesChanged (Hashtable playerAndUpdatedProps)
-	{
-		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
-		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-		if (props.ContainsKey (PhotonPlayerExtensions.PlayerMaterialProp)) {
-			int materialIndex = (int)props [PhotonPlayerExtensions.PlayerMaterialProp];
-			SkinnedMeshRenderer body = player.FindComponentInChildWithTag<SkinnedMeshRenderer> ("PlayerBodyMesh");
-			body.material = playerMaterials [materialIndex];
-		}
 	}
 }
