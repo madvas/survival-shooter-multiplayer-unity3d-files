@@ -5,7 +5,7 @@ using System.Collections;
 
 public static class EnumerableExtension
 {
-	public static T PickRandom<T> (this IEnumerable<T> source)
+	public static T PickRandom<T> (this List<T> source)
 	{
 		return source [Random.Range (0, source.Count)];
 	}
