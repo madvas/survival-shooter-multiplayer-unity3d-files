@@ -2,7 +2,7 @@
 using System.Collections;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class PlayerMaterial : MonoBehaviour
+public class PlayerMaterial : Photon.MonoBehaviour
 {
 	SkinnedMeshRenderer body;
 	PlayerManager playerManager;
@@ -17,7 +17,7 @@ public class PlayerMaterial : MonoBehaviour
 	{
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-		if (props.ContainsKey (PhotonPlayerExtensions.PlayerMaterialProp)) {
+		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.PlayerMaterialProp)) {
 			int materialIndex = (int)props [PhotonPlayerExtensions.PlayerMaterialProp];
 			body.material = playerManager.playerMaterials [materialIndex];
 		}
