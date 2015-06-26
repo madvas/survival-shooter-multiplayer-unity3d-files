@@ -80,8 +80,8 @@ public class RoomTimeManager : MonoBehaviour
 					GameObjectHelper.SendMessageToAll ("OnRoundStarted");
 				}
 			}
+			firstSync = false;
 		}
-		firstSync = false;
 	}
 	
 	/// <remarks>

@@ -7,6 +7,7 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 static class PhotonPlayerExtensions
 {
 	public static readonly string PlayerDeathsProp = "d";
+	public static readonly string PlayerMaterialProp = "m";
 
 	public static void SetDeaths (this PhotonPlayer player, int newDeaths)
 	{
@@ -36,4 +37,12 @@ static class PhotonPlayerExtensions
 		
 		return 0;
 	}
+
+	public static void SetMaterialIndex (this PhotonPlayer player, int materialIndex)
+	{
+		Hashtable material = new Hashtable (); 
+		material [PhotonPlayerExtensions.PlayerMaterialProp] = materialIndex;
+		player.SetCustomProperties (material);
+	}
+
 }
