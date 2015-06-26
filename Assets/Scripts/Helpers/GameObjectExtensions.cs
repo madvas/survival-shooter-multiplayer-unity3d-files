@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GameObjectExtensionss
+public static class MyGameObjectExtensions
 {
 	public static T FindComponentInChildWithTag<T> (this GameObject parent, string tag)where T:Component
 	{
@@ -10,5 +10,6 @@ public class GameObjectExtensionss
 				return tr.GetComponent<T> ();
 			}
 		}
+		return null;
 	}
 }

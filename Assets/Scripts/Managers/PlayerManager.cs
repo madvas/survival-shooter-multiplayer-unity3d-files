@@ -14,8 +14,10 @@ public class PlayerManager : MonoBehaviour
 	void InstantiatePlayer ()
 	{
 		GameObject player = PhotonNetwork.Instantiate ("Player", Vector3.zero, Quaternion.identity, 0);
-		player.GetComponent<AudioListener> ().enabled = true;
+		SkinnedMeshRenderer body = player.FindComponentInChildWithTag<SkinnedMeshRenderer> ("PlayerBodyMesh");
+		body.material = playerMaterials [Random.Range (0, playerMaterials.Length)];
 
+		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
 	}
 }
