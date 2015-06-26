@@ -17,11 +17,11 @@ public class PlayerManager : MonoBehaviour
 		GameObject player = PhotonNetwork.Instantiate ("Player", Vector3.zero, Quaternion.identity, 0);
 		SkinnedMeshRenderer body = player.FindComponentInChildWithTag<SkinnedMeshRenderer> ("PlayerBodyMesh");
 
-		List<int> availableMaterials = Enumerable.Range (0, playerMaterials.Length).Except (PhotonNetwork.playerList.GetMaterials ()).ToList ();
-
-		int materialIndex = availableMaterials.PickRandom ();
+		int[] availableMaterials = Enumerable.Range (0, playerMaterials.Length).Except (PhotonNetwork.playerList.GetMaterials ()).ToArray ();
 
 		Debug.Log (PhotonNetwork.playerList.GetMaterials ().Count);
+		int materialIndex = availableMaterials.PickRandom ();
+
 
 		foreach (var item in PhotonNetwork.playerList.GetMaterials ()) {
 			Debug.Log ("used mat: " + item);
