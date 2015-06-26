@@ -11,6 +11,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	int messagesWidth;
 	InputField messageInput;
 	bool isWriting = false;
+	Text messagesText;
 
 	void Awake ()
 	{
@@ -18,6 +19,8 @@ public class RoomMessages : Photon.MonoBehaviour
 //		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
 		messagesWidth = 250;
 		messageInput = GetComponentInChildren<InputField> ();
+		messagesText = GetComponentInChildren<ScrollRect> ().GetComponent<Text> ();
+
 	}
 
 	void Start ()
