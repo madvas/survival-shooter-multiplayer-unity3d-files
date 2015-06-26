@@ -59,7 +59,10 @@ static class PhotonPlayerExtensions
 	{
 		List<int> materialList = new List<int> ();
 		foreach (var player in players) {
-			materialList.Add (player.GetMaterialIndex ());
+			int matIdx = player.GetMaterialIndex ();
+			if (matIdx > -1) {
+				materialList.Add (matIdx);
+			}
 		}
 		return materialList;
 	}

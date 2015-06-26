@@ -23,12 +23,13 @@ public class PlayerManager : MonoBehaviour
 
 		Debug.Log (PhotonNetwork.playerList.GetMaterials ().Count);
 
-		foreach (var item in availableMaterials) {
-
+		foreach (var item in PhotonNetwork.playerList.GetMaterials ()) {
+			Debug.Log ("used mat: " + item);
 		}
 
 		Debug.Log (availableMaterials.Count);
 		Debug.Log (materialIndex);
+		Debug.Log (playerMaterials [materialIndex]);
 
 		PhotonNetwork.player.SetMaterialIndex (materialIndex);
 		body.material = playerMaterials [materialIndex];
