@@ -11,6 +11,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	int messagesWidth;
 	InputField messageInput;
 	bool isWriting = false;
+	ScrollRect messagesScrollRect;
 	Text messagesText;
 
 	void Awake ()
@@ -19,14 +20,15 @@ public class RoomMessages : Photon.MonoBehaviour
 //		messagesWidth = (int)GetComponent<RectTransform> ().rect.width;
 		messagesWidth = 250;
 		messageInput = GetComponentInChildren<InputField> ();
-		messagesText = GetComponentInChildren<ScrollRect> ().GetComponent<Text> ();
+		messagesScrollRect = GetComponentInChildren<ScrollRect> ();
+		messagesText = messagesScrollRect.content.gameObject.GetComponent<Text> ();
 
 	}
 
 	void Start ()
 	{
-		listView.AddColumn ("Messages", messagesWidth);
-		listView.ShowColumnHeaders = false;
+//		listView.AddColumn ("Messages", messagesWidth);
+//		listView.ShowColumnHeaders = false;
 	}
 
 	void Update ()
@@ -54,14 +56,16 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	void AddMessage (string message)
 	{
-		listView.AddItem (message);
-		listView.SetVerticalScrollBarValue (9999f);
+//		listView.AddItem (message);
+//		listView.SetVerticalScrollBarValue (9999f);
+		messagesText.text += message + "\n";
 	}
 
 	void OnJoinedRoom ()
 	{
-		listView.ClearAllItems ();
-		AddEmptyMessages ();
+//		listView.ClearAllItems ();
+		messagesText.text = "";
+//		AddEmptyMessages ();
 		OnPhotonPlayerConnected (PhotonNetwork.player);
 	}
 
