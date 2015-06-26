@@ -43,7 +43,7 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	void AddEmptyMessages ()
 	{
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 5; i++) {
 			listView.AddItem ("");
 		}
 	}
