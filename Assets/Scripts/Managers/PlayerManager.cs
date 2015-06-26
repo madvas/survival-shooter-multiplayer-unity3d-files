@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
 		Debug.Log (materialIndex);
 		Debug.Log (playerMaterials [materialIndex]);
 
-//		PhotonNetwork.player.SetMaterialIndex (materialIndex);
+		PhotonNetwork.player.SetMaterialIndex (materialIndex);
 		body.material = playerMaterials [materialIndex];
 
 		player.GetComponent<AudioListener> ().enabled = true;

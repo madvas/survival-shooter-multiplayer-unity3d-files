@@ -68,8 +68,6 @@ public class RoomTimeManager : MonoBehaviour
 	/// <summary>Called by PUN when new properties for the room were set (by any client in the room).</summary>
 	public void OnPhotonCustomRoomPropertiesChanged (Hashtable propertiesThatChanged)
 	{
-		Debug.Log ("OnPhotonCustomRoomPropertiesChanged");
-		Debug.Log (propertiesThatChanged);
 		if (propertiesThatChanged.ContainsKey (StartTimeKey)) {
 			StartTime = (double)propertiesThatChanged [StartTimeKey];
 		}
@@ -77,10 +75,8 @@ public class RoomTimeManager : MonoBehaviour
 			isPause = (bool)propertiesThatChanged [IsPauseKey];
 			if (!firstSync) {
 				if (isPause) {
-					Debug.Log ("OnPauseStarted");
 					GameObjectHelper.SendMessageToAll ("OnPauseStarted");
 				} else {
-					Debug.Log ("OnRoundStarted");
 					GameObjectHelper.SendMessageToAll ("OnRoundStarted");
 				}
 			}
