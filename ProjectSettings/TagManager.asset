@@ -15,6 +15,7 @@ TagManager:
   - NetworkManager
   - RoomTimeManager
   - PlayerBodyMesh
+  - PlayerManager
   layers:
   - Default
   - TransparentFX

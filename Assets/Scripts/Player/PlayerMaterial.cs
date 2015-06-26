@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using ExitGames.Client;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PlayerMaterial : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class PlayerMaterial : MonoBehaviour
 		playerManager = GameObject.FindGameObjectWithTag ("PlayerManager").GetComponent<PlayerManager> ();
 	}
 
-	void OnPhotonPlayerPropertiesChanged (Hashtable playerAndUpdatedProps)
+	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
 	{
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
