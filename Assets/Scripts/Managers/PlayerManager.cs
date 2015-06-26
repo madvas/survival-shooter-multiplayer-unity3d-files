@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
 			Debug.Log ("used mat: " + item);
 		}
 
-		Debug.Log (availableMaterials.Count);
+		Debug.Log (availableMaterials.Length);
 		Debug.Log (materialIndex);
 		Debug.Log (playerMaterials [materialIndex]);
 
