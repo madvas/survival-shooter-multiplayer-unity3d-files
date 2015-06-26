@@ -1095,9 +1095,9 @@ RectTransform:
   - {fileID: 566360545}
   m_Father: {fileID: 303651936}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 257, y: -204}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -150, y: 50}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &208188601
@@ -3653,10 +3653,10 @@ RectTransform:
   - {fileID: 718221785}
   m_Father: {fileID: 208188600}
   m_RootOrder: 2
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -147, y: 73.1999969}
-  m_SizeDelta: {x: 296.109985, y: 95}
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 3, y: 24.8999996}
+  m_SizeDelta: {x: 296.109985, y: 120}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &566360546
 MonoBehaviour:
@@ -4716,7 +4716,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -3.81469727e-06}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &718221786
@@ -4744,7 +4744,23 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'Player Shooter3305 joined the room. (1/5)
+
+    [Shooter3305] sdfs
+
+    [Shooter3305] sdfsdfs
+
+    [Shooter3305] sdfsdfsdf
+
+    [Shooter3305] sdfsdf
+
+    [Shooter3305] sdfsdf
+
+    [Shooter3305] sdfsdf
+
+    [Shooter3305] sdfsdf
+
+'
 --- !u!222 &718221787
 CanvasRenderer:
   m_ObjectHideFlags: 0
