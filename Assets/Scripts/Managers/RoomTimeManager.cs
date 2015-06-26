@@ -69,6 +69,7 @@ public class RoomTimeManager : MonoBehaviour
 	public void OnPhotonCustomRoomPropertiesChanged (Hashtable propertiesThatChanged)
 	{
 		Debug.Log ("OnPhotonCustomRoomPropertiesChanged");
+		Debug.Log (propertiesThatChanged);
 		if (propertiesThatChanged.ContainsKey (StartTimeKey)) {
 			StartTime = (double)propertiesThatChanged [StartTimeKey];
 		}
@@ -83,8 +84,8 @@ public class RoomTimeManager : MonoBehaviour
 					GameObjectHelper.SendMessageToAll ("OnRoundStarted");
 				}
 			}
-			firstSync = false;
 		}
+		firstSync = false;
 	}
 	
 	/// <remarks>
