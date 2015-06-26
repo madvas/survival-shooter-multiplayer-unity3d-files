@@ -23,20 +23,17 @@ public class PlayerManager : MonoBehaviour
 			Debug.Log ("used mat: " + item);
 		}
 
-		Debug.Log (availableMaterials.Count);
-		Debug.Log (PhotonNetwork.playerList.GetMaterials ().Count);
 		int materialIndex = availableMaterials.PickRandom ();
-
-
-
-		Debug.Log (availableMaterials.Count);
-		Debug.Log (materialIndex);
-		Debug.Log (playerMaterials [materialIndex]);
 
 		PhotonNetwork.player.SetMaterialIndex (materialIndex);
 		body.material = playerMaterials [materialIndex];
 
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
+	}
+
+	void OnPhotonPlayerInstantiate (PhotonPlayer player)
+	{
+
 	}
 }
