@@ -118,13 +118,11 @@ public class PlayerMovement : MonoBehaviour
 
 	void OnWritingMesssageStarted ()
 	{
-		Debug.Log ("OnWritingMesssageStarted");
 		keyboardDisabled = true;
 	}
 
 	void OnWritingMesssageEnded ()
 	{
-		Debug.Log ("OnWritingMesssageEnded");
 		keyboardDisabled = false;
 	}
 }

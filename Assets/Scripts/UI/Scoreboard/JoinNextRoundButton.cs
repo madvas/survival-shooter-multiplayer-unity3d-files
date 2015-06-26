@@ -28,7 +28,6 @@ public class JoinNextRoundButton : MonoBehaviour
 
 	void OnRoundStarted ()
 	{
-		Debug.Log ("OnRoundStarted");
 		SetButton (false);
 		if (!clicked) {
 			networkManager.LeaveRoom ();
@@ -37,14 +36,12 @@ public class JoinNextRoundButton : MonoBehaviour
 
 	void OnPauseStarted ()
 	{
-		Debug.Log ("OnPauseStarted");
 		clicked = false;
 		SetButton (true);
 	}
 
 	public void OnClick ()
 	{
-		Debug.Log ("button clicked");
 		clicked = true;
 		SetButton (false);
 	}

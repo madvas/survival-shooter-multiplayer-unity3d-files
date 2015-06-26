@@ -58,7 +58,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void RespawnPlayer ()
 	{
-		Debug.Log ("respawn player");
 		if (roomTimeManager.isPauseState ()) {
 			return;
 		}
