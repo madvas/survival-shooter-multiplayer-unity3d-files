@@ -71,9 +71,11 @@ public class RoomMessages : Photon.MonoBehaviour
 		AddMessage ("Player " + otherPlayer.name + " left the room. " + GetPlayersInRoomString ());
 	}
 
-	void OnPlayerKill (PhotonPlayer killedPlayer)
+	void OnPlayerKill (object[] killData)
 	{
-		AddMessage (PhotonNetwork.player.name + " killed " + killedPlayer.name);
+		PhotonPlayer killer = killData [0] as PhotonPlayer;
+		PhotonPlayer victim = killData [1] as PhotonPlayer;
+		AddMessage (killer.name + " killed " + victim.name);
 	}
 
 	string GetPlayersInRoomString ()
