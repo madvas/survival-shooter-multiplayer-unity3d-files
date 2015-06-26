@@ -482,14 +482,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnDelay: 2
-  playerMaterials:
-  - {fileID: 2100000, guid: ae3fd374101464d0f8a31b7a7123b474, type: 2}
-  - {fileID: 2100000, guid: 853b0148ea2974808a35c30f270b23ab, type: 2}
-  - {fileID: 2100000, guid: 68d157d3ff4dc4be0817b3cbffaf378e, type: 2}
-  - {fileID: 2100000, guid: c5fd377e1fed84825ae63ccefba57ac2, type: 2}
-  - {fileID: 2100000, guid: 5ba5237a394ea438db7fb782bb795a71, type: 2}
-  - {fileID: 2100000, guid: 63100417ae0d0435ba0caef7b8238696, type: 2}
-  - {fileID: 2100000, guid: f5421d2532f1e4c74ba16731a433361f, type: 2}
 --- !u!4 &75502397
 Transform:
   m_ObjectHideFlags: 0
@@ -4659,7 +4651,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0397c928cc6430989d99ba801baa16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageInput: {fileID: 0}
 --- !u!1 &827807919
 GameObject:
   m_ObjectHideFlags: 0

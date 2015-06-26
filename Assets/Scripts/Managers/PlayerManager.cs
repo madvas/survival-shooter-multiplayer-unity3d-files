@@ -5,7 +5,7 @@ using System.Linq;
 public class PlayerManager : MonoBehaviour
 {
 	public float respawnDelay = 2f;
-	public static Material[] playerMaterials;
+	public Material[] playerMaterials;
 
 	void OnJoinedRoom ()
 	{
