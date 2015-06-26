@@ -101,9 +101,10 @@ public class PlayerNetworking : Photon.MonoBehaviour
 			}
 
 			if (shooterId == PhotonNetwork.player.ID) {
-				GameObjectHelper.SendMessageToAll ("OnPlayerKill", photonView.owner);
 				PhotonNetwork.player.AddScore (1);
 			}
+			PhotonPlayer killer = PhotonPlayer.Find (shooterId);
+			GameObjectHelper.SendMessageToAll ("OnPlayerKill", killer, photonView.owner);
 		}
 	}
 
