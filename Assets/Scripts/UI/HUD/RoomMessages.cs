@@ -29,6 +29,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	{
 		if (Input.GetKeyDown (KeyCode.Return)) {
 			if (isWriting) {
+				photonView.RPC ("Chat", PhotonTargets.All, messageInput.text);
 				messageInput.text = "";
 				isWriting = false;
 				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
@@ -73,5 +74,11 @@ public class RoomMessages : Photon.MonoBehaviour
 	string GetPlayersInRoomString ()
 	{
 		return string.Format ("({0}/{1})", PhotonNetwork.room.playerCount, PhotonNetwork.room.maxPlayers);
-	}	
+	}
+
+	[PunRPC]
+	void Chat (string newLine, PhotonMessageInfo mi)
+	{
+		AddMessage (string.Format ("[{0}] {1}", mi.sender.name, newLine));
+	}
 }
