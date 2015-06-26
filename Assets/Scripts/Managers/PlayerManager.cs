@@ -19,8 +19,6 @@ public class PlayerManager : MonoBehaviour
 		int materialIndex = Random.Range (0, playerMaterials.Length);
 		body.material = playerMaterials [materialIndex];
 
-		PhotonNetwork.player.set
-
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
 	}
