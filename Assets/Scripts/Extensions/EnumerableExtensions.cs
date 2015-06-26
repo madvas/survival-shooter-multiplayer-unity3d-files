@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 using System.Collections;
-using System;
 
 public static class EnumerableExtension
 {
@@ -19,5 +19,12 @@ public static class EnumerableExtension
 	public static IEnumerable<T> Shuffle<T> (this IEnumerable<T> source)
 	{
 		return source.OrderBy (x => Guid.NewGuid ());
+	}
+
+	public static IEnumerable<T> Debug<T> (this IEnumerable<T> source, string prefix = "")
+	{
+		foreach (var item in source) {
+			UnityEngine.Debug.Log (prefix + " " + item);
+		}
 	}
 }
