@@ -45,4 +45,23 @@ static class PhotonPlayerExtensions
 		player.SetCustomProperties (material);
 	}
 
+	public static int GetMaterialIndex (this PhotonPlayer player)
+	{
+		object material;
+		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.PlayerMaterialProp, out material)) {
+			return (int)material;
+		}
+		
+		return -1;
+	}
+
+	public static List<int> GetMaterials (this PhotonPlayer[] players)
+	{
+		List<int> materialList = new List<int> ();
+		foreach (var player in players) {
+			materialList.Add (player.GetMaterialIndex ());
+		}
+		return materialList;
+	}
+
 }
