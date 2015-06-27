@@ -23,4 +23,9 @@ public class PlayerManager : MonoBehaviour
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
 	}
+
+	void SetMaterialOnOtherPlayers ()
+	{
+
+	}
 }

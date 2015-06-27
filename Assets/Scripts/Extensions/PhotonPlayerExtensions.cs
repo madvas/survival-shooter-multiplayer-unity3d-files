@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
-
+using System.Linq;
 
 static class PhotonPlayerExtensions
 {
@@ -67,4 +67,8 @@ static class PhotonPlayerExtensions
 		return materialList;
 	}
 
+	public static PhotonPlayer[] GetOtherPlayers (this PhotonPlayer[] players)
+	{
+		return players.Where (p => p.ID != PhotonNetwork.player.ID).ToArray ();
+	}
 }

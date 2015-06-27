@@ -13,6 +13,11 @@ public class PlayerMaterial : Photon.MonoBehaviour
 		playerManager = GameObject.FindGameObjectWithTag ("PlayerManager").GetComponent<PlayerManager> ();
 	}
 
+	void OnPhotonPlayerInstantiate ()
+	{
+
+	}
+
 	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
 	{
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
