@@ -13,9 +13,12 @@ public class PlayerMaterial : Photon.MonoBehaviour
 		playerManager = GameObject.FindGameObjectWithTag ("PlayerManager").GetComponent<PlayerManager> ();
 	}
 
-	void OnPhotonPlayerInstantiate ()
+	void OnPhotonInstantiate (PhotonMessageInfo	info)
 	{
-
+		int materialIndex = photonView.owner.GetMaterialIndex ();
+		if (materialIndex > -1) {
+			body.material = playerManager.playerMaterials [materialIndex];
+		}
 	}
 
 	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)

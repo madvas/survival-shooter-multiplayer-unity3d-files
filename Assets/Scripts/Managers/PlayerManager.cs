@@ -26,6 +26,9 @@ public class PlayerManager : MonoBehaviour
 
 	void SetMaterialOnOtherPlayers ()
 	{
+		foreach (var player in PhotonNetwork.playerList.GetOtherPlayers()) {
+			int materialIndex = player.GetMaterialIndex ();
 
+		}
 	}
 }
