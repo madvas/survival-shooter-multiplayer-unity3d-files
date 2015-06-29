@@ -21,6 +21,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 	bool isDead;                                                
 	bool damaged;
 	int dieAnimHash = Animator.StringToHash ("Die");
+	bool dieAnimEnded = true;
 
 	int _currentHealth;
 	public int currentHealth {
@@ -71,7 +72,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 	}
 
 
-	public void TakeDamage (int amount, out bool died)
+	public void TakeDamage (int amount, Vector3 hitPosition, out bool died)
 	{
 		died = false;
 		if (isDead) {
@@ -89,6 +90,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 
 		if (currentHealth <= 0 && !isDead) {
 			died = true;
+			dieAnimEnded = false;
 			Death ();
 		}
 	}
@@ -96,6 +98,11 @@ public class PlayerHealth : Photon.MonoBehaviour
 	public void ResetHealth ()
 	{
 		currentHealth = startingHealth;
+	}
+
+	void OnDeathAnimEnd ()
+	{
+		dieAnimEnded = true;
 	}
 
 	void Death ()
