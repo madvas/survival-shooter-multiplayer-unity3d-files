@@ -28,7 +28,6 @@ public class PlayerManager : MonoBehaviour
 	{
 		foreach (var player in PhotonNetwork.playerList.GetOtherPlayers()) {
 			int materialIndex = player.GetMaterialIndex ();
-
 		}
 	}
 }
