@@ -23,11 +23,4 @@ public class PlayerManager : MonoBehaviour
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
 	}
-
-	void SetMaterialOnOtherPlayers ()
-	{
-		foreach (var player in PhotonNetwork.playerList.GetOtherPlayers()) {
-			int materialIndex = player.GetMaterialIndex ();
-		}
-	}
 }

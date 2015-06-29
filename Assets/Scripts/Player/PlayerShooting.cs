@@ -61,6 +61,7 @@ public class PlayerShooting : MonoBehaviour
 			photonView.RPC ("Shoot", PhotonTargets.All, shootHit.point);
 			if (shootHit.transform.tag == "Player") {
 				shootHit.transform.GetComponent<PhotonView> ().RPC ("TakeShot", PhotonTargets.All, damagePerShot, PhotonNetwork.player.ID);
+				PhotonNetwork.Instantiate ("FTBL_Myst_Cone", shootHit.point, Quaternion.identity, 0);
 			}
 		} else {
 			photonView.RPC ("Shoot", PhotonTargets.All, shootRay.origin + shootRay.direction * range);
