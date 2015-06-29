@@ -71,10 +71,13 @@ public class PlayerHealth : Photon.MonoBehaviour
 	public void TakeDamage (int amount, Vector3 hitPosition, out bool died)
 	{
 		died = false;
+		currentHealth -= amount;
+		if (currentHealth > 0 || !dieAnimEnded) {
+			Instantiate (bloodEffect, hitPosition, Quaternion.identity);
+		}
 		if (isDead) {
 			return;
 		}
-		currentHealth -= amount;
 		if (photonView.isMine) {
 			damaged = true;
 			playerAudio.clip = hurtClip;
@@ -83,9 +86,8 @@ public class PlayerHealth : Photon.MonoBehaviour
 				healthSlider.value = currentHealth;
 			}
 		}
-		if (currentHealth > 0 || !dieAnimEnded) {
-			Instantiate (bloodEffect, hitPosition, Quaternion.identity);
-		}
+		Debug.Log (dieAnimEnded);
+
 		if (currentHealth <= 0 && !isDead) {
 			died = true;
 			dieAnimEnded = false;
@@ -100,6 +102,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 
 	void OnPlayerDieAnimEnd ()
 	{
+		Debug.Log ("OnPlayerDieAnimEnd");
 		dieAnimEnded = true;
 	}
 
