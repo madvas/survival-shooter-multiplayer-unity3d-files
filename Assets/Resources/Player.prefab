@@ -422,7 +422,18 @@ MonoBehaviour:
   hurtClip: {fileID: 8300000, guid: 9922a12f34d0a084aab32de985459723, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .0980392173}
-  bloodEffect: {fileID: 400006, guid: ce314d4c8b588de4a9404da9f385b851, type: 2}
+  bloodEffect:
+  - {fileID: 400004, guid: 3ac45dcee8bdc5c4083e505cf87ab7de, type: 2}
+  - {fileID: 400004, guid: 4826a28e01211e64ab63e8aab65bf799, type: 2}
+  - {fileID: 400000, guid: 70add63f1a5f5c74ebc8f8807f3d8775, type: 2}
+  - {fileID: 400000, guid: 71b5579b1c922d746b8eaff577b2151e, type: 2}
+  - {fileID: 400002, guid: 7f772bd8f5b0c7943a2ac2fb54c0507e, type: 2}
+  - {fileID: 400008, guid: 91290e45ba4a9a24387d987c48ffc703, type: 2}
+  - {fileID: 400006, guid: ce314d4c8b588de4a9404da9f385b851, type: 2}
+  - {fileID: 400000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
+  - {fileID: 400006, guid: e403ad2fa2b63fd4d8f00b969df4b7a9, type: 2}
+  - {fileID: 400008, guid: e79e39c4f8a16ec4784b80fe04b5dfd3, type: 2}
+  - {fileID: 400006, guid: ec6377cf80ab59f41bc21d150b41ce85, type: 2}
 --- !u!114 &11420294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1705,6 +1716,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: bloodEffect.Array.size
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
