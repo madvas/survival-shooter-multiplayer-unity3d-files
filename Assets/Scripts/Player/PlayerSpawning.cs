@@ -87,7 +87,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	// Called at the end of "Die" animation, must be public
 	public void OnDeathAnimEnd ()
 	{
-		Debug.Log ("Death anim ended");
+		gameObject.BroadcastMessage ("OnDeathAnimEnd", SendMessageOptions.DontRequireReceiver);
 		DestroyPlayer ();
 	}
 
@@ -107,7 +107,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void SetPlayerControl (bool enabled)
 	{
-		Debug.Log ("setting player control " + enabled);
 		playerMovement.enabled = enabled;
 		playerShooting.enabled = enabled;
 	}

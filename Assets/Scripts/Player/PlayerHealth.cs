@@ -13,6 +13,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 	public AudioClip hurtClip;
 	public float flashSpeed = 5f;                               
 	public Color flashColour = new Color (1f, 0f, 0f, 0.1f);    
+	public Transform bloodEffect;
 
 	Animator anim;                                              
 	AudioSource playerAudio;                                    
@@ -64,11 +65,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 			}
 			damaged = false;
 		}
-		if (photonView.isMine && Input.GetKeyDown (KeyCode.Q)) {
-			bool died;
-			TakeDamage (100, out died);
-			photonView.owner.AddDeaths (1);
-		}
 	}
 
 
@@ -87,7 +83,9 @@ public class PlayerHealth : Photon.MonoBehaviour
 				healthSlider.value = currentHealth;
 			}
 		}
-
+		if (currentHealth > 0 || !dieAnimEnded) {
+			Instantiate (bloodEffect, hitPosition, Quaternion.identity);
+		}
 		if (currentHealth <= 0 && !isDead) {
 			died = true;
 			dieAnimEnded = false;
