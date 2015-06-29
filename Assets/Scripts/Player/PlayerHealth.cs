@@ -13,7 +13,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 	public AudioClip hurtClip;
 	public float flashSpeed = 5f;                               
 	public Color flashColour = new Color (1f, 0f, 0f, 0.1f);    
-	public Transform[] bloodEffect;
+	public Transform[] bloodEffects;
 
 	Animator anim;                                              
 	AudioSource playerAudio;                                    
@@ -23,8 +23,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 	bool damaged;
 	int dieAnimHash = Animator.StringToHash ("Die");
 	bool dieAnimEnded = true;
-
-	int effectType = 0;
 
 	int _currentHealth;
 	public int currentHealth {
@@ -75,9 +73,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 		died = false;
 		currentHealth -= amount;
 		if (currentHealth > 0 || !dieAnimEnded) {
-			Instantiate (bloodEffect [effectType % bloodEffect.Length], hitPosition, Quaternion.identity);
-			Debug.Log (bloodEffect [effectType % bloodEffect.Length].name);
-			effectType++;
+			Instantiate (bloodEffects.PickRandom (), hitPosition, Quaternion.identity);
 		}
 		if (isDead) {
 			return;
