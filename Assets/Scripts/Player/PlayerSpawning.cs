@@ -73,7 +73,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void DestroyPlayer (bool instantly = false)
 	{
-		Debug.Log ("Destroying player: " + instantly);
 		if (instantly) {
 			SetPlayerVisibility (false);
 		} else if (photonView.isMine) {
@@ -87,7 +86,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	// Called at the end of "Die" animation, must be public
 	public void OnDeathAnimEnd ()
 	{
-		gameObject.BroadcastMessage ("OnDeathAnimEnd", SendMessageOptions.DontRequireReceiver);
+		gameObject.BroadcastMessage ("OnPlayerDieAnimEnd", SendMessageOptions.DontRequireReceiver);
 		DestroyPlayer ();
 	}
 

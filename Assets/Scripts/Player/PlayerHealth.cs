@@ -98,7 +98,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 		currentHealth = startingHealth;
 	}
 
-	void OnDeathAnimEnd ()
+	void OnPlayerDieAnimEnd ()
 	{
 		dieAnimEnded = true;
 	}
