@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerNetworking : Photon.MonoBehaviour
 {
 	public float timeBetweenBullets = 0.15f;   
+	public Transform bloodEffect;
 
 	float timer;                   
 	bool initialLoad = true;
@@ -91,10 +92,11 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	}
 
 	[PunRPC]
-	public void TakeShot (int damage, int shooterId)
+	public void TakeShot (int damage, int shooterId, Vector3 hitPositon)
 	{
 		bool died;
 		playerHealth.TakeDamage (damage, out died);
+		Instantiate (bloodEffect, hitPositon, Quaternion.identity);
 		if (died) {
 			if (photonView.isMine) {
 				photonView.owner.AddDeaths (1);
