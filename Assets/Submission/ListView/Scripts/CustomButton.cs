@@ -8,13 +8,12 @@ namespace Endgame
 {
 	public class CustomButton : Button
 	{
-		public override void OnPointerDown(PointerEventData eventData)
+		public override void OnPointerDown (PointerEventData eventData)
 		{
-			base.OnPointerDown(eventData);
+			base.OnPointerDown (eventData);
 
-			if (this.onPointerDown != null)
-			{
-				this.onPointerDown.Invoke();
+			if (this.onPointerDown != null) {
+				this.onPointerDown.Invoke ();
 			}
 		}
 
@@ -23,7 +22,7 @@ namespace Endgame
 		[Serializable]
 		public class PointerDownEvent : UnityEvent
 		{
-			public PointerDownEvent()
+			public PointerDownEvent ()
 			{
 			}
 		}
