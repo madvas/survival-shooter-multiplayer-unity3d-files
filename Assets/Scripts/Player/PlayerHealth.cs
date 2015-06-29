@@ -76,6 +76,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 		currentHealth -= amount;
 		if (currentHealth > 0 || !dieAnimEnded) {
 			Instantiate (bloodEffect [effectType % bloodEffect.Length], hitPosition, Quaternion.identity);
+			Debug.Log (bloodEffect [effectType % bloodEffect.Length].name);
 			effectType++;
 		}
 		if (isDead) {
