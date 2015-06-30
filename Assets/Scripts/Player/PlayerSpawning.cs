@@ -27,15 +27,15 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine && isSinking) {
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 		}
-		if (isDestoryed && isVisible && transform.position.y < -1) {
+		if (isVisible && transform.position.y < -1) {
 			Debug.Log ("setting vis to false");
 			isSinking = false;
 			SetPlayerVisibility (false);
 		}
-//		if (!isVisible && transform.position.y == 0f) {
-//			Debug.Log ("Cant believe I got here");
-//			SetPlayerVisibility (true);
-//		}
+		if (!isVisible && !isDestoryed && transform.position.y > -0.01f) {
+			Debug.Log ("can believe this shit is here");
+			SetPlayerVisibility (true);
+		}
 	}
 
 	void OnPhotonInstantiate (PhotonMessageInfo	info)
