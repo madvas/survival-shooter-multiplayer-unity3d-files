@@ -57,7 +57,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (roomTimeManager.isPauseState ()) {
 			return;
 		}
-
 		if (photonView.isMine) {
 			PositionHelper.RandomizeTransform (transform);
 			SetPlayerControl (true);
@@ -96,6 +95,9 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	public void SetPlayerVisibility (bool enabled)
 	{
+		if (enabled) {
+			isSinking = false;
+		}
 		foreach (var item in playerRenderers) {
 			item.enabled = enabled;
 		}
