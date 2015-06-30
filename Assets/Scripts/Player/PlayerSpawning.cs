@@ -10,6 +10,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	PlayerShooting playerShooting;
 	SkinnedMeshRenderer[] playerRenderers;
 	bool isSinking;
+	bool isVisible;
 	RoomTimeManager roomTimeManager;
 
 	void Awake ()
@@ -25,11 +26,12 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine && isSinking) {
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 		}
-		if (isSinking && transform.position.y < -1) {
+		if (transform.position.y < -1) {
 			Debug.Log ("setting vis to false");
 			isSinking = false;
 			SetPlayerVisibility (false);
 		}
+
 	}
 
 	void OnPhotonInstantiate (PhotonMessageInfo	info)
@@ -98,12 +100,13 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	public void SetPlayerVisibility (bool enabled)
 	{
 		Debug.Log ("SetPlayerVisibility " + enabled);
-		if (enabled) {
-			isSinking = false;
-		}
+//		if (enabled) {
+//			isSinking = false;
+//		}
 		foreach (var item in playerRenderers) {
 			item.enabled = enabled;
 		}
+		isVisible = enabled;
 	}
 
 	void SetPlayerControl (bool enabled)
