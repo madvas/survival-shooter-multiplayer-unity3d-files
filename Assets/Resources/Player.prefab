@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c83720df9acb89488dbf2c0dbd3ad78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerShot: 20
+  damagePerShot: 10
   timeBetweenBullets: .150000006
   range: 100
 --- !u!114 &11400002
@@ -1899,6 +1899,10 @@ Prefab:
       propertyPath: bloodEffects.Array.data[0]
       value: 
       objectReference: {fileID: 400000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: damagePerShot
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100006}
