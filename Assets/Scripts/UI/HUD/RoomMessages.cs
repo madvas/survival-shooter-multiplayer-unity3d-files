@@ -49,12 +49,14 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	void OnPhotonPlayerConnected (PhotonPlayer newPlayer)
 	{
-		AddMessage ("> " + newPlayer.name + " joined the room. " + GetPlayersInRoomString ());
+		AddMessage (string.Format ("> <color=#{0}>{1}</color> joined the room {2}", 
+		                         GetPlayerChatColor (otherPlayer, otherPlayer.name, GetPlayersInRoomString ())));
 	}
 
 	void OnPhotonPlayerDisconnected (PhotonPlayer otherPlayer)
 	{
-		AddMessage ("> " + otherPlayer.name + " left the room. " + GetPlayersInRoomString ());
+		AddMessage (string.Format ("> <color=#{0}>{1}</color> left the room {2}", 
+		                         GetPlayerChatColor (otherPlayer, otherPlayer.name, GetPlayersInRoomString ())));
 	}
 
 	void OnPlayerKill (object[] killData)
@@ -75,7 +77,13 @@ public class RoomMessages : Photon.MonoBehaviour
 		AddMessage (string.Format ("<b>{0}</b> {1}", mi.sender.name, newLine));
 	}
 
-	void string GetPlayerChatColor(PhotonPlayer player) {
-		return playerChatColors[player.GetMaterialIndex()].ToHexStringRGB();
+	string GetPlayerChatColor (PhotonPlayer player)
+	{
+		return playerChatColors [player.GetMaterialIndex ()].ToHexStringRGB ();
+	}
+
+	string GetPlayerColoredName (PhotonPlayer player)
+	{
+		return string.Format ("<color=#{0}>{1}</color>", GetPlayerChatColor (player), player.name);
 	}
 }
