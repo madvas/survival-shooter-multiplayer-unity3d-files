@@ -27,6 +27,19 @@ public class RoomMessages : Photon.MonoBehaviour
 		messagesText = messagesScrollRect.content.gameObject.GetComponent<Text> ();
 	}
 
+	void Start ()
+	{
+		Debug.LogError ("Roommessages started");
+		Debug.Log (playerChatColor0);
+//		playerChatColors.Add (playerChatColor0);
+//		playerChatColors.Add (playerChatColor1);
+//		playerChatColors.Add (playerChatColor2);
+//		playerChatColors.Add (playerChatColor3);
+//		playerChatColors.Add (playerChatColor4);
+//		playerChatColors.Add (playerChatColor5);
+//		playerChatColors.Add (playerChatColor6);
+	}
+
 	void Update ()
 	{
 		if (Input.GetKeyDown (KeyCode.Return)) {
@@ -84,9 +97,7 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	string GetPlayerChatColor (PhotonPlayer player)
 	{
-		return "";
-
-//		return playerChatColors [player.GetMaterialIndex ()].ToHexStringRGB ();
+		return playerChatColors [player.GetMaterialIndex ()].ToHexStringRGB ();
 	}
 
 	string GetPlayerColoredName (PhotonPlayer player)
