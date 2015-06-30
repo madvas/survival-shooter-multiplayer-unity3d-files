@@ -31,7 +31,10 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			isSinking = false;
 			SetPlayerVisibility (false);
 		}
-
+		if (!isVisible && transform.position.y == 0f) {
+			Debug.Log ("Cant believe I got here");
+			SetPlayerVisibility (true);
+		}
 	}
 
 	void OnPhotonInstantiate (PhotonMessageInfo	info)
