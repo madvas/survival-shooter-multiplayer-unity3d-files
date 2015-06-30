@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 using Endgame;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -18,6 +18,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	bool isWriting = false;
 	ScrollRect messagesScrollRect;
 	Text messagesText;
+	List<Color> playerChatColors;
 
 	void Awake ()
 	{
@@ -84,6 +85,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	string GetPlayerChatColor (PhotonPlayer player)
 	{
 		return "";
+
 //		return playerChatColors [player.GetMaterialIndex ()].ToHexStringRGB ();
 	}
 
