@@ -113,7 +113,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	{
 		Debug.Log ("Respawn Player PUNRPC");
 		anim.SetTrigger (respawnHash);
-		playerSpawning.SetPlayerVisibility (true);
+//		playerSpawning.SetPlayerVisibility (true);
 	}
 
 	[PunRPC]
