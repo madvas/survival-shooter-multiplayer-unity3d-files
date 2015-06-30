@@ -8,21 +8,16 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	PlayerMovement playerMovement;                              
 	PlayerShooting playerShooting;
-	PlayerHealth playerHealth;
 	SkinnedMeshRenderer[] playerRenderers;
 	bool isSinking;
 	RoomTimeManager roomTimeManager;
-	int dieAnimHash = Animator.StringToHash ("Die");
-	Animator anim;
 
 	void Awake ()
 	{
 		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager").GetComponent<RoomTimeManager> ();
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerShooting = GetComponentInChildren <PlayerShooting> ();
-		playerHealth = GetComponent<PlayerHealth> ();
 		playerRenderers = GetComponentsInChildren<SkinnedMeshRenderer> ();
-		anim = GetComponent<Animator> ();
 	}
 
 	void Update ()
