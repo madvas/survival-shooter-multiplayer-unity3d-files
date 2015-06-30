@@ -11,6 +11,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	SkinnedMeshRenderer[] playerRenderers;
 	bool isSinking;
 	bool isVisible;
+	bool isDestoryed;
 	RoomTimeManager roomTimeManager;
 
 	void Awake ()
@@ -26,7 +27,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine && isSinking) {
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 		}
-		if (isSinking && isVisible && transform.position.y < -1) {
+		if (isDestoryed && isVisible && transform.position.y < -1) {
 			Debug.Log ("setting vis to false");
 			isSinking = false;
 			SetPlayerVisibility (false);
@@ -58,6 +59,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void RespawnPlayer ()
 	{
+		isDestoryed = false;
 		Debug.Log ("RespawnPlayer");
 		if (roomTimeManager.isPauseState ()) {
 			return;
@@ -74,6 +76,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void DestroyPlayer (bool instantly = false)
 	{
+		isDestoryed = true;
 		Debug.Log ("DestroyPlayer");
 		if (instantly) {
 			SetPlayerVisibility (false);
