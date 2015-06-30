@@ -4831,35 +4831,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
       propertyPath: m_Name
       value: FTBL_Myst_Cone (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
-      propertyPath: InitialModule.startSize.minCurve.m_Curve.Array.data[0].value
-      value: .333333313
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
+    - target: {fileID: 19800002, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
       propertyPath: InitialModule.startSize.scalar
-      value: .300000012
+      value: .800000012
       objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
+    - target: {fileID: 19800002, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
       propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].value
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
       propertyPath: InitialModule.startSize.minCurve.m_Curve.Array.data[0].value
-      value: .333333313
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800002, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
-      propertyPath: InitialModule.startSize.scalar
-      value: .300000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800002, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
-      propertyPath: InitialModule.startSize.maxCurve.m_Curve.Array.data[0].value
-      value: 1
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
