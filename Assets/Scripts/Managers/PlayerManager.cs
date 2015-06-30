@@ -45,4 +45,14 @@ public class PlayerManager : MonoBehaviour
 		player.GetComponent<AudioListener> ().enabled = true;
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
 	}
+
+	public string GetPlayerTextColor (PhotonPlayer player)
+	{
+		return playerTextColors [player.GetMaterialIndex ()].ToHexStringRGB ();
+	}
+	
+	public string GetPlayerColoredName (PhotonPlayer player)
+	{
+		return string.Format ("<color=#{0}>{1}</color>", GetPlayerTextColor (player), player.name);
+	}
 }
