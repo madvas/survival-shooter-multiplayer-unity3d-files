@@ -12,21 +12,12 @@ public class PlayerShooting : MonoBehaviour
 	Ray shootRay;                                   // A ray from the gun end forwards.
 	RaycastHit shootHit;                            // A raycast hit to get information about what was hit.
 	int shootableMask;                              // A layer mask so the raycast only hits things on the shootable layer.
-	ParticleSystem gunParticles;                    // Reference to the particle system.
-	LineRenderer gunLine;                           // Reference to the line renderer.
-	AudioSource gunAudio;                           // Reference to the audio source.
-	Light gunLight;                                 // Reference to the light component.
-	float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
 	PhotonView photonView;
 	Transform playerTransform;
 
 	void Awake ()
 	{
 		shootableMask = LayerMask.GetMask ("Shootable");
-		gunParticles = GetComponent<ParticleSystem> ();
-		gunLine = GetComponent <LineRenderer> ();
-		gunAudio = GetComponent<AudioSource> ();
-		gunLight = GetComponent<Light> ();
 		photonView = GetComponentInParent<PhotonView> ();
 	}
 

@@ -20,7 +20,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
 	Transform gunEndTransform;
 	PlayerHealth playerHealth;
-	PlayerSpawning playerSpawning;
 	int IsWalkingHash = Animator.StringToHash ("IsWalking");
 	int respawnHash = Animator.StringToHash ("Respawn");
 
@@ -33,7 +32,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		gunLight = GetComponentInChildren<Light> ();
 		gunEndTransform = gunBarrelEnd.transform;
 		playerHealth = GetComponent<PlayerHealth> ();
-		playerSpawning = GetComponent<PlayerSpawning> ();
 		anim = GetComponent<Animator> ();
 	}
 

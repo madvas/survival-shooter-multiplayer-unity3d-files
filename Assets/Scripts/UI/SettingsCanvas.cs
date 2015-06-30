@@ -20,6 +20,7 @@ public class SettingsCanvas : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.B)) {
 			canvas.enabled = !canvas.enabled;
 		}
+
 	}
 
 	public void DisableSound (bool enabled)

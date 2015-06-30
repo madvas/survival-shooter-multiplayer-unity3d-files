@@ -18,7 +18,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 	Animator anim;                                              
 	AudioSource playerAudio;                                    
 
-	PlayerSpawning playerSpawning;
 	bool isDead;                                                
 	bool damaged;
 	int dieAnimHash = Animator.StringToHash ("Die");
@@ -41,7 +40,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 	{
 		playerAudio = GetComponent <AudioSource> ();
 		anim = GetComponent <Animator> ();
-		playerSpawning = GetComponent<PlayerSpawning> ();
 		if (photonView.isMine) {
 			healthSlider = GameObject.FindWithTag ("HealthSlider").GetComponent<Slider> () as Slider;
 			damageImage = GameObject.FindWithTag ("DamageImage").GetComponent<Image> () as Image;
