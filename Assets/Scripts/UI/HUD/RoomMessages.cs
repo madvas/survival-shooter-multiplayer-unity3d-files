@@ -6,12 +6,13 @@ using UnityEngine.EventSystems;
 
 public class RoomMessages : Photon.MonoBehaviour
 {
+	public Color[] playerChatColors;
+	public Color playerChatColor;
 
 	InputField messageInput;
 	bool isWriting = false;
 	ScrollRect messagesScrollRect;
 	Text messagesText;
-	Color[] playerChatColors;
 
 	void Awake ()
 	{
