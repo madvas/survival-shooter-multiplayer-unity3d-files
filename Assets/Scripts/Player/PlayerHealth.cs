@@ -86,8 +86,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 				healthSlider.value = currentHealth;
 			}
 		}
-		Debug.Log (dieAnimEnded);
-
 		if (currentHealth <= 0 && !isDead) {
 			died = true;
 			dieAnimEnded = false;
@@ -102,7 +100,6 @@ public class PlayerHealth : Photon.MonoBehaviour
 
 	void OnPlayerDieAnimEnd ()
 	{
-		Debug.Log ("OnPlayerDieAnimEnd");
 		dieAnimEnded = true;
 	}
 
