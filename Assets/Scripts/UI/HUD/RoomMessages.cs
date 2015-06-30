@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class RoomMessages : Photon.MonoBehaviour
 {
-	public Color[] playerChatColors;
+	public Color[] playerChatColors = new Color[] {new Color (10, 10, 10), new Color (10, 10, 10)};
 	public Color playerChatColor;
 
 	InputField messageInput;
