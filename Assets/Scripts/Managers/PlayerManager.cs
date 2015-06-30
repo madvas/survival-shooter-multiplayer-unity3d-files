@@ -7,6 +7,28 @@ public class PlayerManager : MonoBehaviour
 	public float respawnDelay = 2f;
 	public Material[] playerMaterials;
 
+	public Color playerTextColor0;
+	public Color playerTextColor1;
+	public Color playerTextColor2;
+	public Color playerTextColor3;
+	public Color playerTextColor4;
+	public Color playerTextColor5;
+	public Color playerTextColor6;
+
+	public Color[] playerTextColors;
+
+	void Awake ()
+	{
+		playerTextColors = new Color[7];
+		playerTextColors [0] = playerTextColor0;
+		playerTextColors [1] = playerTextColor1;
+		playerTextColors [2] = playerTextColor2;
+		playerTextColors [3] = playerTextColor3;
+		playerTextColors [4] = playerTextColor4;
+		playerTextColors [5] = playerTextColor5;
+		playerTextColors [6] = playerTextColor6;
+	}
+
 	void OnJoinedRoom ()
 	{
 		InstantiatePlayer ();
