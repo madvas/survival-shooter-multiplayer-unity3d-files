@@ -25,7 +25,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine && isSinking) {
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 		}
-		if (transform.position.y < -1) {
+		if (isSinking && transform.position.y < -1) {
 			isSinking = false;
 			Debug.Log ("setting vis to false");
 			SetPlayerVisibility (false);
