@@ -65,9 +65,9 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine) {
 			PositionHelper.RandomizeTransform (transform);
 			SetPlayerControl (true);
-			SetPlayerVisibility (true);
 		}
 		Debug.Log ("Photonview.isMine " + photonView.isMine);
+		SetPlayerVisibility (true);
 		SetPlayerPhysics (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
