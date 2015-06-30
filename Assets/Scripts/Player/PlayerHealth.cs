@@ -63,6 +63,10 @@ public class PlayerHealth : Photon.MonoBehaviour
 			}
 			damaged = false;
 		}
+		if (Input.GetKeyDown (KeyCode.P)) {
+			bool died;
+			TakeDamage (999, transform.position, out died);
+		}
 	}
 
 

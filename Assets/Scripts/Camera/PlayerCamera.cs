@@ -7,7 +7,7 @@ public class PlayerCamera : MonoBehaviour
 	Transform playerTransform = null;
 
 	public float smoothing = 5f;        
-	public Vector3 offset = new Vector3 (1, 15, -22);
+	public Vector3 offset;
 	
 	void FixedUpdate ()
 	{
