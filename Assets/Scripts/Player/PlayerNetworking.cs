@@ -22,6 +22,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	PlayerHealth playerHealth;
 	int IsWalkingHash = Animator.StringToHash ("IsWalking");
 	int respawnHash = Animator.StringToHash ("Respawn");
+	PlayerSpawning playerSpawning;
 
 	void Awake ()
 	{
@@ -33,6 +34,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		gunEndTransform = gunBarrelEnd.transform;
 		playerHealth = GetComponent<PlayerHealth> ();
 		anim = GetComponent<Animator> ();
+		playerSpawning = GetComponent<PlayerSpawning> ();
 	}
 
 	void Start ()
@@ -109,7 +111,9 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	[PunRPC]
 	public void RespawnPlayer ()
 	{
+		Debug.Log ("Respawn Player PUNRPC");
 		anim.SetTrigger (respawnHash);
+		playerSpawning.SetPlayerVisibility (true);
 	}
 
 	public void DrawShot (Vector3 fromPosition, Vector3 hitPositon)

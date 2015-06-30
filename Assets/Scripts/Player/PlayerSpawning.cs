@@ -27,7 +27,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 		if (transform.position.y < -1) {
 			isSinking = false;
-			Debug.Log ("invisible");
 			SetPlayerVisibility (false);
 		}
 	}
@@ -48,7 +47,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void OnRoundStarted ()
 	{
-		Debug.Log ("round started respawning");
 		RespawnPlayer ();
 	}
 
@@ -95,7 +93,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		GetComponent <Rigidbody> ().isKinematic = !enabled;
 	}
 
-	void SetPlayerVisibility (bool enabled)
+	public void SetPlayerVisibility (bool enabled)
 	{
 		foreach (var item in playerRenderers) {
 			item.enabled = enabled;
