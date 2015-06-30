@@ -116,6 +116,13 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		playerSpawning.SetPlayerVisibility (true);
 	}
 
+	[PunRPC]
+	public void SetPlayerVisibility (bool enabled)
+	{
+		playerSpawning.SetPlayerVisibility (enabled);
+	}
+
+
 	public void DrawShot (Vector3 fromPosition, Vector3 hitPositon)
 	{
 		timer = 0f;
