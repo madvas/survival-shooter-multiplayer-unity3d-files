@@ -423,7 +423,7 @@ MonoBehaviour:
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: .0980392173}
   bloodEffects:
-  - {fileID: 400006, guid: ce314d4c8b588de4a9404da9f385b851, type: 2}
+  - {fileID: 400004, guid: ce314d4c8b588de4a9404da9f385b851, type: 2}
 --- !u!114 &11420294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1895,6 +1895,10 @@ Prefab:
       propertyPath: bloodEffects.Array.data[4]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bloodEffects.Array.data[0]
+      value: 
+      objectReference: {fileID: 400004, guid: ce314d4c8b588de4a9404da9f385b851, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100006}
