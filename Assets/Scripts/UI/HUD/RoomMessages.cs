@@ -87,7 +87,7 @@ public class RoomMessages : Photon.MonoBehaviour
 	[PunRPC]
 	void Chat (string newLine, PhotonMessageInfo mi)
 	{
-		AddMessage (string.Format ("<b>{0}</b> {1}", GetPlayerColoredName (mi.sender), newLine));
+		AddMessage (string.Format ("{0} {1}", GetPlayerColoredName (mi.sender), newLine));
 	}
 
 	string GetPlayerChatColor (PhotonPlayer player)
