@@ -11,13 +11,13 @@ public class RoomMessages : Photon.MonoBehaviour
 	bool isWriting = false;
 	ScrollRect messagesScrollRect;
 	Text messagesText;
+	Color[] playerChatColors;
 
 	void Awake ()
 	{
 		messageInput = GetComponentInChildren<InputField> ();
 		messagesScrollRect = GetComponentInChildren<ScrollRect> ();
 		messagesText = messagesScrollRect.content.gameObject.GetComponent<Text> ();
-
 	}
 
 	void Update ()
@@ -49,12 +49,12 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	void OnPhotonPlayerConnected (PhotonPlayer newPlayer)
 	{
-		AddMessage ("Player " + newPlayer.name + " joined the room. " + GetPlayersInRoomString ());
+		AddMessage ("> " + newPlayer.name + " joined the room. " + GetPlayersInRoomString ());
 	}
 
 	void OnPhotonPlayerDisconnected (PhotonPlayer otherPlayer)
 	{
-		AddMessage ("Player " + otherPlayer.name + " left the room. " + GetPlayersInRoomString ());
+		AddMessage ("> " + otherPlayer.name + " left the room. " + GetPlayersInRoomString ());
 	}
 
 	void OnPlayerKill (object[] killData)
@@ -73,5 +73,9 @@ public class RoomMessages : Photon.MonoBehaviour
 	void Chat (string newLine, PhotonMessageInfo mi)
 	{
 		AddMessage (string.Format ("<b>{0}</b> {1}", mi.sender.name, newLine));
+	}
+
+	void string GetPlayerChatColor(PhotonPlayer player) {
+		return playerChatColors[player.GetMaterialIndex()].ToHexStringRGB();
 	}
 }
