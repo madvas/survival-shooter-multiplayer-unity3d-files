@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class RoomMessages : Photon.MonoBehaviour
 {
-	public Color playerChatColor0 = new Color (0, 0, 0);
+	public Color playerChatColor0;
 	public Color playerChatColor1;
 	public Color playerChatColor2;
 	public Color playerChatColor3;
@@ -18,27 +18,21 @@ public class RoomMessages : Photon.MonoBehaviour
 	bool isWriting = false;
 	ScrollRect messagesScrollRect;
 	Text messagesText;
-	List<Color> playerChatColors;
+	Color[] playerChatColors;
 
 	void Awake ()
 	{
 		messageInput = GetComponentInChildren<InputField> ();
 		messagesScrollRect = GetComponentInChildren<ScrollRect> ();
 		messagesText = messagesScrollRect.content.gameObject.GetComponent<Text> ();
-	}
-
-	void Start ()
-	{
-		Debug.LogError ("Roommessages started");
-		Debug.Log (playerChatColor0.GetType ());
-//		Color[] colors = new Color[] {playerChatColor0}
-//		playerChatColors.Add (playerChatColor0);
-//		playerChatColors.Add (playerChatColor1);
-//		playerChatColors.Add (playerChatColor2);
-//		playerChatColors.Add (playerChatColor3);
-//		playerChatColors.Add (playerChatColor4);
-//		playerChatColors.Add (playerChatColor5);
-//		playerChatColors.Add (playerChatColor6);
+		playerChatColors = new Color[7];
+		playerChatColors [0] = playerChatColor0;
+		playerChatColors [1] = playerChatColor1;
+		playerChatColors [2] = playerChatColor2;
+		playerChatColors [3] = playerChatColor3;
+		playerChatColors [4] = playerChatColor4;
+		playerChatColors [5] = playerChatColor5;
+		playerChatColors [6] = playerChatColor6;
 	}
 
 	void Update ()
