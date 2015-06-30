@@ -84,6 +84,7 @@ public class ScoreboardCanvas : MonoBehaviour
 			.ThenBy (p => p.GetDeaths ())
 			.ToList ();
 		foreach (var player in players) {
+			Color textColor = playerManager.GetPlayerTextColor (player);
 			listView.AddItem (player.name, player.GetScore ().ToString ("D"), player.GetDeaths ().ToString ("D"));
 		}
 	}
