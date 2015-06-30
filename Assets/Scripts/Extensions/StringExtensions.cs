@@ -1,5 +1,4 @@
-﻿using Sytem.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public static class StringExtensions
 {

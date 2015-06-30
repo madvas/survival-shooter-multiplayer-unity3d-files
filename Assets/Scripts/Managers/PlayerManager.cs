@@ -53,6 +53,6 @@ public class PlayerManager : MonoBehaviour
 	
 	public string GetPlayerColoredName (PhotonPlayer player)
 	{
-		return StringHelper.Colorize (player.name, GetPlayerTextColor (player));
+		return player.name.Colorize (GetPlayerTextColor (player));
 	}
 }

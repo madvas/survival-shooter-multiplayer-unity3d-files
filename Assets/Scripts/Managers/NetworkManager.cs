@@ -13,14 +13,12 @@ public class NetworkManager : MonoBehaviour
 
 	void Start ()
 	{
-//		PhotonNetwork.offlineMode = true; 
 		PhotonNetwork.ConnectUsingSettings ("0.1");
-		//PhotonNetwork.logLevel = PhotonLogLevel.Full;
 	}
 	
 	void OnJoinedLobby ()
 	{
-		JoinRoom ("Room 1", "Shooter" + Random.Range (1000, 9999));
+//		JoinRoom ("Room 1", "Shooter" + Random.Range (1000, 9999));
 	}
 
 	public List<Networking.Room> GetRoomList (int maxRooms, int maxPlayersPerRoom)

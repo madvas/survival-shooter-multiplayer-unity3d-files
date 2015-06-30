@@ -85,12 +85,9 @@ public class ScoreboardCanvas : MonoBehaviour
 			.ToList ();
 		foreach (var player in players) {
 			Color textColor = playerManager.GetPlayerTextColor (player);
-			listView.AddItem (player.name, player.GetScore ().ToString ("D"), player.GetDeaths ().ToString ("D"));
+			listView.AddItem (player.name.Colorize (textColor), 
+			                  player.GetScore ().ToString ("D").Colorize (textColor), 
+			                  player.GetDeaths ().ToString ("D").Colorize (textColor));
 		}
-	}
-
-	void WrapInPlayerColor (string Text)
-	{
-
 	}
 }
