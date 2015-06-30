@@ -27,6 +27,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		}
 		if (transform.position.y < -1) {
 			isSinking = false;
+			Debug.Log ("invisible");
 			SetPlayerVisibility (false);
 		}
 	}
@@ -53,6 +54,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void RespawnPlayer ()
 	{
+		Debug.Log ("RespawnPlayer");
 		if (roomTimeManager.isPauseState ()) {
 			return;
 		}
@@ -61,6 +63,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			PositionHelper.RandomizeTransform (transform);
 			SetPlayerControl (true);
 		}
+		Debug.Log (photonView.isMine);
 		SetPlayerPhysics (true);
 		SetPlayerVisibility (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
