@@ -24,11 +24,11 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	{
 		if (photonView.isMine && isSinking) {
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
-			if (transform.position.y < -1) {
-				isSinking = false;
-				SetPlayerVisibility (false);
-				photonView.RPC ("SetPlayerVisibility", PhotonTargets.All, false);
-			}
+		}
+		if (isSinking && transform.position.y < -1) {
+			Debug.Log ("setting vis to false");
+			isSinking = false;
+			SetPlayerVisibility (false);
 		}
 	}
 
@@ -61,7 +61,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			PositionHelper.RandomizeTransform (transform);
 			SetPlayerControl (true);
 		}
-		Debug.Log (photonView.isMine);
+		Debug.Log ("Photonview.isMine " + photonView.isMine);
 		SetPlayerPhysics (true);
 		SetPlayerVisibility (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
@@ -69,9 +69,11 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	void DestroyPlayer (bool instantly = false)
 	{
+		Debug.Log ("DestroyPlayer");
 		if (instantly) {
 			SetPlayerVisibility (false);
 		} else {
+			Debug.Log ("isSinking = " + true);
 			isSinking = true;
 		}
 
@@ -95,6 +97,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	public void SetPlayerVisibility (bool enabled)
 	{
+		Debug.Log ("SetPlayerVisibility " + enabled);
 		if (enabled) {
 			isSinking = false;
 		}
