@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class RoomMessages : Photon.MonoBehaviour
 {
-	public Color playerChatColor0;
+	public Color playerChatColor0 = new Color (0, 0, 0);
 	public Color playerChatColor1;
 	public Color playerChatColor2;
 	public Color playerChatColor3;
@@ -30,7 +30,8 @@ public class RoomMessages : Photon.MonoBehaviour
 	void Start ()
 	{
 		Debug.LogError ("Roommessages started");
-		Debug.Log (playerChatColor0);
+		Debug.Log (playerChatColor0.GetType ());
+//		Color[] colors = new Color[] {playerChatColor0}
 //		playerChatColors.Add (playerChatColor0);
 //		playerChatColors.Add (playerChatColor1);
 //		playerChatColors.Add (playerChatColor2);
