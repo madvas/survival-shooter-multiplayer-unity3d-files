@@ -32,7 +32,7 @@ public class ScoreboardCanvas : MonoBehaviour
 	void Update ()
 	{
 		if (!roomTimeManager.isPauseState ()) {
-			canvas.enabled = PhotonNetwork.inRoom && Input.GetKey (KeyCode.Tab);
+			canvas.enabled = PhotonNetwork.inRoom && Input.GetKey (KeyCode.V);
 		}
 	}
 

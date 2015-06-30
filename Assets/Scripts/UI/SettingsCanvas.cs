@@ -17,7 +17,7 @@ public class SettingsCanvas : MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.Escape)) {
+		if (Input.GetKeyDown (KeyCode.B)) {
 			canvas.enabled = !canvas.enabled;
 		}
 	}
