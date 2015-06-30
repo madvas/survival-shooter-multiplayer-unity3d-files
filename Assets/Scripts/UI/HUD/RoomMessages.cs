@@ -6,8 +6,13 @@ using UnityEngine.EventSystems;
 
 public class RoomMessages : Photon.MonoBehaviour
 {
-	public Color[] playerChatColors = new Color[] {new Color (10, 10, 10), new Color (10, 10, 10)};
-	public Color playerChatColor;
+	public Color playerChatColor0;
+	public Color playerChatColor1;
+	public Color playerChatColor2;
+	public Color playerChatColor3;
+	public Color playerChatColor4;
+	public Color playerChatColor5;
+	public Color playerChatColor6;
 
 	InputField messageInput;
 	bool isWriting = false;
@@ -78,7 +83,8 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	string GetPlayerChatColor (PhotonPlayer player)
 	{
-		return playerChatColors [player.GetMaterialIndex ()].ToHexStringRGB ();
+		return "";
+//		return playerChatColors [player.GetMaterialIndex ()].ToHexStringRGB ();
 	}
 
 	string GetPlayerColoredName (PhotonPlayer player)
