@@ -14,6 +14,8 @@ static class ListViewExtensions
 
 	public static void AddItem (this ListView listView, params string[] rowItems)
 	{
+		ListViewItem a = new ListViewItem (rowItems);
+		a.ForeColor = new Color (25, 60, 99);
 		listView.Items.Add (new ListViewItem (rowItems));
 	}
 

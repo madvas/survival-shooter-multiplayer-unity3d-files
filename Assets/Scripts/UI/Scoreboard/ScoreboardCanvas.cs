@@ -12,12 +12,14 @@ public class ScoreboardCanvas : MonoBehaviour
 	Canvas canvas;
 	ListView listView;
 	RoomTimeManager roomTimeManager;
+	PlayerManager playerManager;
 
 	void Awake ()
 	{
 		canvas = GetComponent<Canvas> ();
 		listView = GetComponentInChildren<ListView> ();
 		roomTimeManager = GameObject.FindGameObjectWithTag ("RoomTimeManager").GetComponent<RoomTimeManager> ();
+		playerManager = GameObject.FindGameObjectWithTag ("PlayerManager").GetComponent<PlayerManager> ();
 	}
 
 	void Start ()
@@ -84,5 +86,10 @@ public class ScoreboardCanvas : MonoBehaviour
 		foreach (var player in players) {
 			listView.AddItem (player.name, player.GetScore ().ToString ("D"), player.GetDeaths ().ToString ("D"));
 		}
+	}
+
+	void WrapInPlayerColor (string Text)
+	{
+
 	}
 }
