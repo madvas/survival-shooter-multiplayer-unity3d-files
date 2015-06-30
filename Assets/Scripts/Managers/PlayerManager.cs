@@ -46,13 +46,13 @@ public class PlayerManager : MonoBehaviour
 		GameObjectHelper.SendMessageToAll ("OnMinePlayerInstantiate", player);
 	}
 
-	public string GetPlayerTextColor (PhotonPlayer player)
+	public Color GetPlayerTextColor (PhotonPlayer player)
 	{
-		return playerTextColors [player.GetMaterialIndex ()].ToHexStringRGB ();
+		return playerTextColors [player.GetMaterialIndex ()];
 	}
 	
 	public string GetPlayerColoredName (PhotonPlayer player)
 	{
-		return string.Format ("<color=#{0}>{1}</color>", GetPlayerTextColor (player), player.name);
+		return StringHelper.Colorize (player.name, GetPlayerTextColor (player));
 	}
 }

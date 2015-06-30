@@ -1,15 +1,10 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
-public class StringHelper : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+public static class StringHelper
+{
+	public static string Colorize (string text, Color color)
+	{
+		return string.Format ("<color=#{0}>{1}</color>", color.ToHexStringRGB (), text);
 	}
 }
