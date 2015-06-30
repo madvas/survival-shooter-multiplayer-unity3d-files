@@ -119,6 +119,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	[PunRPC]
 	public void SetPlayerVisibility (bool enabled)
 	{
+		Debug.Log ("SetPlayerVisibility");
 		playerSpawning.SetPlayerVisibility (enabled);
 	}
 
