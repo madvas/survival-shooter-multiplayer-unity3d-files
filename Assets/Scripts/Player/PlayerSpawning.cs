@@ -28,12 +28,10 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 		}
 		if (isVisible && transform.position.y < -1) {
-			Debug.Log ("setting vis to false");
 			isSinking = false;
 			SetPlayerVisibility (false);
 		}
 		if (!isVisible && !isDestoryed && transform.position.y > -0.01f) {
-			Debug.Log ("can believe this shit is here");
 			SetPlayerVisibility (true);
 		}
 	}
@@ -60,7 +58,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	void RespawnPlayer ()
 	{
 		isDestoryed = false;
-		Debug.Log ("RespawnPlayer");
 		if (roomTimeManager.isPauseState ()) {
 			return;
 		}
@@ -68,7 +65,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 			PositionHelper.RandomizeTransform (transform);
 			SetPlayerControl (true);
 		}
-		Debug.Log ("Photonview.isMine " + photonView.isMine);
 		SetPlayerVisibility (true);
 		SetPlayerPhysics (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
@@ -77,11 +73,9 @@ public class PlayerSpawning : Photon.MonoBehaviour
 	void DestroyPlayer (bool instantly = false)
 	{
 		isDestoryed = true;
-		Debug.Log ("DestroyPlayer");
 		if (instantly) {
 			SetPlayerVisibility (false);
 		} else {
-			Debug.Log ("isSinking = " + true);
 			isSinking = true;
 		}
 
@@ -105,10 +99,6 @@ public class PlayerSpawning : Photon.MonoBehaviour
 
 	public void SetPlayerVisibility (bool enabled)
 	{
-		Debug.Log ("SetPlayerVisibility " + enabled);
-//		if (enabled) {
-//			isSinking = false;
-//		}
 		foreach (var item in playerRenderers) {
 			item.enabled = enabled;
 		}
