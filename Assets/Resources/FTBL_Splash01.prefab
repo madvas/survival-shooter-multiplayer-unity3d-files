@@ -2232,8 +2232,8 @@ ParticleSystem:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  lengthInSec: .100000001
-  startDelay: 0
+  lengthInSec: 1
+  startDelay: 10
   speed: 1
   randomSeed: 0
   looping: 1
@@ -4485,7 +4485,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: lengthInSec
-      value: .100000001
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: startDelay
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
