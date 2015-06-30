@@ -26,7 +26,7 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine && isSinking) {
 			transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
 		}
-		if (isVisible && transform.position.y < -1) {
+		if (isSinking && isVisible && transform.position.y < -1) {
 			Debug.Log ("setting vis to false");
 			isSinking = false;
 			SetPlayerVisibility (false);
@@ -65,10 +65,10 @@ public class PlayerSpawning : Photon.MonoBehaviour
 		if (photonView.isMine) {
 			PositionHelper.RandomizeTransform (transform);
 			SetPlayerControl (true);
+			SetPlayerVisibility (true);
 		}
 		Debug.Log ("Photonview.isMine " + photonView.isMine);
 		SetPlayerPhysics (true);
-		SetPlayerVisibility (true);
 		gameObject.BroadcastMessage ("OnPlayerRespawn", SendMessageOptions.DontRequireReceiver);
 	}
 
