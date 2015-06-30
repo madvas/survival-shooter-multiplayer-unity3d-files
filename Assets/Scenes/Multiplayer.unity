@@ -6943,6 +6943,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
+      propertyPath: bloodEffects.Array.data[0]
+      value: 
+      objectReference: {fileID: 400000, guid: e1b713379b1786748b372a594b5dda7b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
   m_IsPrefabParent: 0
