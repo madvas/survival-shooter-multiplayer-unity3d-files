@@ -23,21 +23,23 @@ public class RoomMessages : Photon.MonoBehaviour
 	void Update ()
 	{
 		Event e = Event.current;
-		if (e.type == EventType.keyDown && e.keyCode == KeyCode.Return) {
-			if (isWriting) {
-				if (messageInput.text.Length > 0) {
-					photonView.RPC ("Chat", PhotonTargets.All, messageInput.text);
-				}
-				messageInput.text = "";
-				isWriting = false;
-				messageInput.DeactivateInputField ();
-				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
-			} else {
-				messageInput.ActivateInputField ();
-				isWriting = true;
-				GameObjectHelper.SendMessageToAll ("OnWritingMesssageStarted");
-			}
-		}
+		Debug.Log (e);
+
+//		if (e. && e.Equals (Event.KeyboardEvent ("[enter]"))) {
+//			if (isWriting) {
+//				if (messageInput.text.Length > 0) {
+//					photonView.RPC ("Chat", PhotonTargets.All, messageInput.text);
+//				}
+//				messageInput.text = "";
+//				isWriting = false;
+//				messageInput.DeactivateInputField ();
+//				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
+//			} else {
+//				messageInput.ActivateInputField ();
+//				isWriting = true;
+//				GameObjectHelper.SendMessageToAll ("OnWritingMesssageStarted");
+//			}
+//		}
 	}
 
 	void AddMessage (string message)
