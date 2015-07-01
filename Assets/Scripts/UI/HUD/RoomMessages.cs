@@ -29,6 +29,7 @@ public class RoomMessages : Photon.MonoBehaviour
 				}
 				messageInput.text = "";
 				isWriting = false;
+				messageInput.DeactivateInputField ();
 				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
 			} else {
 				messageInput.ActivateInputField ();
