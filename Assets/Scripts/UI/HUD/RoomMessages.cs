@@ -20,47 +20,20 @@ public class RoomMessages : Photon.MonoBehaviour
 		playerManager = GameObject.FindGameObjectWithTag ("PlayerManager").GetComponent<PlayerManager> ();
 	}
 
-	void Update ()
-	{
-		Event e = Event.current;
-		if (e != null) {
-			Debug.Log (e);
-		}
-
-//		if (e && e.Equals (Event.KeyboardEvent ("[enter]"))) {
-//			if (isWriting) {
-//				if (messageInput.text.Length > 0) {
-//					photonView.RPC ("Chat", PhotonTargets.All, messageInput.text);
-//				}
-//				messageInput.text = "";
-//				isWriting = false;
-//				messageInput.DeactivateInputField ();
-//				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
-//			} else {
-//				messageInput.ActivateInputField ();
-//				isWriting = true;
-//				GameObjectHelper.SendMessageToAll ("OnWritingMesssageStarted");
-//			}
-//		}
-	}
-
 	void OnGUI ()
 	{
 		Event e = Event.current;
 		if (e.type == EventType.keyDown && e.keyCode == KeyCode.Return) {
-			Debug.Log ("Enter pressed");
 			if (isWriting) {
 				if (messageInput.text.Length > 0) {
 					photonView.RPC ("Chat", PhotonTargets.All, messageInput.text);
 				}
 				messageInput.text = "";
 				isWriting = false;
-				Debug.Log ("deactivating");
 				messageInput.DeactivateInputField ();
 				messageInput.interactable = false;
 				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
 			} else {
-				Debug.Log ("activating");
 				messageInput.interactable = true;
 				messageInput.ActivateInputField ();
 				isWriting = true;
