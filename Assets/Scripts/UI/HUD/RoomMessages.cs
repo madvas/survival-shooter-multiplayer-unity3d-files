@@ -31,10 +31,10 @@ public class RoomMessages : Photon.MonoBehaviour
 				messageInput.text = "";
 				isWriting = false;
 				messageInput.DeactivateInputField ();
-				messageInput.interactable = false;
+//				messageInput.interactable = false;
 				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
 			} else {
-				messageInput.interactable = true;
+//				messageInput.interactable = true;
 				messageInput.ActivateInputField ();
 				messageInput.Select ();
 				isWriting = true;
