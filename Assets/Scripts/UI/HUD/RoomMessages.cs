@@ -48,15 +48,20 @@ public class RoomMessages : Photon.MonoBehaviour
 	{
 		Event e = Event.current;
 		if (e.type == EventType.keyDown && e.keyCode == KeyCode.Return) {
+			Debug.Log ("Enter pressed");
 			if (isWriting) {
 				if (messageInput.text.Length > 0) {
 					photonView.RPC ("Chat", PhotonTargets.All, messageInput.text);
 				}
 				messageInput.text = "";
 				isWriting = false;
+				Debug.Log ("deactivating");
 				messageInput.DeactivateInputField ();
+				messageInput.interactable = false;
 				GameObjectHelper.SendMessageToAll ("OnWritingMesssageEnded");
 			} else {
+				Debug.Log ("activating");
+				messageInput.interactable = true;
 				messageInput.ActivateInputField ();
 				isWriting = true;
 				GameObjectHelper.SendMessageToAll ("OnWritingMesssageStarted");
