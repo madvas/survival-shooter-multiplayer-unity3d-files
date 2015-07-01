@@ -22,7 +22,8 @@ public class RoomMessages : Photon.MonoBehaviour
 
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.Return)) {
+		Event e = Event.current;
+		if (e.type == EventType.keyDown && e.keyCode == KeyCode.Return) {
 			if (isWriting) {
 				if (messageInput.text.Length > 0) {
 					photonView.RPC ("Chat", PhotonTargets.All, messageInput.text);
