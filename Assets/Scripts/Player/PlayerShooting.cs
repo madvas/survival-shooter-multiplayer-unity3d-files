@@ -68,7 +68,14 @@ public class PlayerShooting : MonoBehaviour
 		int damageBonus = (int)changeData [0];
 		int bonusDuration = (int)changeData [1];
 
-
-
+		damagePerShot += damageBonus;
+		Invoke ("ResetDamage", bonusDuration);
 	}
+
+	void ResetDamage ()
+	{
+		Debug.Log ("damage reset to " + originalDamagePerShot);
+		damagePerShot = originalDamagePerShot;
+	}
+
 }
