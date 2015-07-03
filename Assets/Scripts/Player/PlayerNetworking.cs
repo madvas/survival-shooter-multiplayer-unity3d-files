@@ -3,8 +3,6 @@ using System.Collections;
 
 public class PlayerNetworking : Photon.MonoBehaviour
 {
-	public float timeBetweenBullets = 0.15f;   
-
 	float timer;                   
 	bool initialLoad = true;
 	Vector3 position;
@@ -13,24 +11,12 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	Animator anim;
 	bool isWalking = false;
 
-	ParticleSystem gunParticles;                    // Reference to the particle system.
-	LineRenderer gunLine;                           // Reference to the line renderer.
-	AudioSource gunAudio;                           // Reference to the audio source.
-	Light gunLight;                                 // Reference to the light component.
-	float effectsDisplayTime = 0.2f;                // The proportion of the timeBetweenBullets that the effects will display for.
-	Transform gunEndTransform;
 	PlayerHealth playerHealth;
 	int IsWalkingHash = Animator.StringToHash ("IsWalking");
 	int respawnHash = Animator.StringToHash ("Respawn");
 
 	void Awake ()
 	{
-		GameObject gunBarrelEnd = transform.Find ("GunBarrelEnd").gameObject;
-		gunParticles = GetComponentInChildren<ParticleSystem> ();
-		gunLine = GetComponentInChildren<LineRenderer> ();
-		gunAudio = gunBarrelEnd.GetComponent<AudioSource> ();
-		gunLight = GetComponentInChildren<Light> ();
-		gunEndTransform = gunBarrelEnd.transform;
 		playerHealth = GetComponent<PlayerHealth> ();
 		anim = GetComponent<Animator> ();
 	}

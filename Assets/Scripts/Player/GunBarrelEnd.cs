@@ -11,12 +11,11 @@ public class GunBarrelEnd : MonoBehaviour
 	LineRenderer gunLine;                           
 	AudioSource gunAudio;                           
 	Light gunLight;                                 
-	float effectsDisplayTime = 0.2f;                
 
 
 	void Awake ()
 	{
-		ResetShotEffects();
+		SetShotEffects (false);
 	}
 	
 	void Update ()
@@ -46,17 +45,9 @@ public class GunBarrelEnd : MonoBehaviour
 		gunLight.enabled = false;
 	}
 
-	void ResetShotEffects () {
-		GameObject normalEffects = transform.GetChild(0);
-		SetShotEffects(normalEffects);
-	}
-
-	void ResetShotEffects () {
-		GameObject enhancedEffects = transform.GetChild(1);
-		SetShotEffects(enhancedEffects);
-	}
-
-	void SetShotEffects(GameObject effectsObject) {
+	void SetShotEffects (bool enhanced)
+	{
+		GameObject effectsObject = transform.GetChild (enhanced ? 1 : 0);
 		gunParticles = effectsObject.GetComponent<ParticleSystem> ();
 		gunLine = effectsObject.GetComponent<LineRenderer> ();
 		gunAudio = effectsObject.GetComponent<AudioSource> ();
@@ -67,9 +58,8 @@ public class GunBarrelEnd : MonoBehaviour
 	{
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-		if (props.ContainsKey (PhotonPlayerExtensions.damageBonusProp)) {
-			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
-			body.material = playerManager.playerMaterials [materialIndex];
+		if (props.ContainsKey (PhotonPlayerExtensions.increasedDamageProp)) {
+			SetShotEffects (player.HasIncreasedDamage ());
 		}
 	}
 
