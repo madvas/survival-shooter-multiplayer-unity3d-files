@@ -67,7 +67,7 @@ public class GunBarrelEnd : MonoBehaviour
 	{
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-		if (props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
+		if (props.ContainsKey (PhotonPlayerExtensions.damageBonusProp)) {
 			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
 			body.material = playerManager.playerMaterials [materialIndex];
 		}

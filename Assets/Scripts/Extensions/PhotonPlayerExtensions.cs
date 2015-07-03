@@ -8,7 +8,7 @@ static class PhotonPlayerExtensions
 {
 	public static readonly string deathsProp = "d";
 	public static readonly string materialProp = "m";
-	public static readonly string damageBonusProp = "g";
+	public static readonly string increasedDamageProp = "g";
 
 	private static void SetProperty<T> (this PhotonPlayer player, string key, T value)
 	{
@@ -56,7 +56,16 @@ static class PhotonPlayerExtensions
 
 	public static void SetIncreasedDamage (this PhotonPlayer player, bool enabled)
 	{
-		player.SetProperty (PhotonPlayerExtensions.damageBonusProp, enabled);
+		player.SetProperty (PhotonPlayerExtensions.increasedDamageProp, enabled);
+	}
+
+	public static void HasIncreasedDamage (this PhotonPlayer player)
+	{
+		object hasIncreased;
+		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.increasedDamageProp, out hasIncreased)) {
+			return (bool)hasIncreased;
+		}
+		return false;
 	}
 
 	public static List<int> GetMaterials (this PhotonPlayer[] players)
