@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupItemManagerTag: SpeedItemManager
-  increasedSpeed: 12
+  increasedSpeed: 10
   bonusDuration: 30
 --- !u!114 &11478418
 MonoBehaviour:
@@ -607,7 +607,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: increasedSpeed
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bonusDuration
