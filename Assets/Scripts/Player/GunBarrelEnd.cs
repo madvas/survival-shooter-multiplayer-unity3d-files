@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GunBarrelEnd : MonoBehaviour
 {
+	public float timeBetweenBullets = 0.15f;   
+	public float effectsDisplayTime = 0.2f;           
 	float timer;           
 
 	ParticleSystem gunParticles;                    
@@ -14,13 +16,7 @@ public class GunBarrelEnd : MonoBehaviour
 
 	void Awake ()
 	{
-		gunParticles = GetComponentInChildren<ParticleSystem> ();
-		gunLine = GetComponentInChildren<LineRenderer> ();
-		gunAudio = gunBarrelEnd.GetComponent<AudioSource> ();
-		gunLight = GetComponentInChildren<Light> ();
-		gunEndTransform = gunBarrelEnd.transform;
-		playerHealth = GetComponent<PlayerHealth> ();
-		anim = GetComponent<Animator> ();
+		ResetShotEffects();
 	}
 	
 	void Update ()
@@ -43,5 +39,29 @@ public class GunBarrelEnd : MonoBehaviour
 		gunLine.SetPosition (0, fromPosition);
 		gunLine.SetPosition (1, hitPositon);
 	}
+
+	void DisableEffects ()
+	{
+		gunLine.enabled = false;
+		gunLight.enabled = false;
+	}
+
+	void ResetShotEffects () {
+		GameObject normalEffects = transform.GetChild(0);
+		gunParticles = normalEffects.GetComponent<ParticleSystem> ();
+		gunLine = normalEffects.GetComponent<LineRenderer> ();
+		gunAudio = normalEffects.GetComponent<AudioSource> ();
+		gunLight = GetComponentInChildren<Light> ();
+	}
+
+//	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
+//	{
+//		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
+//		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
+//		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
+//			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
+//			body.material = playerManager.playerMaterials [materialIndex];
+//		}
+//	}
 
 }
