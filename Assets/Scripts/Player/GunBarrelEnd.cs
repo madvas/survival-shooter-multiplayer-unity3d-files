@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class GunBarrelEnd : MonoBehaviour
 {
@@ -48,20 +48,29 @@ public class GunBarrelEnd : MonoBehaviour
 
 	void ResetShotEffects () {
 		GameObject normalEffects = transform.GetChild(0);
-		gunParticles = normalEffects.GetComponent<ParticleSystem> ();
-		gunLine = normalEffects.GetComponent<LineRenderer> ();
-		gunAudio = normalEffects.GetComponent<AudioSource> ();
-		gunLight = GetComponentInChildren<Light> ();
+		SetShotEffects(normalEffects);
 	}
 
-//	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
-//	{
-//		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
-//		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-//		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
-//			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
-//			body.material = playerManager.playerMaterials [materialIndex];
-//		}
-//	}
+	void ResetShotEffects () {
+		GameObject enhancedEffects = transform.GetChild(1);
+		SetShotEffects(enhancedEffects);
+	}
+
+	void SetShotEffects(GameObject effectsObject) {
+		gunParticles = effectsObject.GetComponent<ParticleSystem> ();
+		gunLine = effectsObject.GetComponent<LineRenderer> ();
+		gunAudio = effectsObject.GetComponent<AudioSource> ();
+		gunLight = effectsObject.GetComponent<Light> ();
+	}
+
+	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
+	{
+		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
+		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
+		if (props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
+			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
+			body.material = playerManager.playerMaterials [materialIndex];
+		}
+	}
 
 }
