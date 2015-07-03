@@ -6,13 +6,6 @@ public class PickupItemBase : Photon.MonoBehaviour
 {
 
 	bool SentPickup;
-	AudioSource audioSource;
-
-	void Awake ()
-	{
-		audioSource = gameObject.GetComponent<AudioSource> ();
-		audioSource.Play ();
-	}
 
 	void OnTriggerEnter (Collider other)
 	{

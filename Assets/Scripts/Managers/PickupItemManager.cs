@@ -26,12 +26,15 @@ public class PickupItemManager : MonoBehaviour
 		}
 	}
 
-	void OnItemPicked (GameObject pickedItem)
+	void OnItemPicked (object[] pickData)
 	{
-		pickedItem.GetComponent<AudioSource> ().Play ();
+		GameObject pickedItem = pickData [0] as GameObject;
+		bool pickedByMe = (bool)pickData [1];
+		if (pickedByMe) {
+			pickedItem.GetComponent<AudioSource> ().Play ();
+		}
 		if (PhotonNetwork.isMasterClient) {
 			itemInstances.RemoveAll (item => item.GetInstanceID () == pickedItem.GetInstanceID ());
-//			PhotonNetwork.Destroy (pickedItem);
 		}
 
 	}
