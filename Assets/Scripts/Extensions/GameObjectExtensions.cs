@@ -17,4 +17,9 @@ public static class MyGameObjectExtensions
 	{
 		gameObject.SendMessage (methodName, parameters, SendMessageOptions.DontRequireReceiver);
 	}
+
+	public static void BroadcastMessageMultiArg (this GameObject gameObject, string methodName, params object[] parameters)
+	{
+		gameObject.BroadcastMessage (methodName, parameters, SendMessageOptions.DontRequireReceiver);
+	}
 }
