@@ -14,11 +14,13 @@ public class PlayerShooting : MonoBehaviour
 	int shootableMask;                              // A layer mask so the raycast only hits things on the shootable layer.
 	PhotonView photonView;
 	Transform playerTransform;
+	int originalDamagePerShot;
 
 	void Awake ()
 	{
 		shootableMask = LayerMask.GetMask ("Shootable");
 		photonView = GetComponentInParent<PhotonView> ();
+		originalDamagePerShot = damagePerShot;
 	}
 
 	void Update ()
