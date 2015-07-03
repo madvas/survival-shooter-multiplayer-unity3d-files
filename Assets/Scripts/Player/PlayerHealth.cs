@@ -31,7 +31,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 		set {
 			_currentHealth = Mathf.Clamp (value, 0, 100);
 			if (healthSlider) {
-				healthSlider.value = value;
+				healthSlider.value = _currentHealth;
 			}
 		}
 	}                                  
