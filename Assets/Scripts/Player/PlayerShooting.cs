@@ -66,11 +66,12 @@ public class PlayerShooting : MonoBehaviour
 		if (!photonView.isMine) {
 			return;
 		}
-		int damageBonus = (int)changeData [0];
+		int increasedDamage = (int)changeData [0];
 		int bonusDuration = (int)changeData [1];
 
-		damagePerShot += damageBonus;
+		damagePerShot = increasedDamage;
 		Debug.Log ("damage inreased to " + damagePerShot);
+		CancelInvoke ("ResetDamage");
 		Invoke ("ResetDamage", bonusDuration);
 	}
 
