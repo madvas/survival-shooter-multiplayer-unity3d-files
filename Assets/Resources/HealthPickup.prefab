@@ -12,6 +12,7 @@ GameObject:
   - 135: {fileID: 13500000}
   - 82: {fileID: 8200000}
   - 114: {fileID: 11465278}
+  - 114: {fileID: 11449968}
   m_Layer: 0
   m_Name: HealthPickup
   m_TagString: Untagged
@@ -539,6 +540,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Health
+--- !u!114 &11449968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32897a659cb3e482bbb90e92f26be289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11465278
 MonoBehaviour:
   m_ObjectHideFlags: 1
