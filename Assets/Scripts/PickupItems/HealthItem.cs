@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HealthItem : PickupItem
+public class HealthItem : PickupItemBase
 {
+
 }

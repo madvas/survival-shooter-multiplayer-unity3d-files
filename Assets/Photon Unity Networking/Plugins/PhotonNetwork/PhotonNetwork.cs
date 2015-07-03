@@ -2216,7 +2216,7 @@ public static class PhotonNetwork
             }
         }
 
-        if (prefabGo == null)
+		if (prefabGo == null)
         {
             Debug.LogError("Failed to Instantiate prefab: " + prefabName + ". Verify the Prefab is in a Resources folder (and not in a subfolder)");
             return null;

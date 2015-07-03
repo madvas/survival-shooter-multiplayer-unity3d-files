@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PickupItem : MonoBehaviour
+public class PickupItemBase : MonoBehaviour
 {
 	void OnTriggerEnter (Collider other)
 	{

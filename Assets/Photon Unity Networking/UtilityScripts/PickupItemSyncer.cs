@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
+using PhotonPickup;
 
 
 /// <summary>Finds out which PickupItems are not spawned at the moment and send this to new players.</summary>
