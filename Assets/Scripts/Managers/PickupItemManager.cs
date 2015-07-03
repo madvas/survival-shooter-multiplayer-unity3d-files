@@ -13,12 +13,17 @@ public class PickupItemManager : MonoBehaviour
 	
 	void OnRoundStarted ()
 	{
-		InvokeRepeating ("SpawnItem", initialDelay, respawnDelay);
+		if (PhotonNetwork.isMasterClient) {
+
+			InvokeRepeating ("SpawnItem", initialDelay, respawnDelay);
+		}
 	}
 	
 	void OnPauseStarted ()
 	{
-		CancelInvoke ("SpawnItem");
+		if (PhotonNetwork.isMasterClient) {
+			CancelInvoke ("SpawnItem");
+		}
 	}
 	
 	void SpawnItem ()
