@@ -12,4 +12,8 @@ public static class MyGameObjectExtensions
 		}
 		return null;
 	}
+
+	public static SendMessageMultiArg(this GameObject gameObject, string methodName, params object[] parameters) {
+		gameObject.SendMessage(methodName, parameters, SendMessageOptions.DontRequireReceiver);
+	}
 }
