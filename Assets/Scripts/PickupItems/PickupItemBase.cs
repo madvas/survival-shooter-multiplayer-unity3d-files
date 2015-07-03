@@ -25,6 +25,8 @@ public class PickupItemBase : Photon.MonoBehaviour
 		
 		SentPickup = true;
 		photonView.RPC ("PunPickup", PhotonTargets.AllViaServer);
+		GameObjectHelper.SendMessageToAll ("OnItemPicked", gameObject);
+		PhotonNetwork.Destroy (gameObject);
 	}
 
 

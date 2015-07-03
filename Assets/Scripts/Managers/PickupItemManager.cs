@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class PickupItemManager : MonoBehaviour
 {
@@ -24,6 +25,15 @@ public class PickupItemManager : MonoBehaviour
 		if (PhotonNetwork.isMasterClient) {
 			CancelInvoke ("SpawnItem");
 		}
+	}
+
+	void OnItemPicked (GameObject pickedItem)
+	{
+		if (PhotonNetwork.isMasterClient) {
+
+			PhotonNetwork.Destroy (gameObject);
+		}
+
 	}
 	
 	void SpawnItem ()
