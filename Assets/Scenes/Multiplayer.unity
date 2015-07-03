@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabName: HealthPickup
-  maxCount: 15
+  maxCount: 1
   respawnDelay: 1
   initialDelay: 1
 --- !u!1 &65213807

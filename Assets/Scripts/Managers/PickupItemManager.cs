@@ -15,7 +15,6 @@ public class PickupItemManager : MonoBehaviour
 	void OnRoundStarted ()
 	{
 		if (PhotonNetwork.isMasterClient) {
-
 			InvokeRepeating ("SpawnItem", initialDelay, respawnDelay);
 		}
 	}
@@ -30,7 +29,7 @@ public class PickupItemManager : MonoBehaviour
 	void OnItemPicked (GameObject pickedItem)
 	{
 		if (PhotonNetwork.isMasterClient) {
-
+			itemInstances.RemoveAll (item => item.GetInstanceID () == pickedItem.GetInstanceID ());
 			PhotonNetwork.Destroy (gameObject);
 		}
 
@@ -38,7 +37,6 @@ public class PickupItemManager : MonoBehaviour
 	
 	void SpawnItem ()
 	{
-		Debug.Log ("spawning item");
 		if (itemInstances.Count >= maxCount) {
 			return;
 		}
