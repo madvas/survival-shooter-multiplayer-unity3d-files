@@ -3,8 +3,10 @@ using System.Collections;
 
 public class HealthItem : PickupItemBase
 {
-	void OnActivateItemEffect ()
-	{
+	public int healthBonus = 50;
 
+	void OnActivateItemEffect (GameObject player)
+	{
+		player.SendMessage ("OnPlayerHealthChange", healthBonus);
 	}
 }

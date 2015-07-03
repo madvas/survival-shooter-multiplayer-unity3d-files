@@ -29,7 +29,7 @@ public class PlayerHealth : Photon.MonoBehaviour
 			return _currentHealth;
 		}
 		set {
-			_currentHealth = value;
+			_currentHealth = Mathf.Clamp (value, 0, 100);
 			if (healthSlider) {
 				healthSlider.value = value;
 			}
@@ -114,5 +114,10 @@ public class PlayerHealth : Photon.MonoBehaviour
 	{
 		ResetHealth ();
 		isDead = false;
+	}
+
+	void OnPlayerHealthChange (int healthDelta)
+	{
+		currentHealth += healthDelta;
 	}
 }
