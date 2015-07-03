@@ -9,7 +9,7 @@ static class PhotonPlayerExtensions
 	public static readonly string deathsProp = "d";
 	public static readonly string materialProp = "m";
 	public static readonly string increasedDamageProp = "g";
-	public static readonly string increasedSpeedProp = "s";
+	public static readonly string invisibilityProp = "i";
 
 	private static void SetProperty<T> (this PhotonPlayer player, string key, T value)
 	{
@@ -65,6 +65,20 @@ static class PhotonPlayerExtensions
 		object hasIncreased;
 		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.increasedDamageProp, out hasIncreased)) {
 			return (bool)hasIncreased;
+		}
+		return false;
+	}
+
+	public static void SetInvisibility (this PhotonPlayer player, bool enabled)
+	{
+		player.SetProperty (PhotonPlayerExtensions.invisibilityProp, enabled);
+	}
+	
+	public static bool isInvisible (this PhotonPlayer player)
+	{
+		object isInvisible;
+		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.invisibilityProp, out isInvisible)) {
+			return (bool)isInvisible;
 		}
 		return false;
 	}
