@@ -5,7 +5,7 @@ using System.Collections;
 public class PickupItemBase : Photon.MonoBehaviour
 {
 	bool SentPickup;
-	public PickupItemManager pickupItemManager;
+	public GameObject pickupItemManager;
 
 	void OnTriggerEnter (Collider other)
 	{
@@ -37,7 +37,7 @@ public class PickupItemBase : Photon.MonoBehaviour
 		if (msgInfo.sender.isLocal) {
 			SentPickup = false;
 		}
-		GameObjectHelper.SendMessageToAll ("OnItemPicked", gameObject, msgInfo.sender.isLocal);
+		pickupItemManager.SendMessageMultiArg ("OnItemPicked", gameObject, msgInfo.sender.isLocal);
 		Destroy (gameObject);
 	}
 }
