@@ -10,9 +10,12 @@ public class PickupItemBase : Photon.MonoBehaviour
 	void OnTriggerEnter (Collider other)
 	{
 		PhotonView otherpv = other.GetComponent<PhotonView> ();
-		if (otherpv != null && otherpv.isMine) {
-			Debug.Log ("OnTriggerEnter() calls Pickup().");
-			Pickup ();
+		if (otherpv != null) {
+			GameObjectHelper.SendMessageToAll ("OnItemPicked", gameObject);
+			if (otherpv.isMine) {
+				Debug.Log ("OnTriggerEnter() calls Pickup().");
+				Pickup ();
+			}
 		}
 	}
 
@@ -24,8 +27,6 @@ public class PickupItemBase : Photon.MonoBehaviour
 		}
 		
 		SentPickup = true;
-		photonView.RPC ("PunPickup", PhotonTargets.AllViaServer);
-		GameObjectHelper.SendMessageToAll ("OnItemPicked", gameObject);
 	}
 
 
@@ -35,5 +36,8 @@ public class PickupItemBase : Photon.MonoBehaviour
 		if (msgInfo.sender.isLocal) {
 			SentPickup = false;
 		}
+		photonView.RPC ("PunPickup", PhotonTargets.AllViaServer);
+		PhotonNetwork.Destroy (pickedItem);
+	}
 	}
 }

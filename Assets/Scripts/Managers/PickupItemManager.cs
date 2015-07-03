@@ -30,7 +30,7 @@ public class PickupItemManager : MonoBehaviour
 	{
 		if (PhotonNetwork.isMasterClient) {
 			itemInstances.RemoveAll (item => item.GetInstanceID () == pickedItem.GetInstanceID ());
-			PhotonNetwork.Destroy (gameObject);
+//			PhotonNetwork.Destroy (pickedItem);
 		}
 
 	}
