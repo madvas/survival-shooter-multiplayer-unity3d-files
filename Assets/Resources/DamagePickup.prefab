@@ -392,7 +392,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
-  m_Color: {r: 1, g: .866666675, b: .117647059, a: 1}
+  m_Color: {r: .945098042, g: .0627451017, b: 1, a: 1}
   m_Intensity: 10
   m_Range: 2
   m_SpotAngle: 100
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupItemManagerTag: DamageItemManager
-  damageBonus: 5
+  increasedDamage: 15
   bonusDuration: 20
 --- !u!135 &13500000
 SphereCollider:
@@ -543,6 +543,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: pickupItemManagerTag
       value: DamageItemManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: .945098042
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: .0627451017
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
