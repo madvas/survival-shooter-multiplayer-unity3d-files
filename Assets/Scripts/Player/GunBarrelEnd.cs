@@ -41,12 +41,17 @@ public class GunBarrelEnd : MonoBehaviour
 
 	void DisableEffects ()
 	{
-		gunLine.enabled = false;
-		gunLight.enabled = false;
+		if (gunLine != null) {
+			gunLine.enabled = false;
+		}
+		if (gunLight != null) {
+			gunLight.enabled = false;
+		}
 	}
 
 	void SetShotEffects (bool enhanced)
 	{
+		DisableEffects ();
 		Transform effectsObject = transform.GetChild (enhanced ? 1 : 0);
 		gunParticles = effectsObject.GetComponent<ParticleSystem> ();
 		gunLine = effectsObject.GetComponent<LineRenderer> ();
