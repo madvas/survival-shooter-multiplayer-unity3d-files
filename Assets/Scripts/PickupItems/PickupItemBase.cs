@@ -32,9 +32,9 @@ public class PickupItemBase : Photon.MonoBehaviour
 	void PunPickup (PhotonMessageInfo msgInfo)
 	{
 		if (msgInfo.sender.isLocal) {
+			gameObject.SendMessage ("OnActivateItemEffect");
 			SentPickup = false;
+			PhotonNetwork.Destroy (gameObject);
 		}
-		gameObject.SendMessage ("OnActivateItemEffect");
-		PhotonNetwork.Destroy (gameObject);
 	}
 }
