@@ -3,8 +3,8 @@ using System.Collections;
 
 public class SpeedPickup : PickupItemBase
 {
-	public int increasedSpeed = 15;
-	public int bonusDuration = 20;
+	public int increasedSpeed;
+	public int bonusDuration;
 	
 	void OnActivateItemEffect (GameObject player)
 	{

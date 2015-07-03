@@ -18,6 +18,8 @@ TagManager:
   - PlayerManager
   - DamageItemManager
   - HealthItemManager
+  - SpeedItemManager
+  - InvisibilityItemManager
   layers:
   - Default
   - TransparentFX

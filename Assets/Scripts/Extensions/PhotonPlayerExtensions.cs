@@ -9,6 +9,7 @@ static class PhotonPlayerExtensions
 	public static readonly string deathsProp = "d";
 	public static readonly string materialProp = "m";
 	public static readonly string increasedDamageProp = "g";
+	public static readonly string increasedSpeedProp = "s";
 
 	private static void SetProperty<T> (this PhotonPlayer player, string key, T value)
 	{
@@ -63,6 +64,20 @@ static class PhotonPlayerExtensions
 	{
 		object hasIncreased;
 		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.increasedDamageProp, out hasIncreased)) {
+			return (bool)hasIncreased;
+		}
+		return false;
+	}
+
+	public static void SetIncreasedSpeed (this PhotonPlayer player, bool enabled)
+	{
+		player.SetProperty (PhotonPlayerExtensions.increasedSpeedProp, enabled);
+	}
+	
+	public static bool HasIncreasedSpeed (this PhotonPlayer player)
+	{
+		object hasIncreased;
+		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.increasedSpeedProp, out hasIncreased)) {
 			return (bool)hasIncreased;
 		}
 		return false;
