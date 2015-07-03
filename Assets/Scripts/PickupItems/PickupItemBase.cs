@@ -34,6 +34,7 @@ public class PickupItemBase : Photon.MonoBehaviour
 		if (msgInfo.sender.isLocal) {
 			SentPickup = false;
 		}
+		gameObject.SendMessage ("OnActivateItemEffect");
 		PhotonNetwork.Destroy (gameObject);
 	}
 }
