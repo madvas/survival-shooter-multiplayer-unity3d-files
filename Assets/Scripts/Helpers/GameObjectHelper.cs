@@ -31,4 +31,9 @@ public class GameObjectHelper : MonoBehaviour
 	{
 		return GameObject.FindGameObjectsWithTag ().Where (x => x.GetComponent<PhotonView> ().isMine);
 	}
+
+	public static GameObject FindPlayerByPhotonViewId (int photonViewId)
+	{
+		return GameObject.FindGameObjectsWithTag ().Where (x => x.GetComponent<PhotonView> ().viewID == photonViewId);
+	}
 }

@@ -12,26 +12,27 @@ public class PickupItemBase : Photon.MonoBehaviour
 		PhotonView otherpv = other.GetComponent<PhotonView> ();
 		if (otherpv != null && otherpv.isMine) {
 			Debug.Log ("OnTriggerEnter() calls Pickup().");
-			Pickup ();
+			Pickup (otherpv.viewID);
 		}
 	}
 
 
-	void Pickup ()
+	void Pickup (int playerPhotonViewId)
 	{
 		if (SentPickup) {
 			return;
 		}
 		
 		SentPickup = true;
-		photonView.RPC ("PunPickup", PhotonTargets.AllViaServer);
+		photonView.RPC ("PunPickup", PhotonTargets.AllViaServer, playerPhotonViewId);
 	}
 
 
 	[PunRPC]
-	void PunPickup (PhotonMessageInfo msgInfo)
+	void PunPickup (PhotonMessageInfo msgInfo, int playerPhotonViewId)
 	{
-		gameObject.SendMessage ("OnActivateItemEffect");
+		GameObject player = GameObjectHelper.FindPlayerByPhotonViewId (playerPhotonViewId);
+		gameObject.SendMessage ("OnActivateItemEffect", player);
 		if (msgInfo.sender.isLocal) {
 			SentPickup = false;
 			PhotonNetwork.Destroy (gameObject);
