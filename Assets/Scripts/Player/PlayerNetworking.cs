@@ -149,4 +149,19 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		gunLine.enabled = false;
 		gunLight.enabled = false;
 	}
+
+
+	void OnPlayerDamageChange (object[] changeData)
+	{
+		int increasedDamage = (int)changeData [0];
+		int bonusDuration = (int)changeData [1];
+		
+		CancelInvoke ("ResetShotEffects");
+		Invoke ("ResetShotEffects", bonusDuration);
+	}
+
+	void EnhanceShotEffects() {
+		gunParticles.startLifetime = 0.2;
+		gunParticles
+	}
 }
