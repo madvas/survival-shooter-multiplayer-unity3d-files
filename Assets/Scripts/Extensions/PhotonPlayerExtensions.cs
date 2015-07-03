@@ -10,26 +10,23 @@ static class PhotonPlayerExtensions
 	public static readonly string materialProp = "m";
 	public static readonly string damageBonusProp = "g";
 
-	private static void SetProperty<T> (this PhotonPlayer, T value) {
-
+	private static void SetProperty<T> (this PhotonPlayer player, string key, T value)
+	{
+		Hashtable prop = new Hashtable ();
+		prop [key] = value;
+		player.SetCustomProperties (prop);
 	}
 
 	public static void SetDeaths (this PhotonPlayer player, int newDeaths)
 	{
-		Hashtable deaths = new Hashtable ();  // using PUN's implementation of Hashtable
-		deaths [PhotonPlayerExtensions.deathsProp] = newDeaths;
-		
-		player.SetCustomProperties (deaths);  // this locally sets the deaths and will sync it in-game asap.
+		player.SetProperty (PhotonPlayerExtensions.deathsProp, newDeaths);
 	}
 	
 	public static void AddDeaths (this PhotonPlayer player, int deathsToAddToCurrent)
 	{
 		int current = player.GetDeaths ();
 		current = current + deathsToAddToCurrent;
-		
-		Hashtable deaths = new Hashtable ();  // using PUN's implementation of Hashtable
-		deaths [PhotonPlayerExtensions.deathsProp] = current;
-		player.SetCustomProperties (deaths);
+		player.SetProperty (PhotonPlayerExtensions.deathsProp, current);
 	}
 	
 	public static int GetDeaths (this PhotonPlayer player)
@@ -44,9 +41,7 @@ static class PhotonPlayerExtensions
 
 	public static void SetMaterialIndex (this PhotonPlayer player, int materialIndex)
 	{
-		Hashtable material = new Hashtable (); 
-		material [PhotonPlayerExtensions.materialProp] = materialIndex;
-		player.SetCustomProperties (material);
+		player.SetProperty (PhotonPlayerExtensions.materialProp, materialIndex);
 	}
 
 	public static int GetMaterialIndex (this PhotonPlayer player)
@@ -57,6 +52,11 @@ static class PhotonPlayerExtensions
 		}
 		
 		return -1;
+	}
+
+	public static void SetIncreasedDamage (this PhotonPlayer player, bool enabled)
+	{
+		player.SetProperty (PhotonPlayerExtensions.damageBonusProp, enabled);
 	}
 
 	public static List<int> GetMaterials (this PhotonPlayer[] players)
