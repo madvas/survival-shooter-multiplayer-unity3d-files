@@ -44,7 +44,7 @@ public class PickupItemBase : Photon.MonoBehaviour
 		if (msgInfo.sender.isLocal) {
 			SentPickup = false;
 		}
-		GameObjectHelper.SendMessageToAll ("OnItemPicked", gameObject);
+		GameObjectHelper.SendMessageToAll ("OnItemPicked", gameObject, msgInfo.sender.isLocal);
 		Destroy (gameObject);
 	}
 }
