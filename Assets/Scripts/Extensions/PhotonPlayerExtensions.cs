@@ -59,7 +59,7 @@ static class PhotonPlayerExtensions
 		player.SetProperty (PhotonPlayerExtensions.increasedDamageProp, enabled);
 	}
 
-	public static void HasIncreasedDamage (this PhotonPlayer player)
+	public static bool HasIncreasedDamage (this PhotonPlayer player)
 	{
 		object hasIncreased;
 		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.increasedDamageProp, out hasIncreased)) {

@@ -47,7 +47,7 @@ public class GunBarrelEnd : MonoBehaviour
 
 	void SetShotEffects (bool enhanced)
 	{
-		GameObject effectsObject = transform.GetChild (enhanced ? 1 : 0);
+		Transform effectsObject = transform.GetChild (enhanced ? 1 : 0);
 		gunParticles = effectsObject.GetComponent<ParticleSystem> ();
 		gunLine = effectsObject.GetComponent<LineRenderer> ();
 		gunAudio = effectsObject.GetComponent<AudioSource> ();

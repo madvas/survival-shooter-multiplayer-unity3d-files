@@ -15,14 +15,12 @@ public class PlayerShooting : MonoBehaviour
 	PhotonView photonView;
 	Transform playerTransform;
 	int originalDamagePerShot;
-	GameObject gunBarrelEnd;
 
 	void Awake ()
 	{
 		shootableMask = LayerMask.GetMask ("Shootable");
 		photonView = GetComponentInParent<PhotonView> ();
 		originalDamagePerShot = damagePerShot;
-		gunBarrelEnd = GetComponentInChildren<GunBarrelEnd> ();
 	}
 
 	void Update ()
@@ -62,12 +60,6 @@ public class PlayerShooting : MonoBehaviour
 		}
 	}
 
-	[PunRPC]
-	public void Shoot (Vector3 hitPositon)
-	{
-		gunBarrelEnd.DrawShot (hitPositon);
-	}
-
 	void OnPlayerDamageChange (object[] changeData)
 	{
 		Debug.Log ("OnPlayerDamageChange");
@@ -78,7 +70,6 @@ public class PlayerShooting : MonoBehaviour
 		int bonusDuration = (int)changeData [1];
 
 		damagePerShot = increasedDamage;
-		Debug.Log ("damage inreased to " + damagePerShot);
 		CancelInvoke ("ResetDamage");
 		Invoke ("ResetDamage", bonusDuration);
 	}

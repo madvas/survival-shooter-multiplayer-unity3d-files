@@ -10,6 +10,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	float smoothing = 10f;
 	Animator anim;
 	bool isWalking = false;
+	GunBarrelEnd gunBarrelEnd;
 
 	PlayerHealth playerHealth;
 	int IsWalkingHash = Animator.StringToHash ("IsWalking");
@@ -19,6 +20,7 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	{
 		playerHealth = GetComponent<PlayerHealth> ();
 		anim = GetComponent<Animator> ();
+		gunBarrelEnd = GetComponentInChildren<GunBarrelEnd> ();
 	}
 
 	void Start ()
@@ -75,6 +77,12 @@ public class PlayerNetworking : Photon.MonoBehaviour
 			PhotonPlayer killer = PhotonPlayer.Find (shooterId);
 			GameObjectHelper.SendMessageToAll ("OnPlayerKill", killer, photonView.owner);
 		}
+	}
+
+	[PunRPC]
+	public void Shoot (Vector3 hitPositon)
+	{
+		gunBarrelEnd.DrawShot (hitPositon);
 	}
 
 	[PunRPC]
