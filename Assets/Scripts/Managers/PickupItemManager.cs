@@ -29,6 +29,6 @@ public class PickupItemManager : MonoBehaviour
 		}
 		PositionData randomTransform = PositionHelper.GetRandomSpawnPosition ();
 		randomTransform.position.y = 1;
-		PhotonNetwork.Instantiate (prefabName, randomTransform.position, randomTransform.rotation, 0);
+		itemInstances.Add (PhotonNetwork.Instantiate (prefabName, randomTransform.position, randomTransform.rotation, 0));
 	}
 }
