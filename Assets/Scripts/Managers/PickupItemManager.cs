@@ -9,9 +9,15 @@ public class PickupItemManager : MonoBehaviour
 	public int maxCount;
 	public float respawnDelay;
 	public float initialDelay;
-	
+
+	AudioSource audioSource;
 	List<GameObject> itemInstances = new List<GameObject> ();
-	
+
+	void Awake ()
+	{
+		audioSource = GetComponent<AudioSource> ();
+	}
+
 	void OnRoundStarted ()
 	{
 		if (PhotonNetwork.isMasterClient) {
@@ -31,7 +37,7 @@ public class PickupItemManager : MonoBehaviour
 		GameObject pickedItem = pickData [0] as GameObject;
 		bool pickedByMe = (bool)pickData [1];
 		if (pickedByMe) {
-			pickedItem.GetComponent<AudioSource> ().Play ();
+			audioSource.Play ();
 		}
 		if (PhotonNetwork.isMasterClient) {
 			itemInstances.RemoveAll (item => item.GetInstanceID () == pickedItem.GetInstanceID ());
