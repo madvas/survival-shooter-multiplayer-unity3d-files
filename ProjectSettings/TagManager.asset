@@ -16,6 +16,8 @@ TagManager:
   - RoomTimeManager
   - PlayerBodyMesh
   - PlayerManager
+  - DamageItemManager
+  - HealthItemManager
   layers:
   - Default
   - TransparentFX

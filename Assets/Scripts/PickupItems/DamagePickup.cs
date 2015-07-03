@@ -8,7 +8,6 @@ public class DamagePickup : PickupItemBase
 	
 	void OnActivateItemEffect (GameObject player)
 	{
-		Debug.Log ("OnActivateItemEffect");
 		player.SendMessageMultiArg ("OnPlayerDamageChange", damageBonus, bonusDuration);
 	}
 }

@@ -261,7 +261,7 @@ GameObject:
   - 82: {fileID: 38425738}
   m_Layer: 0
   m_Name: HealthItemManager
-  m_TagString: Untagged
+  m_TagString: HealthItemManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1795,7 +1795,7 @@ GameObject:
   - 82: {fileID: 271944079}
   m_Layer: 0
   m_Name: DamageItemManager
-  m_TagString: Untagged
+  m_TagString: DamageItemManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

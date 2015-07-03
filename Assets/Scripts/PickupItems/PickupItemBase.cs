@@ -18,7 +18,6 @@ public class PickupItemBase : Photon.MonoBehaviour
 	{
 		PhotonView otherpv = other.GetComponent<PhotonView> ();
 		if (otherpv != null && otherpv.isMine) {
-			Debug.Log ("OnTriggerEnter() calls Pickup().");
 			Pickup (otherpv.viewID);
 		}
 	}
