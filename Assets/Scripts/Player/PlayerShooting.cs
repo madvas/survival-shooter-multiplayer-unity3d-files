@@ -83,4 +83,9 @@ public class PlayerShooting : MonoBehaviour
 		photonView.owner.SetIncreasedDamage (false);
 	}
 
+	void OnPlayerRespawn ()
+	{
+		ResetDamage ();
+	}
+
 }
