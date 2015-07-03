@@ -493,7 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupItemManagerTag: DamageItemManager
   increasedDamage: 15
-  bonusDuration: 20
+  bonusDuration: 25
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -555,6 +555,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bonusDuration
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
