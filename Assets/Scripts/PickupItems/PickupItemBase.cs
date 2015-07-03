@@ -31,11 +31,13 @@ public class PickupItemBase : Photon.MonoBehaviour
 	[PunRPC]
 	public void PunPickup (int playerPhotonViewId, PhotonMessageInfo msgInfo)
 	{
+
 		GameObject player = GameObjectHelper.FindPlayerByPhotonViewId (playerPhotonViewId);
 		gameObject.SendMessage ("OnActivateItemEffect", player);
 		if (msgInfo.sender.isLocal) {
 			SentPickup = false;
-			PhotonNetwork.Destroy (gameObject);
 		}
+		GameObjectHelper.SendMessageToAll ("OnItemPicked");
+		Destroy (gameObject);
 	}
 }
