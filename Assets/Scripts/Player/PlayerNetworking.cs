@@ -44,15 +44,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		}
 	}
 
-	void Update ()
-	{
-		timer += Time.deltaTime;
-		
-		if (timer >= timeBetweenBullets * effectsDisplayTime) {
-			DisableEffects ();
-		}
-	}
-	
 	IEnumerator UpdateData ()
 	{
 		if (initialLoad) {
@@ -112,18 +103,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		anim.SetTrigger (respawnHash);
 	}
 
-	public void DrawShot (Vector3 fromPosition, Vector3 hitPositon)
-	{
-		timer = 0f;
-		gunAudio.Play ();
-		gunLight.enabled = true;
-		gunParticles.Stop ();
-		gunParticles.Play ();
-		gunLine.enabled = true;
-		gunLine.SetPosition (0, fromPosition);
-		gunLine.SetPosition (1, hitPositon);
-	}
-
 	void OnPlayerRespawn ()
 	{
 		if (photonView.isMine) {
@@ -144,13 +123,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		}
 	}
 
-	void DisableEffects ()
-	{
-		gunLine.enabled = false;
-		gunLight.enabled = false;
-	}
-
-
 	void OnPlayerDamageChange (object[] changeData)
 	{
 		int increasedDamage = (int)changeData [0];
@@ -158,10 +130,5 @@ public class PlayerNetworking : Photon.MonoBehaviour
 		
 		CancelInvoke ("ResetShotEffects");
 		Invoke ("ResetShotEffects", bonusDuration);
-	}
-
-	void EnhanceShotEffects() {
-		gunParticles.startLifetime = 0.2;
-		gunParticles
 	}
 }
