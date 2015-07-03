@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
@@ -25,8 +25,8 @@ public class PlayerMaterial : Photon.MonoBehaviour
 	{
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.PlayerMaterialProp)) {
-			int materialIndex = (int)props [PhotonPlayerExtensions.PlayerMaterialProp];
+		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
+			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
 			body.material = playerManager.playerMaterials [materialIndex];
 		}
 	}

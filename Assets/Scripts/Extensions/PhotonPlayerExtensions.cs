@@ -6,13 +6,18 @@ using System.Linq;
 
 static class PhotonPlayerExtensions
 {
-	public static readonly string PlayerDeathsProp = "d";
-	public static readonly string PlayerMaterialProp = "m";
+	public static readonly string deathsProp = "d";
+	public static readonly string materialProp = "m";
+	public static readonly string damageBonusProp = "g";
+
+	private static void SetProperty<T> (this PhotonPlayer, T value) {
+
+	}
 
 	public static void SetDeaths (this PhotonPlayer player, int newDeaths)
 	{
 		Hashtable deaths = new Hashtable ();  // using PUN's implementation of Hashtable
-		deaths [PhotonPlayerExtensions.PlayerDeathsProp] = newDeaths;
+		deaths [PhotonPlayerExtensions.deathsProp] = newDeaths;
 		
 		player.SetCustomProperties (deaths);  // this locally sets the deaths and will sync it in-game asap.
 	}
@@ -23,15 +28,14 @@ static class PhotonPlayerExtensions
 		current = current + deathsToAddToCurrent;
 		
 		Hashtable deaths = new Hashtable ();  // using PUN's implementation of Hashtable
-		deaths [PhotonPlayerExtensions.PlayerDeathsProp] = current;
-		
-		player.SetCustomProperties (deaths);  // this locally sets the deaths and will sync it in-game asap.
+		deaths [PhotonPlayerExtensions.deathsProp] = current;
+		player.SetCustomProperties (deaths);
 	}
 	
 	public static int GetDeaths (this PhotonPlayer player)
 	{
 		object teamId;
-		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.PlayerDeathsProp, out teamId)) {
+		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.deathsProp, out teamId)) {
 			return (int)teamId;
 		}
 		
@@ -41,14 +45,14 @@ static class PhotonPlayerExtensions
 	public static void SetMaterialIndex (this PhotonPlayer player, int materialIndex)
 	{
 		Hashtable material = new Hashtable (); 
-		material [PhotonPlayerExtensions.PlayerMaterialProp] = materialIndex;
+		material [PhotonPlayerExtensions.materialProp] = materialIndex;
 		player.SetCustomProperties (material);
 	}
 
 	public static int GetMaterialIndex (this PhotonPlayer player)
 	{
 		object material;
-		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.PlayerMaterialProp, out material)) {
+		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.materialProp, out material)) {
 			return (int)material;
 		}
 		
