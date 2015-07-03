@@ -4,8 +4,15 @@ using System.Collections;
 [RequireComponent(typeof(PhotonView))]
 public class PickupItemBase : Photon.MonoBehaviour
 {
+	public string pickupItemManagerTag;
+
 	bool SentPickup;
-	public GameObject pickupItemManager;
+	GameObject pickupItemManager;
+
+	void Awake ()
+	{
+		pickupItemManager = GameObject.FindGameObjectWithTag (pickupItemManagerTag);
+	}
 
 	void OnTriggerEnter (Collider other)
 	{

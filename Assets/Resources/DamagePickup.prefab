@@ -111,8 +111,9 @@ GameObject:
   - 4: {fileID: 400012}
   - 135: {fileID: 13500000}
   - 114: {fileID: 11407730}
+  - 114: {fileID: 11430466}
   m_Layer: 0
-  m_Name: BulletPickup
+  m_Name: DamagePickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,6 +480,20 @@ MonoBehaviour:
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
+--- !u!114 &11430466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0a94ebac15a4ad3958c12f955bb2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupItemManagerTag: DamageItemManager
+  damageBonus: 5
+  bonusDuration: 20
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -524,6 +539,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Radius
       value: .899999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pickupItemManagerTag
+      value: DamageItemManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
