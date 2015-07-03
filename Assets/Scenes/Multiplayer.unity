@@ -290,8 +290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabName: HealthPickup
-  maxCount: 200
-  respawnDelay: .100000001
+  maxCount: 20
+  respawnDelay: 1
   initialDelay: 1
 --- !u!82 &38425738
 AudioSource:
