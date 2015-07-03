@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32897a659cb3e482bbb90e92f26be289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBonus: 50
 --- !u!114 &11465278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -630,6 +631,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BypassEffects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BypassListenerEffects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BypassReverbZones
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
