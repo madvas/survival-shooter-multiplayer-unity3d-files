@@ -69,20 +69,6 @@ static class PhotonPlayerExtensions
 		return false;
 	}
 
-	public static void SetIncreasedSpeed (this PhotonPlayer player, bool enabled)
-	{
-		player.SetProperty (PhotonPlayerExtensions.increasedSpeedProp, enabled);
-	}
-	
-	public static bool HasIncreasedSpeed (this PhotonPlayer player)
-	{
-		object hasIncreased;
-		if (player.customProperties.TryGetValue (PhotonPlayerExtensions.increasedSpeedProp, out hasIncreased)) {
-			return (bool)hasIncreased;
-		}
-		return false;
-	}
-
 	public static List<int> GetMaterials (this PhotonPlayer[] players)
 	{
 		List<int> materialList = new List<int> ();

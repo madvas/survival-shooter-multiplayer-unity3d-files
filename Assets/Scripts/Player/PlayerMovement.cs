@@ -135,20 +135,18 @@ public class PlayerMovement : Photon.MonoBehaviour
 		
 		speed = increasedSpeed;
 		
-		photonView.owner.SetIncreasedSpeed (true);
 		CancelInvoke ("ResetSpeed");
 		Invoke ("ResetSpeed", bonusDuration);
 	}
 
-	void ResetDamage ()
+	void ResetSpeed ()
 	{
 		speed = origSpeed;
-		photonView.owner.SetIncreasedSpeed (false);
 	}
 	
 	void OnPlayerRespawn ()
 	{
-		ResetDamage ();
+		ResetSpeed ();
 	}
 
 }

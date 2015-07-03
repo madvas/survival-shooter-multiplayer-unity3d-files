@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b1ca389695b41cea81c778c5d88aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupItemManagerTag: 
+  pickupItemManagerTag: SpeedItemManager
   increasedSpeed: 12
   bonusDuration: 30
 --- !u!114 &11478418
@@ -612,6 +612,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: bonusDuration
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: pickupItemManagerTag
+      value: SpeedItemManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
