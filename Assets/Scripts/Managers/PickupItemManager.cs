@@ -9,10 +9,11 @@ public class PickupItemManager : MonoBehaviour
 	public float respawnDelay;
 	public float initialDelay;
 	
-	GameObject[] itemInstances;
+	GameObject[] itemInstances = new GameObject[];
 	
 	void OnRoundStarted ()
 	{
+		Debug.Log ("starting spawning");
 		InvokeRepeating ("SpawnItem", initialDelay, respawnDelay);
 	}
 	
