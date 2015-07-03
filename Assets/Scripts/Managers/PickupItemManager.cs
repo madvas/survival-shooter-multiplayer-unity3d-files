@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PickupItemsManager : MonoBehaviour
+public class PickupItemManager : MonoBehaviour
 {
 
 	public string prefabName;
