@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class GameObjectHelper : MonoBehaviour
 {
@@ -24,5 +25,10 @@ public class GameObjectHelper : MonoBehaviour
 			objectsWithComponent.Add (targetComponents [index].gameObject);
 		}
 		return objectsWithComponent;
+	}
+
+	public static GameObject FindMinePlayerGameObject ()
+	{
+		return GameObject.FindGameObjectsWithTag ().Where (x => x.GetComponent<PhotonView> ().isMine);
 	}
 }
