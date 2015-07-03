@@ -6,6 +6,7 @@ public static class PositionHelper
 
 	public static PositionData GetRandomSpawnPosition ()
 	{
+		Debug.Log (GameObject.FindGameObjectWithTag ("Floor").name);
 		float offset = 0;
 		float randomX = Random.Range (floorBounds.center.x + (floorBounds.extents.x / 2) - offset, floorBounds.center.x - (floorBounds.extents.x / 2) + offset);
 		float randomZ = Random.Range (floorBounds.center.z + (floorBounds.extents.z / 2) - offset, floorBounds.center.z - (floorBounds.extents.z / 2) + offset);
@@ -31,7 +32,7 @@ public static class PositionHelper
 		foreach (var item in GameObject.FindGameObjectsWithTag("NotSpawnable")) {
 			foreach (Collider collider in item.GetComponents<Collider>()) {
 				if (collider.bounds.Contains (position)) {
-					return collider.ClosestPointOnBounds (Vector3.zero);
+					return collider.ClosestPointOnBounds (position);
 				}
 			}
 		}
