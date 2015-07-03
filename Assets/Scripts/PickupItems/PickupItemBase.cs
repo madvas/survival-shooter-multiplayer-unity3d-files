@@ -6,6 +6,12 @@ public class PickupItemBase : Photon.MonoBehaviour
 {
 
 	bool SentPickup;
+	AudioSource audioSource;
+
+	void Awake ()
+	{
+		audioSource = gameObject.GetComponent<AudioSource> ();
+	}
 
 	void OnTriggerEnter (Collider other)
 	{
@@ -35,6 +41,8 @@ public class PickupItemBase : Photon.MonoBehaviour
 		GameObject player = GameObjectHelper.FindPlayerByPhotonViewId (playerPhotonViewId);
 		gameObject.SendMessage ("OnActivateItemEffect", player);
 		if (msgInfo.sender.isLocal) {
+			Debug.Log ("isLocal");
+			audioSource.Play ();
 			SentPickup = false;
 		}
 		GameObjectHelper.SendMessageToAll ("OnItemPicked", gameObject);
