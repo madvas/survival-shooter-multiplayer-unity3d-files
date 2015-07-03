@@ -42,8 +42,6 @@ public class PickupItemBase : Photon.MonoBehaviour
 		GameObject player = GameObjectHelper.FindPlayerByPhotonViewId (playerPhotonViewId);
 		gameObject.SendMessage ("OnActivateItemEffect", player);
 		if (msgInfo.sender.isLocal) {
-			Debug.Log (audioSource.clip.name);
-			audioSource.Play ();
 			SentPickup = false;
 		}
 		GameObjectHelper.SendMessageToAll ("OnItemPicked", gameObject);

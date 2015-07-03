@@ -28,6 +28,7 @@ public class PickupItemManager : MonoBehaviour
 
 	void OnItemPicked (GameObject pickedItem)
 	{
+		pickedItem.GetComponent<AudioSource> ().Play ();
 		if (PhotonNetwork.isMasterClient) {
 			itemInstances.RemoveAll (item => item.GetInstanceID () == pickedItem.GetInstanceID ());
 //			PhotonNetwork.Destroy (pickedItem);
