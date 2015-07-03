@@ -29,7 +29,7 @@ public class PickupItemBase : Photon.MonoBehaviour
 
 
 	[PunRPC]
-	void PunPickup (PhotonMessageInfo msgInfo, int playerPhotonViewId)
+	public void PunPickup (int playerPhotonViewId, PhotonMessageInfo msgInfo)
 	{
 		GameObject player = GameObjectHelper.FindPlayerByPhotonViewId (playerPhotonViewId);
 		gameObject.SendMessage ("OnActivateItemEffect", player);

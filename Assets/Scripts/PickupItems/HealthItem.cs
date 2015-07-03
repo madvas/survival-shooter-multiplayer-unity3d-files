@@ -7,6 +7,7 @@ public class HealthItem : PickupItemBase
 
 	void OnActivateItemEffect (GameObject player)
 	{
+		Debug.Log ("OnActivateItemEffect");
 		player.SendMessage ("OnPlayerHealthChange", healthBonus);
 	}
 }
