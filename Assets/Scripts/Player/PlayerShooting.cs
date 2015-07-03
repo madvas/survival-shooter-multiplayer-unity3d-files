@@ -70,6 +70,8 @@ public class PlayerShooting : MonoBehaviour
 		int bonusDuration = (int)changeData [1];
 
 		damagePerShot = increasedDamage;
+
+		photonView.owner.SetIncreasedDamage (true);
 		CancelInvoke ("ResetDamage");
 		Invoke ("ResetDamage", bonusDuration);
 	}
@@ -78,6 +80,7 @@ public class PlayerShooting : MonoBehaviour
 	{
 		Debug.Log ("damage reset to " + originalDamagePerShot);
 		damagePerShot = originalDamagePerShot;
+		photonView.owner.SetIncreasedDamage (false);
 	}
 
 }
