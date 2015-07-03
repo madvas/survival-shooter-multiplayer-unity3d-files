@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ItemsManager : MonoBehaviour {
+public class PickupItemsManager : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public string HealthItemPrefab;
+	GameObject[] healthItems;
+
+	void OnRoundStarted ()
+	{
+
 	}
 }
