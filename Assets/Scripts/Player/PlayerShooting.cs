@@ -57,4 +57,9 @@ public class PlayerShooting : MonoBehaviour
 			photonView.RPC ("Shoot", PhotonTargets.All, shootRay.origin + shootRay.direction * range);
 		}
 	}
+
+	void OnPlayerDamageChange ()
+	{
+
+	}
 }
