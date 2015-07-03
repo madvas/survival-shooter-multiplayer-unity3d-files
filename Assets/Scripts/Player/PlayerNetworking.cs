@@ -60,12 +60,6 @@ public class PlayerNetworking : Photon.MonoBehaviour
 	}
 
 	[PunRPC]
-	public void Shoot (Vector3 hitPositon)
-	{
-		DrawShot (gunEndTransform.position, hitPositon);
-	}
-
-	[PunRPC]
 	public void TakeShot (int damage, int shooterId, Vector3 hitPositon)
 	{
 		bool died;
@@ -107,14 +101,5 @@ public class PlayerNetworking : Photon.MonoBehaviour
 			photonView.owner.SetScore (0);
 			photonView.owner.SetDeaths (0);
 		}
-	}
-
-	void OnPlayerDamageChange (object[] changeData)
-	{
-		int increasedDamage = (int)changeData [0];
-		int bonusDuration = (int)changeData [1];
-		
-		CancelInvoke ("ResetShotEffects");
-		Invoke ("ResetShotEffects", bonusDuration);
 	}
 }

@@ -27,7 +27,7 @@ public class GunBarrelEnd : MonoBehaviour
 		}
 	}
 
-	public void DrawShot (Vector3 fromPosition, Vector3 hitPositon)
+	public void DrawShot (Vector3 hitPositon)
 	{
 		timer = 0f;
 		gunAudio.Play ();
@@ -35,7 +35,7 @@ public class GunBarrelEnd : MonoBehaviour
 		gunParticles.Stop ();
 		gunParticles.Play ();
 		gunLine.enabled = true;
-		gunLine.SetPosition (0, fromPosition);
+		gunLine.SetPosition (0, transform.position);
 		gunLine.SetPosition (1, hitPositon);
 	}
 

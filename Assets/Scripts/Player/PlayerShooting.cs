@@ -15,12 +15,14 @@ public class PlayerShooting : MonoBehaviour
 	PhotonView photonView;
 	Transform playerTransform;
 	int originalDamagePerShot;
+	GameObject gunBarrelEnd;
 
 	void Awake ()
 	{
 		shootableMask = LayerMask.GetMask ("Shootable");
 		photonView = GetComponentInParent<PhotonView> ();
 		originalDamagePerShot = damagePerShot;
+		gunBarrelEnd = GetComponentInChildren<GunBarrelEnd> ();
 	}
 
 	void Update ()
@@ -58,6 +60,12 @@ public class PlayerShooting : MonoBehaviour
 		} else {
 			photonView.RPC ("Shoot", PhotonTargets.All, shootRay.origin + shootRay.direction * range);
 		}
+	}
+
+	[PunRPC]
+	public void Shoot (Vector3 hitPositon)
+	{
+		gunBarrelEnd.DrawShot (hitPositon);
 	}
 
 	void OnPlayerDamageChange (object[] changeData)
