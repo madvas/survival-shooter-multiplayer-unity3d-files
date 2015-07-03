@@ -11,6 +11,7 @@ public class PickupItemBase : Photon.MonoBehaviour
 	void Awake ()
 	{
 		audioSource = gameObject.GetComponent<AudioSource> ();
+		audioSource.Play ();
 	}
 
 	void OnTriggerEnter (Collider other)
