@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class PickupItemManager : MonoBehaviour
 {
@@ -9,11 +9,10 @@ public class PickupItemManager : MonoBehaviour
 	public float respawnDelay;
 	public float initialDelay;
 	
-	GameObject[] itemInstances = new GameObject[];
+	List<GameObject> itemInstances = new List<GameObject> ();
 	
 	void OnRoundStarted ()
 	{
-		Debug.Log ("starting spawning");
 		InvokeRepeating ("SpawnItem", initialDelay, respawnDelay);
 	}
 	
@@ -24,7 +23,8 @@ public class PickupItemManager : MonoBehaviour
 	
 	void SpawnItem ()
 	{
-		if (itemInstances.Length >= maxCount) {
+		Debug.Log ("spawning item");
+		if (itemInstances.Count >= maxCount) {
 			return;
 		}
 		PositionData randomTransform = PositionHelper.GetRandomSpawnPosition ();
