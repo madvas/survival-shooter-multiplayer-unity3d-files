@@ -73,6 +73,7 @@ GameObject:
   - 23: {fileID: 2332390}
   - 65: {fileID: 6558140}
   - 114: {fileID: 11471652}
+  - 114: {fileID: 11470100}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -637,6 +638,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenBullets: .150000006
   effectsDisplayTime: .200000003
+--- !u!114 &11470100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d882b8d97653a48b69ebc7bc5433d129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11471652
 MonoBehaviour:
   m_ObjectHideFlags: 1
