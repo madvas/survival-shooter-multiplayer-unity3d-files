@@ -28,10 +28,14 @@ public class PlayerMaterial : Photon.MonoBehaviour
 		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
 			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
 			body.material = playerManager.playerMaterials [materialIndex];
+
+
 			Debug.Log ("setting trans");
 			Color col = body.material.color;
 			col.a = 0.1f;
 			body.material.color = col;
+
+			body.material.SetFloat ("_Mode", 4.0f);
 		}
 	}
 }
