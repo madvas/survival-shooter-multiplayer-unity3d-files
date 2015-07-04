@@ -7,6 +7,7 @@ public class InvisibilityPickup : PickupItemBase
 	
 	void OnActivateItemEffect (GameObject player)
 	{
+		Debug.Log ("OnActivateItemEffect " + player.name);
 		player.BroadcastMessage ("OnPlayerGoInvisible", bonusDuration);
 	}
 }
