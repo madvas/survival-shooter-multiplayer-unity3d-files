@@ -30,7 +30,7 @@ public class PlayerMaterial : Photon.MonoBehaviour
 
 	public void UpdatePlayerMaterial (PhotonPlayer player, bool transparent)
 	{
-		int materialIndex = player.GetMaterialIndex ();
+		int materialIndex = photonView.owner.GetMaterialIndex ();
 		if (materialIndex > -1) {
 			Material[] materials = transparent ? playerManager.playerTransparentMaterials : playerManager.playerMaterials;
 			body.material = materials [materialIndex];

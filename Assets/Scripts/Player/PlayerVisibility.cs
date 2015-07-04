@@ -43,7 +43,7 @@ public class PlayerVisibility : Photon.MonoBehaviour
 
 	void SetPlayerVisibility (PhotonPlayer player, bool enabled)
 	{
-		if (player.ID == photonView.owner.ID && !enabled) {
+		if (player.ID == PhotonNetwork.player.ID && !enabled) {
 			playerMaterial.UpdatePlayerMaterial (player, true);
 		} else {
 			playerMaterial.UpdatePlayerMaterial (player, false);
@@ -57,7 +57,7 @@ public class PlayerVisibility : Photon.MonoBehaviour
 	{
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-		if (props.ContainsKey (PhotonPlayerExtensions.invisibilityProp)) {
+		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.invisibilityProp)) {
 			Debug.Log ("setting " + player.name + " visibility " + !player.isInvisible ());
 			SetPlayerVisibility (player, !player.isInvisible ());
 		}
