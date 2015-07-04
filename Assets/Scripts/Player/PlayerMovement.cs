@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnitySampleAssets.CrossPlatformInput;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : Photon.MonoBehaviour
 {
 	public float speed = 6f;            // The speed that the player will move at.
 
@@ -15,9 +15,11 @@ public class PlayerMovement : MonoBehaviour
 
 	bool keyboardDisabled = false;
 	int IsWalkingHash = Animator.StringToHash ("IsWalking");
+	float origSpeed;
 
 	void Awake ()
 	{
+		origSpeed = speed;
 #if !MOBILE_INPUT
 		floorMask = LayerMask.GetMask ("Floor");
 #endif
@@ -125,4 +127,26 @@ public class PlayerMovement : MonoBehaviour
 	{
 		keyboardDisabled = false;
 	}
+
+	void OnPlayerSpeedChange (object[] changeData)
+	{
+		float increasedSpeed = (float)changeData [0];
+		int bonusDuration = (int)changeData [1];
+		
+		speed = increasedSpeed;
+		
+		CancelInvoke ("ResetSpeed");
+		Invoke ("ResetSpeed", bonusDuration);
+	}
+
+	void ResetSpeed ()
+	{
+		speed = origSpeed;
+	}
+	
+	void OnPlayerRespawn ()
+	{
+		ResetSpeed ();
+	}
+
 }

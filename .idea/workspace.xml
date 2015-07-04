@@ -6,7 +6,468 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0c12a4f-5e8d-4c23-a9bd-6dc0c201093d" name="Default" comment="" />
+    <list default="true" id="b0c12a4f-5e8d-4c23-a9bd-6dc0c201093d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffHeight.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffNormals.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/ContrastEnhanced3D16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures/Falloff.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Textures/Flare50mm.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Textures/FlareStar.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/FlashlightCookie.tif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/FlashlightIrregularCookie.tif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Textures/GlassStainedAlbedo.tif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Textures/GlassStainedNormals.tif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures/Grid.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/HexShape.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Audio/Effects/IncreasedDamageGunShot.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Textures/Pickup/InvisibilityPickup.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures/Light.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/LightHardCookie.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/LightSoftCookie.tif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/LightSquareCookie.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Models/LowPolySphere.fbx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/MotionBlurJitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/Neutral3D16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/Noise.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/NoiseAndGrain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/NoiseEffectGrain.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/NoiseEffectScratch.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/RandomVectors.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures/Shadow.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/SphereShape.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Textures/ToonLit.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Textures/UtilToonGradient.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/VignetteMask.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/color correction ramp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/grayscale ramp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Flares/50mmZoom.flare.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Flares/50mmZoom.flare" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch/Adaptation.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch/Adaptation.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Antialiasing.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Antialiasing.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/AntialiasingEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/AntialiasingEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch/Apply.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch/Apply.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/Blend.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/Blend.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BlendForBloom.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BlendForBloom.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/BlendModesOverlay.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/BlendModesOverlay.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BlendOneOne.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BlendOneOne.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Prefabs/BlobLightProjector.prefab.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Prefabs/BlobLightProjector.prefab" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Prefabs/BlobShadowProjector.prefab.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Prefabs/BlobShadowProjector.prefab" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Bloom.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Bloom.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/BloomAndFlares.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/BloomAndFlares.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/BloomAndFlaresEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/BloomAndFlaresEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/BloomEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/BloomEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/BloomOptimized.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/BloomOptimized.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Blur.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Blur.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BlurAndFlares.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BlurAndFlares.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/BlurEffectConeTaps.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/BlurEffectConeTaps.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/BlurOptimized.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/BlurOptimized.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/Bokeh34.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/Bokeh34.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseAzureTransparent.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseAzureTransparent.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseBlueTransparent.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseBlueTransparent.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseGreenTransparent.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseGreenTransparent.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseRedTransparent.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseRedTransparent.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseVioletTransparent.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseVioletTransparent.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseWhiteTransparent.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseWhiteTransparent.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseYellowTransparent.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseYellowTransparent.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BrightPassFilter.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BrightPassFilter.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BrightPassFilter2.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/BrightPassFilter2.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Shaders/BumpedSpecularDisplacement.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Shaders/BumpedSpecularDisplacement.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Shaders/BumpedSpecularSmooth.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Shaders/BumpedSpecularSmooth.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/CameraMotionBlur.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/CameraMotionBlur.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/CameraMotionBlur.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/CameraMotionBlur.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/CameraMotionBlurDX11.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/CameraMotionBlurDX11.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/CameraMotionBlurEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/CameraMotionBlurEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ChromaticAberrationShader.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ChromaticAberrationShader.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffHeight.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Textures/CliffNormals.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrection3DLut.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrection3DLut.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionCurves.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionCurves.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrectionCurves.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrectionCurves.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/ColorCorrectionCurvesEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/ColorCorrectionCurvesEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrectionCurvesSimple.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrectionCurvesSimple.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrectionEffect.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrectionEffect.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionLookup.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionLookup.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/ColorCorrectionLookupEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/ColorCorrectionLookupEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionRamp.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionRamp.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrectionSelective.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ColorCorrectionSelective.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ContrastComposite.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ContrastComposite.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ContrastEnhance.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ContrastEnhance.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/ContrastEnhanced3D16.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ContrastStretch.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ContrastStretch.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ConvertDepth.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ConvertDepth.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/CreaseApply.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/CreaseApply.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/CreaseShading.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/CreaseShading.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/DLAA.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/DLAA.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/DepthOfField.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/DepthOfField.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/DepthOfField34.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/DepthOfField34.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/DepthOfFieldDX11.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/DepthOfFieldDX11.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/DepthOfFieldDeprecated.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/DepthOfFieldDeprecated.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/DepthOfFieldDeprecatedEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/DepthOfFieldDeprecatedEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/DepthOfFieldEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/DepthOfFieldEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/DepthOfFieldScatter.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/DepthOfFieldScatter.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/EdgeDetectNormals.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/EdgeDetectNormals.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/EdgeDetection.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/EdgeDetection.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/EdgeDetectionEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/EdgeDetectionEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/FXAA2.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/FXAA2.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/FXAA3Console.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/FXAA3Console.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/FXAAPreset2.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/FXAAPreset2.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/FXAAPreset3.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/FXAAPreset3.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures/Falloff.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Fisheye.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Fisheye.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/FisheyeShader.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/FisheyeShader.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Materials/Flare50mm.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Materials/Flare50mm.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Textures/Flare50mm.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Flares/FlareSmall.flare.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Flares/FlareSmall.flare" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Textures/FlareStar.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Flares.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/FlashlightCookie.tif.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/FlashlightIrregularCookie.tif.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Materials/GlassRefractive.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Materials/GlassRefractive.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Textures/GlassStainedAlbedo.tif.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Shaders/GlassStainedBumpDistort.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Shaders/GlassStainedBumpDistort.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Textures/GlassStainedNormals.tif.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/GlobalFog.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/GlobalFog.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/GlobalFog.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/GlobalFog.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Grayscale.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Grayscale.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/GrayscaleEffect.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/GrayscaleEffect.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures/Grid.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Materials/GridProjector.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Materials/GridProjector.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Prefabs/GridProjector.prefab.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Prefabs/GridProjector.prefab" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Guidelines.txt.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Guidelines.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/HexShape.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ImageEffectBase.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ImageEffectBase.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ImageEffects.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ImageEffects.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupItems/InvisibilityPickup.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupItems/InvisibilityPickup.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Textures/Pickup/InvisibilityPickup.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Resources/InvisibilityPickup.prefab.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/LensFlareCreate.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/LensFlareCreate.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures/Light.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/LightHardCookie.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Materials/LightProjector.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Materials/LightProjector.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/LightSoftCookie.tif.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures/LightSquareCookie.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Models/LowPolySphere.fbx.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch/Luminance.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch/Luminance.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Materials.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Materials.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Materials.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Materials.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch/MinMaxReduction.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Contrast Stretch/MinMaxReduction.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/MobileBloom.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/MobileBloom.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/MobileBlur.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/MobileBlur.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Models.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/MotionBlur.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/MotionBlur.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/MotionBlur.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/MotionBlur.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/MotionBlurClear.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/MotionBlurClear.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/MotionBlurJitter.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/MultiPassHollywoodFlares.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/MultiPassHollywoodFlares.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/NFAA.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/NFAA.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/Neutral3D16.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/Noise.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/NoiseAndGrain.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/NoiseAndGrain.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/NoiseAndGrain.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/NoiseAndGrain.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/NoiseAndGrain.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/NoiseAndGrainDX11.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/NoiseAndGrainDX11.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/NoiseAndGrainEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/NoiseAndGrainEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/NoiseAndScratches.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/NoiseAndScratches.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/NoiseEffectGrain.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/NoiseEffectScratch.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/NoiseEffectShaderRGB.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/NoiseEffectShaderRGB.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/NoiseEffectShaderYUV.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/NoiseEffectShaderYUV.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerBody.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerBody.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsBase.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsBase.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsHelper.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsHelper.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Prefabs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/PrepareSunShaftsBlur.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/PrepareSunShaftsBlur.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Shaders/ProjectorLight.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Shaders/ProjectorLight.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Shaders/ProjectorMultiply.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Shaders/ProjectorMultiply.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Quads.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Quads.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/RadialBlur.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/RadialBlur.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/RandomVectors.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/SSAA.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing/SSAA.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/SSAOShader.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/SSAOShader.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Scenes.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenOverlay.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenOverlay.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenSpaceAmbientObscurance.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenSpaceAmbientObscurance.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ScreenSpaceAmbientObscurance.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ScreenSpaceAmbientObscurance.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenSpaceAmbientOcclusion.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/ScreenSpaceAmbientOcclusion.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/SeparableBlur.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/SeparableBlur.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/SeparableBlurPlus.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/SeparableBlurPlus.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/SeparableWeightedBlurDof34.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/SeparableWeightedBlurDof34.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/SepiaTone.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/SepiaTone.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/SepiaToneEffect.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/SepiaToneEffect.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Shaders.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Shaders.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Shaders.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures/Shadow.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Materials/ShadowProjector.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Materials/ShadowProjector.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ShowAlphaChannel.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/ShowAlphaChannel.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/SimpleClear.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/SimpleClear.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupItems/SpeedPickup.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/PickupItems/SpeedPickup.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/Pickup/SpeedPickup.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Materials/Pickup/SpeedPickup.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/SphereShape.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Flares/Sun.flare.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Flares/Sun.flare" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/SunShafts.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/SunShafts.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/SunShaftsComposite.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/SunShaftsComposite.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/SunShaftsEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/SunShaftsEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Materials/TesselatedBumpSpecular.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Materials/TesselatedBumpSpecular.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Materials/TesselatedBumpSpecularDisplacement.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Materials/TesselatedBumpSpecularDisplacement.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Materials/TesselatedBumpSpecularSmooth.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Materials/TesselatedBumpSpecularSmooth.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Scenes/TessellationSample.unity.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Scenes/TessellationSample.unity" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/GlassRefraction/Textures.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightCookies/Textures.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/LightFlares/Textures.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/Projectors/Textures.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/TessellationShaders/Textures.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Textures.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/TiltShift.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/TiltShift.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/TiltShiftHdrLensBlur.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField/TiltShiftHdrLensBlur.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Tonemapper.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/Tonemapper.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Tonemapping.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Tonemapping.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/TonemappingEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/TonemappingEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials/ToonBasic.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials/ToonBasic.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders/ToonBasic.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders/ToonBasic.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials/ToonBasicOutline.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials/ToonBasicOutline.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders/ToonBasicOutline.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders/ToonBasicOutline.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials/ToonLit.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials/ToonLit.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Textures/ToonLit.psd.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders/ToonLit.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders/ToonLit.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials/ToonLitOutline.mat.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Materials/ToonLitOutline.mat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders/ToonLitOutline.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Shaders/ToonLitOutline.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Triangles.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Triangles.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Twirl.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Twirl.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/TwirlEffect.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/TwirlEffect.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ToonShading/Textures/UtilToonGradient.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/VignetteAndChromaticAberrationEditor.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Editor/ImageEffects/VignetteAndChromaticAberrationEditor.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/VignetteMask.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/VignetteShader.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/VignetteShader.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/VignettingShader.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/VignettingShader.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Vortex.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Scripts/Vortex.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/VortexEffect.shader.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/VortexEffect.shader" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_Antialiasing.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/_DepthOfField.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/color correction ramp.png.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/frag_ao.cginc.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Shaders/frag_ao.cginc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Standard Assets/Effects/ImageEffects/Textures/grayscale ramp.png.meta" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/Hellephant Death.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/Hellephant Death.wav.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/Hellephant Hurt.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/ZomBear Death.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/ZomBear Death.wav.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/ZomBear Hurt.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/ZomBear Hurt.wav.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/ZomBunny Death.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/ZomBunny Death.wav.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/ZomBunny Hurt.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/ZomBunny Hurt.wav.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Resources/Pickups/PiercePickup.prefab.meta" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Assets/Audio/Effects/Hellephant Hurt.wav.meta" afterPath="$PROJECT_DIR$/Assets/Audio/Effects/IncreasedDamageGunShot.wav.meta" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Assets/Resources/Pickups.meta" afterPath="$PROJECT_DIR$/Assets/Standard Assets.meta" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Assets/Resources/Pickups/BouncePickup.prefab" afterPath="$PROJECT_DIR$/Assets/Resources/SpeedPickup.prefab" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Assets/Resources/Pickups/BouncePickup.prefab.meta" afterPath="$PROJECT_DIR$/Assets/Resources/SpeedPickup.prefab.meta" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Assets/Resources/Pickups/PiercePickup.prefab" afterPath="$PROJECT_DIR$/Assets/Resources/InvisibilityPickup.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/Pickup/BouncePickup.mat" afterPath="$PROJECT_DIR$/Assets/Materials/Pickup/BouncePickup.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseAzure.mat" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseAzure.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseBlue.mat" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseBlue.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseGreen.mat" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseGreen.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseRed.mat" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseRed.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseViolet.mat" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseViolet.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseWhite.mat" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseWhite.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseYellow.mat" afterPath="$PROJECT_DIR$/Assets/Materials/BoyDiffuseYellow.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/Pickup/BulletPickup.mat" afterPath="$PROJECT_DIR$/Assets/Materials/Pickup/BulletPickup.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Resources/DamagePickup.prefab.meta" afterPath="$PROJECT_DIR$/Assets/Resources/DamagePickup.prefab.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Resources/DamagePickup.prefab" afterPath="$PROJECT_DIR$/Assets/Resources/DamagePickup.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/EyesMaterial.mat" afterPath="$PROJECT_DIR$/Assets/Materials/EyesMaterial.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Extensions/GameObjectExtensions.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/GameObjectExtensions.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/Pickup/HealthPickup.mat" afterPath="$PROJECT_DIR$/Assets/Materials/Pickup/HealthPickup.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Textures/HellephantDiffuse.tif.meta" afterPath="$PROJECT_DIR$/Assets/Textures/HellephantDiffuse.tif.meta" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/HellephantMaterial.mat" afterPath="$PROJECT_DIR$/Assets/Materials/HellephantMaterial.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/IncreasedDamageLineRendererMaterial.mat" afterPath="$PROJECT_DIR$/Assets/Materials/IncreasedDamageLineRendererMaterial.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scenes/Multiplayer.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Multiplayer.unity" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Extensions/PhotonPlayerExtensions.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/PhotonPlayerExtensions.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/Pickup/PiercePickup.mat" afterPath="$PROJECT_DIR$/Assets/Materials/Pickup/PiercePickup.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Resources/Player.prefab" afterPath="$PROJECT_DIR$/Assets/Resources/Player.prefab" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMaterial.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMaterial.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Materials/PlayerMaterial.mat" afterPath="$PROJECT_DIR$/Assets/Materials/PlayerMaterial.mat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShooting.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/SceneCamera.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/SceneCamera.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
+    </list>
     <ignored path="test2.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,14 +510,17 @@
       <file leaf-file-name="TagManager.asset" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProjectSettings/TagManager.asset">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45980707">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.2915327">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -71,6 +535,10 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
   <component name="NamedScopeManager">
     <order />
   </component>
@@ -80,7 +548,7 @@
     <option name="width" value="1920" />
     <option name="height" value="1053" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -103,7 +571,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -139,99 +606,60 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/www/clojure-hacking/hello-world" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
       <module name="" />
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
       <envs />
-      <properties />
-      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <method />
     </configuration>
   </component>
@@ -250,34 +678,38 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1680" y="23" width="1920" height="1053" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SvgViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -296,6 +728,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Models/Characters/Player.fbx.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="548" column="20" selection-start-line="548" selection-start-column="20" selection-end-line="548" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectSettings/TagManager.asset">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Models/Characters/Player.fbx.meta">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -338,8 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProjectSettings/TagManager.asset">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45980707">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.2915327">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
           <folding />
         </state>
       </provider>

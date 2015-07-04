@@ -5,34 +5,42 @@ public class SceneCamera : MonoBehaviour
 {
 
 	Camera camera;
+	AudioListener audioListener;
 
 	void Awake ()
 	{
 		camera = GetComponent<Camera> ();
+		audioListener = GetComponent<AudioListener> ();
 	}
 
 	void OnLeftRoom ()
 	{
-		camera.enabled = true;
+		SetEnabled (true);
 	}
 
 	void OnJoinedRoomInRound ()
 	{
-		camera.enabled = false;
+		SetEnabled (false);
 	}
 
 	void OnJoinedRoomInPause ()
 	{
-		camera.enabled = true;
+		SetEnabled (true);
 	}
 
 	void OnPauseStarted ()
 	{
-		camera.enabled = true;
+		SetEnabled (true);
 	}
 
 	void OnRoundStarted ()
 	{
-		camera.enabled = false;
+		SetEnabled (false);
+	}
+
+	void SetEnabled (bool enabled)
+	{
+		camera.enabled = enabled;
+		audioListener.enabled = enabled;
 	}
 }

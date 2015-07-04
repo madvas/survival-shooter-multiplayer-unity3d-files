@@ -62,7 +62,6 @@ public class PlayerShooting : MonoBehaviour
 
 	void OnPlayerDamageChange (object[] changeData)
 	{
-		Debug.Log ("OnPlayerDamageChange");
 		if (!photonView.isMine) {
 			return;
 		}
@@ -81,6 +80,11 @@ public class PlayerShooting : MonoBehaviour
 		Debug.Log ("damage reset to " + originalDamagePerShot);
 		damagePerShot = originalDamagePerShot;
 		photonView.owner.SetIncreasedDamage (false);
+	}
+
+	void OnPlayerRespawn ()
+	{
+		ResetDamage ();
 	}
 
 }
