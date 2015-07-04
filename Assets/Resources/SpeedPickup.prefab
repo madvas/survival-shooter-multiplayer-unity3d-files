@@ -239,7 +239,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0a7e232829973294d86d257c8db5446c, type: 2}
+  - {fileID: 2100000, guid: 2c8b030ee7440454087fca5f148162f4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -263,7 +263,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0a7e232829973294d86d257c8db5446c, type: 2}
+  - {fileID: 2100000, guid: 2c8b030ee7440454087fca5f148162f4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -311,7 +311,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0a7e232829973294d86d257c8db5446c, type: 2}
+  - {fileID: 2100000, guid: 2c8b030ee7440454087fca5f148162f4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -335,7 +335,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0a7e232829973294d86d257c8db5446c, type: 2}
+  - {fileID: 2100000, guid: 2c8b030ee7440454087fca5f148162f4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -537,8 +537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupItemManagerTag: SpeedItemManager
-  increasedSpeed: 10
-  bonusDuration: 30
+  increasedSpeed: 9
+  bonusDuration: 15
 --- !u!114 &11478418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -607,11 +607,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: increasedSpeed
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bonusDuration
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: pickupItemManagerTag
