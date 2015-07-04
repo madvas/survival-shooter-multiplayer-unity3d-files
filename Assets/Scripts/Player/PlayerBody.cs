@@ -25,7 +25,6 @@ public class PlayerBody : Photon.MonoBehaviour
 	void ResetVisibility ()
 	{
 		photonView.owner.SetInvisibility (false);
-		SetPlayerVisibility (true);
 	}
 	
 	void OnPlayerRespawn ()
@@ -44,4 +43,15 @@ public class PlayerBody : Photon.MonoBehaviour
 			item.enabled = enabled;
 		}
 	}
+
+	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
+	{
+		Debug.Log ("invisibility OnPhotonPlayerPropertiesChanged");
+		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
+		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
+		if (props.ContainsKey (PhotonPlayerExtensions.invisibilityProp)) {
+			SetPlayerVisibility (!player.isInvisible ());
+		}
+	}
+
 }
