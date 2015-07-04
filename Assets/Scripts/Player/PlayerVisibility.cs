@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerBody : Photon.MonoBehaviour
+public class PlayerVisibility : Photon.MonoBehaviour
 {
 
 	SkinnedMeshRenderer[] playerRenderers;
+	SkinnedMeshRenderer body;
+	PlayerManager playerManager;
 
 	void Awake ()
 	{
+		body = gameObject.FindComponentInChildWithTag<SkinnedMeshRenderer> ("PlayerBodyMesh");
+		playerManager = GameObject.FindGameObjectWithTag ("PlayerManager").GetComponent<PlayerManager> ();
 		playerRenderers = GetComponentsInChildren<SkinnedMeshRenderer> ();
 	}
 
@@ -39,8 +43,12 @@ public class PlayerBody : Photon.MonoBehaviour
 
 	void SetPlayerVisibility (bool enabled)
 	{
-		foreach (var item in playerRenderers) {
-			item.enabled = enabled;
+		if (photonView.isMine && !enabled) {
+			body.material = PlayerManager
+		} else {
+			foreach (var item in playerRenderers) {
+				item.enabled = enabled;
+			}
 		}
 	}
 
