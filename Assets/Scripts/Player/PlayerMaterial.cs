@@ -15,10 +15,7 @@ public class PlayerMaterial : Photon.MonoBehaviour
 
 	void OnPhotonInstantiate (PhotonMessageInfo	info)
 	{
-		int materialIndex = photonView.owner.GetMaterialIndex ();
-		if (materialIndex > -1) {
-			body.material = playerManager.playerMaterials [materialIndex];
-		}
+		UpdatePlayerMaterial (false);
 	}
 
 	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
@@ -26,13 +23,16 @@ public class PlayerMaterial : Photon.MonoBehaviour
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
 		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
-			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
-			body.material = playerManager.playerMaterials [materialIndex];
+			UpdatePlayerMaterial (false);
 		}
 	}
 
-	public ChangePlayerMaterial(PhotonPlayer player, bool transparent) {
-		Material[] materials = transparent ? playerManager.playerTransparentMaterials : playerManager.playerMaterials;
-		body.material = materials[player.GetMaterialIndex()];
+	public void UpdatePlayerMaterial (bool transparent)
+	{
+		int materialIndex = photonView.owner.GetMaterialIndex ();
+		if (materialIndex > -1) {
+			Material[] materials = transparent ? playerManager.playerTransparentMaterials : playerManager.playerMaterials;
+			body.material = materials [materialIndex];
+		}
 	}
 }

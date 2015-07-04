@@ -5,14 +5,12 @@ public class PlayerVisibility : Photon.MonoBehaviour
 {
 
 	SkinnedMeshRenderer[] playerRenderers;
-	SkinnedMeshRenderer body;
-	PlayerManager playerManager;
+	PlayerMaterial playerMaterial;
 
 	void Awake ()
 	{
-		body = gameObject.FindComponentInChildWithTag<SkinnedMeshRenderer> ("PlayerBodyMesh");
-		playerManager = GameObject.FindGameObjectWithTag ("PlayerManager").GetComponent<PlayerManager> ();
 		playerRenderers = GetComponentsInChildren<SkinnedMeshRenderer> ();
+		playerMaterial = GetComponent<PlayerMaterial> ();
 	}
 
 	void OnPlayerGoInvisible (int duration)
