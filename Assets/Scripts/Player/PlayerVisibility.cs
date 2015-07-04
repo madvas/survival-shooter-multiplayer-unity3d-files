@@ -44,9 +44,9 @@ public class PlayerVisibility : Photon.MonoBehaviour
 	void SetPlayerVisibility (PhotonPlayer player, bool enabled)
 	{
 		if (player.ID == PhotonNetwork.player.ID && !enabled) {
-			playerMaterial.UpdatePlayerMaterial (player, true);
+			playerMaterial.UpdatePlayerMaterial (true);
 		} else {
-			playerMaterial.UpdatePlayerMaterial (player, false);
+			playerMaterial.UpdatePlayerMaterial (false);
 			foreach (var item in playerRenderers) {
 				item.enabled = enabled;
 			}
