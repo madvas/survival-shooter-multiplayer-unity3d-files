@@ -41,13 +41,13 @@ public class PlayerVisibility : Photon.MonoBehaviour
 		ResetVisibility ();
 	}
 
-	void SetPlayerVisibility (bool enabled)
+	void SetPlayerVisibility (PhotonPlayer player, bool enabled)
 	{
-		Debug.Log ("SetPlayerVisibility " + photonView.isMine);
-		if (photonView.isMine && !enabled) {
-			playerMaterial.UpdatePlayerMaterial (true);
+		Debug.Log ("SetPlayerVisibility " + photonView.isMine == player.ID);
+		if (player.ID == photonView.owner.ID && !enabled) {
+			playerMaterial.UpdatePlayerMaterial (true, player);
 		} else {
-			playerMaterial.UpdatePlayerMaterial (false);
+			playerMaterial.UpdatePlayerMaterial (false, player);
 			foreach (var item in playerRenderers) {
 				item.enabled = enabled;
 			}
@@ -60,7 +60,7 @@ public class PlayerVisibility : Photon.MonoBehaviour
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
 		if (props.ContainsKey (PhotonPlayerExtensions.invisibilityProp)) {
-			SetPlayerVisibility (!player.isInvisible ());
+			SetPlayerVisibility (player, !player.isInvisible ());
 		}
 	}
 
