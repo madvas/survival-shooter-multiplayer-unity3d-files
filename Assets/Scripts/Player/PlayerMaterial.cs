@@ -27,9 +27,9 @@ public class PlayerMaterial : Photon.MonoBehaviour
 		}
 	}
 
-	public void UpdatePlayerMaterial (bool transparent)
+	public void UpdatePlayerMaterial (bool transparent, PhotonPlayer player = photonView.owner.ID)
 	{
-		int materialIndex = photonView.owner.GetMaterialIndex ();
+		int materialIndex = player.GetMaterialIndex ();
 		if (materialIndex > -1) {
 			Material[] materials = transparent ? playerManager.playerTransparentMaterials : playerManager.playerMaterials;
 			body.material = materials [materialIndex];
