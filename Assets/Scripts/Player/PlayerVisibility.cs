@@ -16,7 +16,6 @@ public class PlayerVisibility : Photon.MonoBehaviour
 
 	void OnPlayerGoInvisible (int duration)
 	{
-		Debug.Log ("OnPlayerGoInvisible");
 		if (!photonView.isMine) {
 			return;
 		}
@@ -58,7 +57,6 @@ public class PlayerVisibility : Photon.MonoBehaviour
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
 		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.invisibilityProp)) {
-			Debug.Log ("setting " + player.name + " visibility " + !player.isInvisible ());
 			SetPlayerVisibility (player, !player.isInvisible ());
 		}
 	}
