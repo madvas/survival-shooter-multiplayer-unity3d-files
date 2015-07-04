@@ -23,7 +23,7 @@ public class PlayerMaterial : Photon.MonoBehaviour
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
 		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
-			Debug.Log ("OnPhotonPlayerPropertiesChanged " + player.name);
+			Debug.Log ("setting  " + player.name + " material " + player.GetMaterialIndex ());
 			UpdatePlayerMaterial (player, false);
 		}
 	}

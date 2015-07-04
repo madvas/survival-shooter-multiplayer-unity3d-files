@@ -56,10 +56,10 @@ public class PlayerVisibility : Photon.MonoBehaviour
 
 	void OnPhotonPlayerPropertiesChanged (object[] playerAndUpdatedProps)
 	{
-		Debug.Log ("invisibility OnPhotonPlayerPropertiesChanged");
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
 		if (props.ContainsKey (PhotonPlayerExtensions.invisibilityProp)) {
+			Debug.Log ("setting " + player.name + " visibility " + !player.isInvisible ());
 			SetPlayerVisibility (player, !player.isInvisible ());
 		}
 	}
