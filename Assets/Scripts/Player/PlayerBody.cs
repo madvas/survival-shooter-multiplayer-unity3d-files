@@ -3,27 +3,45 @@ using System.Collections;
 
 public class PlayerBody : Photon.MonoBehaviour
 {
+
+	SkinnedMeshRenderer[] playerRenderers;
+
+	void Awake ()
+	{
+		playerRenderers = GetComponentsInChildren<SkinnedMeshRenderer> ();
+	}
+
 	void OnPlayerGoInvisible (int duration)
 	{
 		if (!photonView.isMine) {
 			return;
 		}
-		int increasedDamage = (int)changeData [0];
-		int bonusDuration = (int)changeData [1];
 		
-		
-		photonView.owner.SetIncreasedDamage (true);
+		photonView.owner.SetInvisibility (true);
 		CancelInvoke ("ResetVisibility");
-		Invoke ("ResetVisibility", bonusDuration);
+		Invoke ("ResetVisibility", duration);
 	}
 	
 	void ResetVisibility ()
 	{
 		photonView.owner.SetInvisibility (false);
+		SetPlayerVisibility (true);
 	}
 	
 	void OnPlayerRespawn ()
 	{
 		ResetVisibility ();
+	}
+
+	void OnPlayerDead ()
+	{
+		ResetVisibility ();
+	}
+
+	void SetPlayerVisibility (bool enabled)
+	{
+		foreach (var item in playerRenderers) {
+			item.enabled = enabled;
+		}
 	}
 }
