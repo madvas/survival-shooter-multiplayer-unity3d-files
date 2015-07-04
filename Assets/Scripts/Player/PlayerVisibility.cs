@@ -44,7 +44,7 @@ public class PlayerVisibility : Photon.MonoBehaviour
 	void SetPlayerVisibility (bool enabled)
 	{
 		if (photonView.isMine && !enabled) {
-			body.material = PlayerManager
+			body.material = playerManager.playerTransparentMaterials [photonView.owner.GetMaterialIndex ()];
 		} else {
 			foreach (var item in playerRenderers) {
 				item.enabled = enabled;

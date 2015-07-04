@@ -30,4 +30,9 @@ public class PlayerMaterial : Photon.MonoBehaviour
 			body.material = playerManager.playerMaterials [materialIndex];
 		}
 	}
+
+	public ChangePlayerMaterial(PhotonPlayer player, bool transparent) {
+		Material[] materials = transparent ? playerManager.playerTransparentMaterials : playerManager.playerMaterials;
+		body.material = materials[player.GetMaterialIndex()];
+	}
 }
