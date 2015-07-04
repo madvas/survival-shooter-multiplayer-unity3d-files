@@ -7,6 +7,6 @@ public class InvisibilityPickup : PickupItemBase
 	
 	void OnActivateItemEffect (GameObject player)
 	{
-		player.BroadcastMessageMultiArg ("OnPlayerGoInvisible", bonusDuration);
+		player.BroadcastMessage ("OnPlayerGoInvisible", bonusDuration);
 	}
 }

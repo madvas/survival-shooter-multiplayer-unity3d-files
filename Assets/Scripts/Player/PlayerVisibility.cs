@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PlayerVisibility : Photon.MonoBehaviour
 {

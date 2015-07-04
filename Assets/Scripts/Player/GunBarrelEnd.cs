@@ -68,5 +68,4 @@ public class GunBarrelEnd : MonoBehaviour
 			SetShotEffects (player.HasIncreasedDamage ());
 		}
 	}
-
 }
