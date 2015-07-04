@@ -6754,6 +6754,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 13700000, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6796,7 +6800,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: ccdd745f4f5074e1aa5da915a512d387, type: 2}
+    - target: {fileID: 13700000, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
+      propertyPath: m_UseLightProbes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}
+      propertyPath: m_ReflectionProbeUsage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6732bf1fdd75046289020637d3d722b8, type: 2}

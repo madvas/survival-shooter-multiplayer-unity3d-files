@@ -7,6 +7,8 @@ public class PlayerManager : MonoBehaviour
 	public float respawnDelay = 2f;
 	public Material[] playerMaterials;
 
+	public Material invisibleMaterial;
+
 	public Color playerTextColor0;
 	public Color playerTextColor1;
 	public Color playerTextColor2;
