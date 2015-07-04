@@ -15,9 +15,14 @@ public class PlayerMaterial : Photon.MonoBehaviour
 
 	void OnPhotonInstantiate (PhotonMessageInfo	info)
 	{
+		Debug.Log ("OnPhotonInstantiate");
 		int materialIndex = photonView.owner.GetMaterialIndex ();
 		if (materialIndex > -1) {
 			body.material = playerManager.playerMaterials [materialIndex];
+			Debug.Log ("setting trans");
+			Color col = body.material.color;
+			col.a = 0.1f;
+			body.material.color = col;
 		}
 	}
 
