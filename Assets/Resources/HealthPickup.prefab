@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupItemManagerTag: HealthItemManager
-  healthBonus: 50
+  healthBonus: 100
 --- !u!114 &11465278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -598,6 +598,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: pickupItemManagerTag
       value: HealthItemManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: healthBonus
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
