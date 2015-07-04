@@ -43,7 +43,6 @@ public class PlayerVisibility : Photon.MonoBehaviour
 
 	void SetPlayerVisibility (PhotonPlayer player, bool enabled)
 	{
-		Debug.Log ("SetPlayerVisibility " + player.name);
 		if (player.ID == photonView.owner.ID && !enabled) {
 			playerMaterial.UpdatePlayerMaterial (player, true);
 		} else {

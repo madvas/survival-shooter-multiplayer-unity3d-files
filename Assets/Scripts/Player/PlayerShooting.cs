@@ -77,7 +77,6 @@ public class PlayerShooting : MonoBehaviour
 
 	void ResetDamage ()
 	{
-		Debug.Log ("damage reset to " + originalDamagePerShot);
 		damagePerShot = originalDamagePerShot;
 		photonView.owner.SetIncreasedDamage (false);
 	}
