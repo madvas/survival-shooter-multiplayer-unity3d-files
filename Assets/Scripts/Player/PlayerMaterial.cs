@@ -27,8 +27,7 @@ public class PlayerMaterial : Photon.MonoBehaviour
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
 		if (player.ID == photonView.owner.ID && props.ContainsKey (PhotonPlayerExtensions.materialProp)) {
 			int materialIndex = (int)props [PhotonPlayerExtensions.materialProp];
-//			body.material = playerManager.playerMaterials [materialIndex];
-			body.material = playerManager.invisibleMaterial;
+			body.material = playerManager.playerMaterials [materialIndex];
 		}
 	}
 }
