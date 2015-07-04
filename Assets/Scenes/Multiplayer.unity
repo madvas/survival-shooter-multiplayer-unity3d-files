@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: HealthPickup
   maxCount: 2
-  respawnDelay: 30
+  respawnDelay: 25
   initialDelay: 15
 --- !u!82 &38425738
 AudioSource:
@@ -1047,8 +1047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: InvisibilityPickup
   maxCount: 2
-  respawnDelay: 45
-  initialDelay: 60
+  respawnDelay: 35
+  initialDelay: 40
 --- !u!4 &150464696
 Transform:
   m_ObjectHideFlags: 0
@@ -2017,8 +2017,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: DamagePickup
   maxCount: 2
-  respawnDelay: 30
-  initialDelay: 40
+  respawnDelay: 20
+  initialDelay: 30
 --- !u!1 &303651935
 GameObject:
   m_ObjectHideFlags: 0
@@ -7508,8 +7508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: SpeedPickup
   maxCount: 2
-  respawnDelay: 30
-  initialDelay: 50
+  respawnDelay: 20
+  initialDelay: 35
 --- !u!4 &1779768452
 Transform:
   m_ObjectHideFlags: 0
