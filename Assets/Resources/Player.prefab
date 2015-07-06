@@ -770,7 +770,7 @@ SkinnedMeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: ee0cf4d2d57a9474e85dcfbbdc0917a4, type: 2}
+  - {fileID: 2100000, guid: 5ba5237a394ea438db7fb782bb795a71, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3229,7 +3229,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9236d818ce434644f8ac5b47aca88fab, type: 2}
+      objectReference: {fileID: 2100000, guid: 5ba5237a394ea438db7fb782bb795a71, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100006}

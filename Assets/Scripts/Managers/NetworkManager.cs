@@ -13,7 +13,7 @@ public class NetworkManager : MonoBehaviour
 
 	void Start ()
 	{
-		PhotonNetwork.ConnectUsingSettings ("0.1");
+		PhotonNetwork.ConnectUsingSettings ("0.2");
 	}
 	
 	void OnJoinedLobby ()
