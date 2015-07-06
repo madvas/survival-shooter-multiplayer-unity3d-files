@@ -49,7 +49,8 @@ public class PlayerManager : MonoBehaviour
 
 	public Color GetPlayerTextColor (PhotonPlayer player)
 	{
-		return playerTextColors [player.GetMaterialIndex ()];
+		int matIndex = player.GetMaterialIndex ();
+		return matIndex > -1 ? playerTextColors [matIndex] : Color.white;
 	}
 	
 	public string GetPlayerColoredName (PhotonPlayer player)
