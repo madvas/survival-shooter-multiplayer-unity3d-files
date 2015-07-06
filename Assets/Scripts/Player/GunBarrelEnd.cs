@@ -10,11 +10,13 @@ public class GunBarrelEnd : MonoBehaviour
 	ParticleSystem gunParticles;                    
 	LineRenderer gunLine;                           
 	AudioSource gunAudio;                           
-	Light gunLight;                                 
+	Light gunLight;          
+	PhotonView photonView;
 
 
 	void Awake ()
 	{
+		photonView = transform.parent.GetComponent<PhotonView> ();
 		SetShotEffects (false);
 	}
 	
@@ -63,7 +65,7 @@ public class GunBarrelEnd : MonoBehaviour
 	{
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
-		if (props.ContainsKey (PhotonPlayerExtensions.increasedDamageProp)) {
+		if (photonView.owner.ID == player.ID && props.ContainsKey (PhotonPlayerExtensions.increasedDamageProp)) {
 			Debug.Log ("setting shot effects to " + player.name);
 			SetShotEffects (player.HasIncreasedDamage ());
 		}
