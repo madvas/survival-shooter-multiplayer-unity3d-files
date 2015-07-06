@@ -32,6 +32,14 @@ public class PickupItemManager : MonoBehaviour
 		}
 	}
 
+	void OnMasterClientSwitched (PhotonPlayer newMasterClient)
+	{
+		if (PhotonNetwork.isMasterClient) {
+			Debug.Log ("The new master");
+			InvokeRepeating ("SpawnItem", initialDelay, respawnDelay);
+		}
+	}
+
 	void OnItemPicked (object[] pickData)
 	{
 		GameObject pickedItem = pickData [0] as GameObject;
