@@ -8,6 +8,8 @@ public class DamagePickup : PickupItemBase
 	
 	void OnActivateItemEffect (GameObject player)
 	{
+		Debug.Log ("OnPlayerDamageChange");
+		Debug.Log (player.GetComponent<PhotonView> ().owner.name);
 		player.BroadcastMessageMultiArg ("OnPlayerDamageChange", increasedDamage, bonusDuration);
 	}
 }
