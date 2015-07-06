@@ -66,7 +66,6 @@ public class GunBarrelEnd : MonoBehaviour
 		PhotonPlayer player = playerAndUpdatedProps [0] as PhotonPlayer;
 		Hashtable props = playerAndUpdatedProps [1] as Hashtable;
 		if (photonView.owner.ID == player.ID && props.ContainsKey (PhotonPlayerExtensions.increasedDamageProp)) {
-			Debug.Log ("setting shot effects to " + player.name);
 			SetShotEffects (player.HasIncreasedDamage ());
 		}
 	}
