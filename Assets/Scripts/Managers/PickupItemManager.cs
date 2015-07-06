@@ -35,7 +35,7 @@ public class PickupItemManager : MonoBehaviour
 	void OnMasterClientSwitched (PhotonPlayer newMasterClient)
 	{
 		if (PhotonNetwork.isMasterClient) {
-			Debug.Log ("The new master");
+			CancelInvoke ("SpawnItem");
 			InvokeRepeating ("SpawnItem", initialDelay, respawnDelay);
 		}
 	}
